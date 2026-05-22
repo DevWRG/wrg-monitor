@@ -1,0 +1,2269 @@
+{
+  "generated_at": "2026-05-22T13:26:05+0700",
+  "source_summary": {
+    "runtime_context_entries": 184,
+    "distinct_phones": 73,
+    "distinct_sender_names": 68
+  },
+  "group_directory": {
+    "120363403842555552@g.us": "GA WRG",
+    "120363405485256544@g.us": "The ALLIANCE",
+    "120363409252019573@g.us": "Research",
+    "6281248476085-1530485384@g.us": "PLAN PURCHASING WRG",
+    "6281248476085-1539641961@g.us": "PENJUALAN CAB. MADURA",
+    "6281335118687-1517798430@g.us": "GROUP TRAINING KRM-TAGIH",
+    "6281335118687-1527497732@g.us": "PENJUALAN PROV. NTT NTB",
+    "6282232418991-1555990746@g.us": "FINANCE & TAX WRG"
+  },
+  "group_directory_user": {
+    "6281335118687-1527497998@g.us": "GROUP TRAINING KRM-TAGIH",
+    "120363404092121926@g.us": "Koord HoD",
+    "120363406071725731@g.us": "WRG - Accounting & Tax"
+  },
+  "members": [
+    {
+      "phone": "+6285168121906",
+      "auto_name": "Kapten",
+      "name": "Kapten",
+      "user_labeled": true,
+      "groups": [
+        "120363403842555552@g.us",
+        "120363405485256544@g.us",
+        "120363409252019573@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GA WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG",
+        "Research",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 8,
+      "notes": "Owner / Bot Admin — Pak Gilang S Pratama"
+    },
+    {
+      "phone": "+6281248476085",
+      "auto_name": "",
+      "name": "IKA PURWANINGSARI",
+      "user_labeled": true,
+      "groups": [
+        "120363403842555552@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GA WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 6,
+      "roster_source": true,
+      "panggilan": "Ika",
+      "posisi": "HOD Finance & Supply Chain",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281230460577",
+      "auto_name": "",
+      "name": "Gilang S Pratama",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 5
+    },
+    {
+      "phone": "+6281330088773",
+      "auto_name": "",
+      "name": "Yogi Nugroho",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 5,
+      "roster_source": true,
+      "panggilan": "Yogi",
+      "posisi": "HOD Sales West Area",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285231034648",
+      "auto_name": "",
+      "name": "Adm Keuangan",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 5,
+      "notes": "Inbox role Adm Keuangan. Roster: Siti Nurkolis / Kolis (Finance, HP utama +6285854718057). Confirmed 2026-05-22 — Kolis pegang 2 HP: personal untuk diskusi/planning, role-inbox ini untuk kirim bukti faktur/transfer (pushName 'Keuangan Wahana Rizky', mostly media:image)."
+    },
+    {
+      "phone": "+6285808489080",
+      "auto_name": "admwahana2020",
+      "name": "adm Sales",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 5,
+      "notes": "Inbox role Admin Sales (SHARED). Roster: Abib Robi Nurhamsa (+62881036179456), Mochamad Jasyim (+6285755602302), Najmi Putri Harini/Puput (+6282132233560) — bertiga semua Admin Sales & Penawaran Pusat. Confirmed 2026-05-22 — pushName 'admwahana2020' broadcast sales coordination."
+    },
+    {
+      "phone": "+6285853772380",
+      "auto_name": "",
+      "name": "Maslikha Purnamasari",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 5,
+      "roster_source": true,
+      "panggilan": "Sari",
+      "posisi": "Admin Fakturis",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281232432442",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "120363403842555552@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GA WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 5
+    },
+    {
+      "phone": "+102808682496186",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4
+    },
+    {
+      "phone": "+6281332170240",
+      "auto_name": "",
+      "name": "Muhid",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "HOD Aftersales",
+      "roster_source": true,
+      "panggilan": "Muhid",
+      "posisi": "HOD Aftersales",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285257118107",
+      "auto_name": "",
+      "name": "Diana",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Admin pengiriman",
+      "roster_source": true,
+      "panggilan": "Diana",
+      "posisi": "Admin Shipping",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281230791487",
+      "auto_name": "",
+      "name": "CHOIRUL HUDA SETYAWAN",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 4,
+      "roster_source": true,
+      "panggilan": "Irul",
+      "posisi": "AM",
+      "cabang": "Lamongan"
+    },
+    {
+      "phone": "+6281235590851",
+      "auto_name": "",
+      "name": "Adm Teknisi",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Inbox role Admin Teknisi. Roster: Haidar Maut (panggilan Haidar, HP utama +6282229891108)."
+    },
+    {
+      "phone": "+6281358245675",
+      "auto_name": "",
+      "name": "Adm Gudang",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Inbox role Admin Gudang (SHARED). Roster: Denys Chandra Irawan (+6285648575326) DAN Yugi Dwi Bagus Juliawan (+6285785307719) — pakai bersama. PushNames terlihat: 'Warehouse1' (terse ack), 'Warehouse WRG' (inventory detail). Confirmed 2026-05-22."
+    },
+    {
+      "phone": "+6281358857217",
+      "auto_name": "",
+      "name": "Ahmad Muzaqin Mufid",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 4,
+      "roster_source": true,
+      "panggilan": "Mufid",
+      "posisi": "HOD Business IVD",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281554211700",
+      "auto_name": "",
+      "name": "Admin Distribution",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Inbox role Admin Distribusi. Roster: Isteffany Chindyliani (panggilan Cindy, HP utama +6289688034365)."
+    },
+    {
+      "phone": "+6285704142027",
+      "auto_name": "",
+      "name": "Rocky Gunawan",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 4,
+      "notes": "HP kedua Rocky Gunawan (HOD Sales East Area). HP utama (roster): +6281213255253."
+    },
+    {
+      "phone": "+6285733048855",
+      "auto_name": "Husni",
+      "name": "Husni",
+      "user_labeled": true,
+      "groups": [
+        "120363403842555552@g.us",
+        "120363409252019573@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GA WRG",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "Research"
+      ],
+      "appearance_count": 4,
+      "roster_source": true,
+      "panggilan": "Husni",
+      "posisi": "HOD BD & GA",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285755247126",
+      "auto_name": "",
+      "name": "Adm Pembelian",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Inbox role Admin Pembelian. Roster: Claudya Fikayanti (Purchasing, HP utama +6285262444989). Confirmed 2026-05-22 — pushName 'Admin Purchasing WRG' + content style purchasing operation."
+    },
+    {
+      "phone": "+6285854718057",
+      "auto_name": "Siti Nurcholis",
+      "name": "Siti Nurcholis",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG",
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB"
+      ],
+      "appearance_count": 4,
+      "roster_source": true,
+      "panggilan": "Kolis",
+      "posisi": "Finance",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285878287784",
+      "auto_name": "Vickyadi",
+      "name": "Vickyadi",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 4,
+      "roster_source": true,
+      "panggilan": "Vicky",
+      "posisi": "AM",
+      "cabang": "NTB"
+    },
+    {
+      "phone": "+6285842934016",
+      "auto_name": "",
+      "name": "Admin Shipping",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 4,
+      "notes": "Inbox role Admin Shipping. Roster: Diana Agustina (panggilan Diana, HP utama +6285257118107)."
+    },
+    {
+      "phone": "+6282131121079",
+      "auto_name": "",
+      "name": "Akhmad Iqbal Asshiddiqi",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Iqbal",
+      "posisi": "AM",
+      "cabang": "Cirebon"
+    },
+    {
+      "phone": "+6282178705010",
+      "auto_name": "",
+      "name": "Luri Anpulan Mulia Pohan",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN PROV. NTT NTB",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Luri",
+      "posisi": "AM",
+      "cabang": "Jember"
+    },
+    {
+      "phone": "+6282273757478",
+      "auto_name": "",
+      "name": "Muhammad arif prayogi",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Arif",
+      "posisi": "AM",
+      "cabang": "SBY 2"
+    },
+    {
+      "phone": "+6283840115994",
+      "auto_name": "",
+      "name": "Puspita Dewi Oktorani",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Pita",
+      "posisi": "Supply chain",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285704012622",
+      "auto_name": "",
+      "name": "Adm Fakturis",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PENJUALAN PROV. NTT NTB"
+      ],
+      "appearance_count": 3,
+      "notes": "Inbox role Admin Fakturis. Roster: Maslikha Purnamasari (panggilan Sari, HP utama +6285853772380)."
+    },
+    {
+      "phone": "+6287860059055",
+      "auto_name": "",
+      "name": "Angga adhitya bramansyah",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Angga",
+      "posisi": "AM",
+      "cabang": "Madura"
+    },
+    {
+      "phone": "+6289675945698",
+      "auto_name": "Rizal",
+      "name": "Rizal",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Rizal",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "Madura"
+    },
+    {
+      "phone": "+628983451067",
+      "auto_name": "",
+      "name": "Baginda Naufal",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN PROV. NTT NTB",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 3,
+      "roster_source": true,
+      "panggilan": "Baginda",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "NTB"
+    },
+    {
+      "phone": "+109363238846504",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2
+    },
+    {
+      "phone": "+11540744925281",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "PENJUALAN PROV. NTT NTB",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2
+    },
+    {
+      "phone": "+12516038045733",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN PROV. NTT NTB"
+      ],
+      "appearance_count": 2
+    },
+    {
+      "phone": "+6281228983310",
+      "auto_name": "",
+      "name": "Muhammad Prayugo",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Yugo",
+      "posisi": "AM",
+      "cabang": "Palembang"
+    },
+    {
+      "phone": "+6281232554911",
+      "auto_name": "",
+      "name": "Ekba Prastia",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Ekba",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "SBY 2"
+    },
+    {
+      "phone": "+6282326239278",
+      "auto_name": "",
+      "name": "MIFTAHUL WILDHA SAPUTRA",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Wildha",
+      "posisi": "AM",
+      "cabang": "Madiun"
+    },
+    {
+      "phone": "+6282336177459",
+      "auto_name": "",
+      "name": "Karib fardian",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Karib",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "Malang"
+    },
+    {
+      "phone": "+6285233838478",
+      "auto_name": "",
+      "name": "Elok Kurniawati",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Elok",
+      "posisi": "Admin Cabang",
+      "cabang": "Jember"
+    },
+    {
+      "phone": "+6285649206602",
+      "auto_name": "",
+      "name": "Nungky Hendarti",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Nungky",
+      "posisi": "Admin Cabang",
+      "cabang": "Kediri"
+    },
+    {
+      "phone": "+6285738143823",
+      "auto_name": "",
+      "name": "Boni",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PENJUALAN CAB. MADURA"
+      ],
+      "appearance_count": 2,
+      "notes": "HP kedua Achmad Fahruddin Arrazzy / Boni (Logistik, Pusat). HP utama (roster): +6285856613533."
+    },
+    {
+      "phone": "+6285755706014",
+      "auto_name": "",
+      "name": "agus joni setiawan",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Agus",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "Madiun"
+    },
+    {
+      "phone": "+6285778991341",
+      "auto_name": "",
+      "name": "Ari Kurnia Yuda",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Ari",
+      "posisi": "AM",
+      "cabang": "Bali"
+    },
+    {
+      "phone": "+6285864407545",
+      "auto_name": "",
+      "name": "FIRMANSYAH",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Firman",
+      "posisi": "AM",
+      "cabang": "Malang"
+    },
+    {
+      "phone": "+6288217207854",
+      "auto_name": "",
+      "name": "Ibnu Mashabi",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Ibnu",
+      "posisi": "Kirim Tagih & Admin Cabang",
+      "cabang": "Jakarta"
+    },
+    {
+      "phone": "+628979472943",
+      "auto_name": "",
+      "name": "Sidqi",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Sidqi",
+      "posisi": "AM",
+      "cabang": "Solo & Yogyakarta"
+    },
+    {
+      "phone": "+628999303274",
+      "auto_name": "",
+      "name": "Aulia Ghozalina",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "The ALLIANCE"
+      ],
+      "appearance_count": 2,
+      "roster_source": true,
+      "panggilan": "Aulia",
+      "posisi": "AM",
+      "cabang": "Kediri"
+    },
+    {
+      "phone": "+9290047848571",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us"
+      ],
+      "group_subjects": [
+        "PENJUALAN CAB. MADURA",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2
+    },
+    {
+      "phone": "+96765764223134",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH",
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 2
+    },
+    {
+      "phone": "+111755216851047",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+12631582728230",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+253553562153141",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+6281216995625",
+      "auto_name": "",
+      "name": "achmad surya nugraha",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Surya",
+      "posisi": "kirim tagih",
+      "cabang": "Jember"
+    },
+    {
+      "phone": "+6281234504296",
+      "auto_name": "",
+      "name": "DIMAS BAGUS PRAKOSO",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Dimas",
+      "posisi": "Kirim tagih",
+      "cabang": "Jember"
+    },
+    {
+      "phone": "+6281336530830",
+      "auto_name": "",
+      "name": "Arif rahman hakim",
+      "user_labeled": true,
+      "groups": [
+        "120363405485256544@g.us"
+      ],
+      "group_subjects": [
+        "The ALLIANCE"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Arman",
+      "posisi": "HOD Business Medical",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281336663933",
+      "auto_name": "",
+      "name": "Martin Adi Pratama",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Martin",
+      "posisi": "Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281916630446",
+      "auto_name": "",
+      "name": "Rengga Marantika wicaksono",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Rengga",
+      "posisi": "Kirim Tagih",
+      "cabang": "Kediri"
+    },
+    {
+      "phone": "+6282229459206",
+      "auto_name": "",
+      "name": "Navisa Tristiana Ramadini",
+      "user_labeled": true,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Navisa",
+      "posisi": "AR",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6282277400079",
+      "auto_name": "",
+      "name": "Kadek heriadi",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Adi",
+      "posisi": "Kirim Tagih",
+      "cabang": "SBY 2"
+    },
+    {
+      "phone": "+6285198331737",
+      "auto_name": "",
+      "name": "Maskhanudin",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "notes": "HP kedua Maskhanudin / Udin (Kirim Tagih, SBY 2). HP utama (roster): +6285656002508."
+    },
+    {
+      "phone": "+6285648575326",
+      "auto_name": "Denys Chandra",
+      "name": "Denys Chandra",
+      "user_labeled": true,
+      "groups": [
+        "6281248476085-1530485384@g.us"
+      ],
+      "group_subjects": [
+        "PLAN PURCHASING WRG"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Denys",
+      "posisi": "Admin Gudang",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285742339221",
+      "auto_name": "",
+      "name": "Hanasta Januar Alfitri",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Anas",
+      "posisi": "Kirim tagih",
+      "cabang": "Madiun"
+    },
+    {
+      "phone": "+6285755447818",
+      "auto_name": "",
+      "name": "Renika",
+      "user_labeled": true,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+6285773000833",
+      "auto_name": "",
+      "name": "Ayu Karisma",
+      "user_labeled": true,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Ayu",
+      "posisi": "AR",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6287742151755",
+      "auto_name": "",
+      "name": "Nur Rahmalia Zunisa",
+      "user_labeled": true,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ],
+      "group_subjects": [
+        "FINANCE & TAX WRG"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Rahma",
+      "posisi": "Procurement",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6287860367707",
+      "auto_name": "",
+      "name": "Reka Arya Prapandega",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Reka",
+      "posisi": "Kirim tagih",
+      "cabang": "Kediri"
+    },
+    {
+      "phone": "+62895418259402",
+      "auto_name": "",
+      "name": "Ahmad Abdul Hanif",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Hanif",
+      "posisi": "Kirim Tagih",
+      "cabang": "Madura"
+    },
+    {
+      "phone": "+62895806909911",
+      "auto_name": "",
+      "name": "Achmad Miftahul Munir",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Munir",
+      "posisi": "Kirim Tagih",
+      "cabang": "SBY 2"
+    },
+    {
+      "phone": "+6289602081239",
+      "auto_name": "Haris",
+      "name": "Haris Zul Hilmi",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Haris",
+      "posisi": "Kirim Tagih",
+      "cabang": "Malang"
+    },
+    {
+      "phone": "+6289605483157",
+      "auto_name": "",
+      "name": "Dito Anggara",
+      "user_labeled": true,
+      "groups": [
+        "120363403842555552@g.us"
+      ],
+      "group_subjects": [
+        "GA WRG"
+      ],
+      "appearance_count": 1,
+      "roster_source": true,
+      "panggilan": "Dito",
+      "posisi": "GA",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281210207065",
+      "auto_name": "",
+      "name": "Chafid Hersandi",
+      "user_labeled": true,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ],
+      "group_subjects": [
+        "GROUP TRAINING KRM-TAGIH"
+      ],
+      "appearance_count": 1,
+      "notes": "Korsek"
+    },
+    {
+      "phone": "+73577101537521",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "120363409252019573@g.us"
+      ],
+      "group_subjects": [
+        "Research"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+87961316122799",
+      "auto_name": "",
+      "name": "",
+      "user_labeled": false,
+      "groups": [
+        "120363409252019573@g.us"
+      ],
+      "group_subjects": [
+        "Research"
+      ],
+      "appearance_count": 1
+    },
+    {
+      "phone": "+62881036179456",
+      "auto_name": "",
+      "name": "Abib robi Nurhamsa",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Abib",
+      "posisi": "Admin Sales & Penawaran",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285856613533",
+      "auto_name": "",
+      "name": "Achmad fahruddin arrazzy",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Boni",
+      "posisi": "Logistik",
+      "cabang": "Pusat",
+      "notes": "HP utama (roster). HP kedua aktif di group: +6285738143823 (label monitor: Boni)."
+    },
+    {
+      "phone": "+6285262444989",
+      "auto_name": "",
+      "name": "Claudya fikayanti",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Claudya",
+      "posisi": "purchasing",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285656002508",
+      "auto_name": "",
+      "name": "Maskhanudin",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Udin",
+      "posisi": "Kirim tagih",
+      "cabang": "SBY 2",
+      "notes": "HP utama (roster). HP kedua aktif di group: +6285198331737 (label monitor: Maskhanudin)."
+    },
+    {
+      "phone": "+6285331769132",
+      "auto_name": "",
+      "name": "Enggar Robbi Novianto",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Enggar",
+      "posisi": "Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+62895328255580",
+      "auto_name": "",
+      "name": "Fanessa Rahayu Putri Waluyo",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Fanessa",
+      "posisi": "Accounting",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+628986338635",
+      "auto_name": "",
+      "name": "Galih Aldy Prasetyo",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Galih",
+      "posisi": "Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6282229891108",
+      "auto_name": "",
+      "name": "HAIDAR MAUT",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Haidar",
+      "posisi": "Admin Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6289688034365",
+      "auto_name": "",
+      "name": "Isteffany chindyliani",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Cindy",
+      "posisi": "Admin Distribusi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281333029926",
+      "auto_name": "",
+      "name": "NURUL FADHILAH",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Fafa",
+      "posisi": "HOD Accounting",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6285755602302",
+      "auto_name": "",
+      "name": "MOCHAMAD JASYIM",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Jasyim",
+      "posisi": "Admin Sales & Penawaran",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6282331319794",
+      "auto_name": "",
+      "name": "Muhammad Halim Prayogo",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Halim",
+      "posisi": "Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6282132233560",
+      "auto_name": "",
+      "name": "Najmi Putri Harini",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Puput",
+      "posisi": "Admin Sales & Penawaran",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6282140803327",
+      "auto_name": "",
+      "name": "Nopa Andriawan",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Nopa",
+      "posisi": "Teknisi",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6283851703968",
+      "auto_name": "",
+      "name": "PUTRI DIANA",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Putri",
+      "posisi": "Accounting",
+      "cabang": "Pusat"
+    },
+    {
+      "phone": "+6281213255253",
+      "auto_name": "",
+      "name": "Rocky Gunawan",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Rocky",
+      "posisi": "HOD Sales East Area",
+      "cabang": "Pusat",
+      "notes": "HP utama (roster). HP kedua aktif di group: +6285704142027 (label monitor: Rocky Gunawan)."
+    },
+    {
+      "phone": "+6285785307719",
+      "auto_name": "",
+      "name": "Yugi Dwi Bagus Juliawan",
+      "user_labeled": true,
+      "groups": [],
+      "group_subjects": [],
+      "appearance_count": 0,
+      "roster_source": true,
+      "panggilan": "Yugi",
+      "posisi": "Admin Gudang",
+      "cabang": "Pusat"
+    }
+  ],
+  "sender_names_from_messages": [
+    {
+      "sender_name": "Warehouse1",
+      "count": 366,
+      "groups": [
+        "120363405145265597@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1526342601@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527496248@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281335118687-1527497732@g.us",
+        "6281335118687-1527497998@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609891850@g.us",
+        "6281949637972-1609891981@g.us",
+        "6281949637972-1609892156@g.us"
+      ]
+    },
+    {
+      "sender_name": "admwahana2020",
+      "count": 232,
+      "groups": [
+        "120363405145265597@g.us",
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527496248@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281335118687-1527497732@g.us",
+        "6281335118687-1527497998@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609891850@g.us",
+        "6281949637972-1609891981@g.us",
+        "6281949637972-1609892156@g.us"
+      ]
+    },
+    {
+      "sender_name": "Warehouse WRG",
+      "count": 211,
+      "groups": [
+        "120363405145265597@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1526342601@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527496248@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281335118687-1527497732@g.us",
+        "6281335118687-1527497998@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609891850@g.us",
+        "6281949637972-1609891981@g.us",
+        "6281949637972-1609892156@g.us"
+      ]
+    },
+    {
+      "sender_name": "Ekba_Prastia",
+      "count": 195,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281949637972-1609891981@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Denys Chandra",
+      "count": 184,
+      "groups": [
+        "6281248476085-1530485384@g.us",
+        "6281335118687-1526342601@g.us"
+      ]
+    },
+    {
+      "sender_name": "Karib",
+      "count": 160,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527496248@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Shipping WRG",
+      "count": 150,
+      "groups": [
+        "120363405145265597@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us"
+      ]
+    },
+    {
+      "sender_name": "Elok",
+      "count": 120,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1526342601@g.us",
+        "6281335118687-1527496546@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Fafa",
+      "count": 114,
+      "groups": [
+        "120363404092121926@g.us",
+        "120363406071725731@g.us"
+      ]
+    },
+    {
+      "sender_name": "agus",
+      "count": 98,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527495664@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rizal",
+      "count": 94,
+      "groups": [
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Yogi Nugroho",
+      "count": 86,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363225099430838@g.us",
+        "120363404092121926@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281335118687-1527497998@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609891981@g.us",
+        "6281949637972-1609892156@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "M. Wildha Saputra",
+      "count": 85,
+      "groups": [
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281949637972-1523701417@g.us",
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Arif_Official",
+      "count": 83,
+      "groups": [
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281949637972-1523701417@g.us"
+      ]
+    },
+    {
+      "sender_name": "Putri Diana",
+      "count": 79,
+      "groups": [
+        "120363215877961952@g.us",
+        "120363406071725731@g.us"
+      ]
+    },
+    {
+      "sender_name": "Mufidz",
+      "count": 78,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363225099430838@g.us",
+        "120363404092121926@g.us",
+        "120363405145265597@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281949637972-1609891981@g.us"
+      ]
+    },
+    {
+      "sender_name": "anggaadhitya2016",
+      "count": 78,
+      "groups": [
+        "120363397960052940@g.us",
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281949637972-1523701417@g.us",
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Ibnuuuu",
+      "count": 75,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609761547@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "IRUL|PT WAHANA GUMILANG",
+      "count": 67,
+      "groups": [
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281949637972-1523701417@g.us",
+        "6281949637972-1609891981@g.us"
+      ]
+    },
+    {
+      "sender_name": "Nungky",
+      "count": 66,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1526342601@g.us",
+        "6281335118687-1527494977@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "fanessa",
+      "count": 62,
+      "groups": [
+        "120363215877961952@g.us",
+        "120363406071725731@g.us"
+      ]
+    },
+    {
+      "sender_name": "Keuangan Wahana Rizky",
+      "count": 61,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6282232418991-1555990746@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Husni",
+      "count": 60,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363403842555552@g.us",
+        "120363404092121926@g.us",
+        "120363409252019573@g.us"
+      ]
+    },
+    {
+      "sender_name": "Aulia Ghozalina",
+      "count": 54,
+      "groups": [
+        "120363397960052940@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281949637972-1523701417@g.us",
+        "6281949637972-1609891981@g.us",
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Boni3",
+      "count": 52,
+      "groups": [
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1526342601@g.us"
+      ]
+    },
+    {
+      "sender_name": "Admin Penawaran",
+      "count": 50,
+      "groups": [
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Maskhan",
+      "count": 49,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "IKA",
+      "count": 45,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363215877961952@g.us",
+        "120363404092121926@g.us",
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "FIRMANSYAH",
+      "count": 41,
+      "groups": [
+        "120363405485256544@g.us",
+        "6281335118687-1527496248@g.us",
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Hanif",
+      "count": 40,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "DNIFXMMS",
+      "count": 39,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Luripohan",
+      "count": 38,
+      "groups": [
+        "120363397960052940@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497732@g.us",
+        "6285649096261-1516620137@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Siti Nurcholis",
+      "count": 38,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Kadek Heriadi",
+      "count": 36,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497274@g.us"
+      ]
+    },
+    {
+      "sender_name": "Admin Purchasing WRG",
+      "count": 35,
+      "groups": [
+        "120363215877961952@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281949637972-1609891981@g.us"
+      ]
+    },
+    {
+      "sender_name": "Anas_Januar",
+      "count": 35,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Kapten",
+      "count": 34,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363215877961952@g.us",
+        "120363225099430838@g.us",
+        "120363397960052940@g.us",
+        "120363403842555552@g.us",
+        "120363405145265597@g.us",
+        "120363405485256544@g.us",
+        "120363406071725731@g.us",
+        "120363409252019573@g.us",
+        "6281248476085-1530485384@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1526342601@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281335118687-1527495664@g.us",
+        "6281335118687-1527496248@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281335118687-1527497732@g.us",
+        "6281335118687-1527497998@g.us",
+        "6281949637972-1523701186@g.us",
+        "6281949637972-1523701417@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609761547@g.us",
+        "6281949637972-1609891850@g.us",
+        "6281949637972-1609891981@g.us",
+        "6281949637972-1609892156@g.us",
+        "6282232418991-1555990746@g.us",
+        "6285649096261-1516620137@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rengga",
+      "count": 34,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "ASN",
+      "count": 32,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Baginda Naufal",
+      "count": 31,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281335118687-1527497732@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Haris",
+      "count": 31,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Marimasmadu",
+      "count": 29,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Vickyadi",
+      "count": 24,
+      "groups": [
+        "120363397960052940@g.us",
+        "6281335118687-1527497732@g.us",
+        "6285649096261-1516620137@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "renika",
+      "count": 24,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rekarya",
+      "count": 23,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Fakturis WRG",
+      "count": 20,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Muhid",
+      "count": 20,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363404092121926@g.us"
+      ]
+    },
+    {
+      "sender_name": "Sidqi",
+      "count": 20,
+      "groups": [
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527497998@g.us",
+        "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Yugo",
+      "count": 19,
+      "groups": [
+        "120363225099430838@g.us",
+        "6281949637972-1603758195@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Dito",
+      "count": 18,
+      "groups": [
+        "120363403842555552@g.us"
+      ]
+    },
+    {
+      "sender_name": "Pita",
+      "count": 17,
+      "groups": [
+        "120363215877961952@g.us"
+      ]
+    },
+    {
+      "sender_name": "RG WG",
+      "count": 16,
+      "groups": [
+        "120363397960052940@g.us",
+        "120363404092121926@g.us",
+        "120363405485256544@g.us",
+        "6281248476085-1539641961@g.us",
+        "6281335118687-1527497732@g.us"
+      ]
+    },
+    {
+      "sender_name": "Arman",
+      "count": 15,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363404092121926@g.us",
+        "6281949637972-1523701417@g.us"
+      ]
+    },
+    {
+      "sender_name": "Ayume",
+      "count": 15,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rahma",
+      "count": 15,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Sari",
+      "count": 14,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "d",
+      "count": 12,
+      "groups": [
+        "6281335118687-1526342601@g.us"
+      ]
+    },
+    {
+      "sender_name": "Gilang Pratama",
+      "count": 11,
+      "groups": [
+        "120363215877961952@g.us",
+        "120363404092121926@g.us"
+      ]
+    },
+    {
+      "sender_name": "Navisa",
+      "count": 10,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Chafid",
+      "count": 7,
+      "groups": [
+        "120363404092121926@g.us"
+      ]
+    },
+    {
+      "sender_name": "Iqbal",
+      "count": 7,
+      "groups": [
+        "120363409252019573@g.us"
+      ]
+    },
+    {
+      "sender_name": "iqbal Wrg",
+      "count": 5,
+      "groups": [
+        "120363225099430838@g.us",
+        "6281949637972-1609761547@g.us"
+      ]
+    },
+    {
+      "sender_name": "S",
+      "count": 4,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Ari Kurnia Yuda",
+      "count": 3,
+      "groups": [
+        "120363397960052940@g.us",
+        "6281949637972-1609891850@g.us"
+      ]
+    },
+    {
+      "sender_name": "navisatris",
+      "count": 3,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Firman W",
+      "count": 2,
+      "groups": [
+        "120363404092121926@g.us"
+      ]
+    },
+    {
+      "sender_name": "Firmansyah",
+      "count": 1,
+      "groups": [
+        "120363397960052940@g.us"
+      ]
+    },
+    {
+      "sender_name": "HRD Wahana Gumilang Group",
+      "count": 1,
+      "groups": [
+        "120363048384809457@g.us"
+      ]
+    }
+  ],
+  "last_lid_resolve": "2026-05-22T20:26:05",
+  "lid_resolve_summary": {
+    "resolved": 6,
+    "merged": 1,
+    "renamed": 5,
+    "restored_labels": 4
+  },
+  "roster_merge_at": "2026-05-22T20:26:05",
+  "roster_summary": {
+    "enriched": 45,
+    "phantomed": 17,
+    "roster_total": 62
+  }
+}

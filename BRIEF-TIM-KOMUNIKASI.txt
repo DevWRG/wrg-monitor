@@ -1,0 +1,233 @@
+============================================================
+BRIEF UNTUK TIM — KOMUNIKASI DI WHATSAPP GRUP WRG
+============================================================
+Versi: 2026-05-13
+Untuk: Seluruh anggota grup WhatsApp internal WRG (sales,
+       operasional, lapangan, koordinasi)
+
+LATAR BELAKANG
+--------------
+Mulai sekarang ada sistem asisten otomatis yang ngebaca seluruh
+pesan di grup WhatsApp WRG, lalu setiap 3 jam ngeluarin rekap dan
+setiap 7 jam ngeluarin resume eksekutif. Output ini dipakai untuk:
+
+  • Pantau status pengiriman, koordinasi, dan follow-up klien
+  • Tracking siapa minta apa ke siapa, dan udah dijawab atau belum
+  • Bahan rapat dengan Pak Gilang (tiap akhir pekan ada briefing
+    komprehensif)
+
+Sistem ini cuma BACA pesan, gak akan reply atau ganggu obrolan
+kalian. Tapi supaya rekapnya akurat, ada beberapa kebiasaan kecil
+yang kalau dilakukan rame-rame bakal bikin hasilnya jauh lebih
+tajem. Bukan paksaan, anggap aja sebagai "sopan santun digital"
+yang ngebantu semua orang dapet info lebih cepat dan jelas.
+
+
+============================================================
+1.  CARA NGASIH KONFIRMASI YANG TERBACA SISTEM
+============================================================
+
+Sistem mendeteksi konfirmasi dari KATA-KATA, bukan dari emoji
+reaction atau thumbs-up. Reaction tetep boleh, tapi kalau yang
+diminta konfirmasi/approval, tolong tambahin TEKS singkat.
+
+✓ DIHITUNG SEBAGAI KONFIRMASI:
+   • "OK"
+   • "Siap"
+   • "Noted"
+   • "Setuju"
+   • "Ya / iya"
+   • "Bisa"
+   • "Jalan" / "Lanjut"
+   • "Acc"
+   • Atau langsung action-nya: "Sudah saya kirim", "Sudah dibuat",
+     "Sudah selesai", dll.
+
+✗ TIDAK DIHITUNG (sistem anggap masih pending):
+   • Cuma reaction emoji 👍 / ✅ tanpa balasan teks
+   • "Oh"  /  "Hmm"  /  "Iyaa nanti"
+   • "Siap nanti dicek"  (gak ada ETA)
+   • "Akan menyusul"  (gak ada timeline)
+   • "Menyusul ya"
+
+Tips: kalau memang belum bisa langsung confirm, lebih baik jawab
+"Ditunggu sampai jam 4 ya" daripada "nanti" doang. Begitu kalian
+selesai, jawab lagi "Sudah, jam 4" — sistem akan match-in.
+
+
+============================================================
+2.  CARA NUNJUK PIC YANG JELAS
+============================================================
+
+Saat ngasih tugas atau minta sesuatu, sebutin PIC-nya dengan jelas.
+Pilihan format:
+
+   • @mention WhatsApp (paling akurat)        → "@John tolong cek..."
+   • Sebut nama lengkap dulu, baru tugas      → "Mas Wildha, tolong..."
+   • Jangan cuma "tolong dibantu ya" tanpa
+     nyebut siapa — sistem gak tau ke siapa.
+
+Kalau request untuk SEMUA orang (broadcast):
+   • Pakai "@all" atau "rekan-rekan, tolong..."
+   • Sistem akan tag ini sebagai "MENUNGGU KONFIRMASI dari grup"
+
+Contoh:
+
+  ❌ Kurang jelas:  "Tolong dicek dulu kalau ada waktu"
+  ✓ Lebih bagus:    "@Mas Wildha tolong dicek dokumen SJ-3286
+                     hari ini bisa? Deadline jam 4 sore."
+
+
+============================================================
+3.  CARA REPLY/QUOTE PESAN
+============================================================
+
+Kalau jawab pertanyaan/request lama, PAKAI fitur reply (long-press
+pesan → reply). Ini ngebantu sistem ngerti konteks-nya:
+
+  • Tanpa reply: sistem harus nebak dari urutan waktu
+  • Dengan reply: sistem langsung tau "ini jawaban untuk request itu"
+
+Khusus untuk topik yang udah lama (>2 jam), reply WAJIB supaya
+sistem gak salah match.
+
+
+============================================================
+4.  KIRIM FOTO/DOKUMEN + CAPTION
+============================================================
+
+Banyak grup pakai foto/scan sebagai bukti (Sj, faktur, foto barang,
+SN alat). Sistem bisa baca metadata tapi BUKAN isi foto.
+
+Mohon selalu tambahkan CAPTION singkat di bawah foto:
+
+  Format yang ideal:
+  [LOKASI/KLIEN] - [JENIS DOKUMEN] - [STATUS]
+
+  Contoh:
+  📷  "RS Larasati - SJ + Faktur - selesai diterima Bu Yati"
+  📷  "RSUD Moh Zyn - GLORY ASO LATEX 100 T - siap kirim"
+  📷  "Realisasi Joni 13-05 - 4 RS done, 1 pending"
+
+Tanpa caption, sistem cuma tau "ada foto dikirim" — gak tau isinya
+untuk apa.
+
+
+============================================================
+5.  SINYAL CLOSURE / SELESAI
+============================================================
+
+Saat tugas/pengiriman/dokumen selesai, lapor balik ke grup dengan
+kata kunci closure. Ini ngebantu sistem nutup item dari list "pending":
+
+   • "Selesai"
+   • "Done"
+   • "Sudah dikirim"
+   • "Sudah diterima"
+   • "Sudah dilakukan"
+   • "Beres"
+
+Idealnya sambil mention requester awal, supaya match-nya pasti:
+
+  "@Mas Aulia order RS Wijaya Kusuma sudah saya kirim ya"
+
+
+============================================================
+6.  ORDER & FORECAST: SEBUTKAN ANGKA & WAKTU
+============================================================
+
+Untuk pesanan, forecast, atau pengajuan:
+
+  ✓ "Forecast Juli: 4 box ASO Latex untuk RSUD Mantingan"
+  ✓ "PO 2253 - estimasi kirim 16 Mei sore"
+  ✓ "Plan 5 bulan: 2 box/bulan TSH untuk RS PTP Jember"
+
+Sebut JUMLAH, PERIODE, dan KLIEN. Jangan cuma "kebutuhan biasa
+ditambah dikit".
+
+
+============================================================
+7.  TOPIK BERBEDA → PESAN TERPISAH
+============================================================
+
+Kalau mau ngomongin 3 hal yang gak nyambung, pisahin jadi 3 pesan.
+Sistem mendeteksi topik per-pesan; kalau dijadiin satu pesan
+panjang dengan 5 topik random, sistem kemungkinan cuma nangkep
+1-2 topik utama dan sisanya hilang.
+
+  ❌ "Mba RS Larasati udah selesai. Btw kemarin SJK-3286 piye?
+       Oh ya stok HbsAg tinggal 2. Mas Aldo besok bisa antar?"
+
+  ✓ Pisahkan jadi 4 pesan singkat, satu per topik.
+
+
+============================================================
+8.  YANG GAK PERLU DIUBAH
+============================================================
+
+Banyak hal yang udah natural di grup gak perlu diubah:
+
+   • Tone santai / penggunaan emoji untuk warna
+   • Bahasa daerah / mix Jawa-Indonesia
+   • Singkatan internal (Sj, Pjk, RS, dst)
+   • Foto bukti — tetep dipake, cuma tambahin caption
+   • Forwarded message dari principle / klien — tetep boleh
+
+Sistem cukup pintar buat ngerti konteks internal WRG. Yang minta
+dibantuin cuma hal-hal di poin 1-7 di atas.
+
+
+============================================================
+9.  CONTOH BEFORE / AFTER LENGKAP
+============================================================
+
+Skenario: koordinasi pengiriman alat ke RS Al Irsyad
+
+❌ BEFORE (sistem akan kebingungan):
+─────────────────────────────────────
+Mas: "Bu eka laborat, alat al irsyad piye?"
+Mba: 👍
+Mas: "ok thanks"
+─────────────────────────────────────
+  → Sistem: gak tau alat apa, gak tau status, gak tau confirm
+    siapa ke siapa. Item akan masuk OUTSTANDING.
+
+✓ AFTER (sistem auto-match):
+─────────────────────────────────────
+Mas Maskhan: "@Mba Eka untuk alat RS Al Irsyad
+              (SJK-PJ/II.3286 - BDI K3 Edta + Teclot CaCl)
+              kira-kira hari ini bisa diantar?"
+
+Mba Eka:    "Siap mas, sudah saya jadwalin tadi pagi.
+             Estimasi sampai jam 14:00."
+
+Mba Eka:    [kirim foto SJ + caption:
+             'RS Al Irsyad - SJK-3286 - sudah diterima Bu Indri jam 14:10']
+─────────────────────────────────────
+  → Sistem:
+    ✓ TERKONFIRMASI: Pengiriman alat RS Al Irsyad
+      dari Mas Maskhan ke Mba Eka, confirm by Mba Eka @ 14:10
+    + record waktu request vs delivery (lag 4 jam, on time)
+
+
+============================================================
+10. RANGKUMAN SINGKAT
+============================================================
+
+3 hal yang paling penting:
+
+  1. Konfirmasi pakai KATA-KATA, bukan emoji doang
+  2. Sebut PIC yang JELAS saat minta sesuatu
+  3. Lapor SELESAI saat tugas done (sambil mention requester)
+
+Sisanya bonus. Makin konsisten, makin akurat rekap-nya, dan makin
+sedikit pertanyaan "udah belum mas?" yang harus diulang-ulang.
+
+Pertanyaan / saran / komplain ➝ langsung ke Pak Gilang atau ke
+admin grup WRG.
+
+Terima kasih atas kerjasamanya.
+
+============================================================
+                       — HOD WRG —
+============================================================
