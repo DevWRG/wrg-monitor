@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T13:26:05+0700",
+  "generated_at": "2026-05-22T15:30:05+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
@@ -1909,7 +1909,7 @@
     },
     {
       "sender_name": "FIRMANSYAH",
-      "count": 41,
+      "count": 42,
       "groups": [
         "120363405485256544@g.us",
         "6281335118687-1527496248@g.us",
@@ -2253,14 +2253,14 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-22T20:26:05",
+  "last_lid_resolve": "2026-05-22T22:30:05",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
     "restored_labels": 4
   },
-  "roster_merge_at": "2026-05-22T20:26:05",
+  "roster_merge_at": "2026-05-22T22:30:05",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,

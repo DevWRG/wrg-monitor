@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-22 20:26 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-22 22:30 WIB · 89 distinct phones across 11 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -133,7 +133,7 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Admin Penawaran | 50 | 1 |
 | Maskhan | 49 | 1 |
 | IKA | 45 | 4 |
-| FIRMANSYAH | 41 | 3 |
+| FIRMANSYAH | 42 | 3 |
 | Hanif | 40 | 1 |
 | DNIFXMMS | 39 | 1 |
 | Luripohan | 38 | 6 |
