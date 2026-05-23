@@ -188,6 +188,10 @@ Output: SELESAI"
     AI_FAILURES=$((AI_FAILURES + 1))
     continue
   fi
+  # Force-correct "Generated:" line — AI tends to hallucinate the date even
+  # though prompt has the real $TIMESTAMP expanded (treats it as placeholder
+  # to "reinvent"). Script knows the real time; overwrite any AI value.
+  HASIL=$(printf '%s\n' "$HASIL" | sed -E "s/^- Generated: .*$/- Generated: $TIMESTAMP/")
   echo "$HASIL" > "$OUT"
   PROCESSED=$((PROCESSED + 1))
   log "  ✓ saved $OUT"
