@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T09:12:48+0700",
+  "generated_at": "2026-05-23T15:30:04+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
@@ -2221,6 +2221,13 @@
       ]
     },
     {
+      "sender_name": "Firman W",
+      "count": 5,
+      "groups": [
+        "120363404092121926@g.us"
+      ]
+    },
+    {
       "sender_name": "iqbal Wrg",
       "count": 5,
       "groups": [
@@ -2234,13 +2241,6 @@
       "groups": [
         "120363397960052940@g.us",
         "6281949637972-1609891850@g.us"
-      ]
-    },
-    {
-      "sender_name": "Firman W",
-      "count": 4,
-      "groups": [
-        "120363404092121926@g.us"
       ]
     },
     {
@@ -2272,14 +2272,14 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-23T16:12:48",
+  "last_lid_resolve": "2026-05-23T22:30:04",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
     "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-23T16:12:48",
+  "roster_merge_at": "2026-05-23T22:30:04",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,

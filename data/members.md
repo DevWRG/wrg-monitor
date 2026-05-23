@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-23 16:12 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-23 22:30 WIB · 89 distinct phones across 11 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -166,9 +166,9 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Navisa | 10 | 1 |
 | Chafid | 8 | 1 |
 | Iqbal | 7 | 1 |
+| Firman W | 5 | 1 |
 | iqbal Wrg | 5 | 2 |
 | Ari Kurnia Yuda | 4 | 2 |
-| Firman W | 4 | 1 |
 | S | 4 | 1 |
 | navisatris | 3 | 1 |
 | Firmansyah | 1 | 1 |
