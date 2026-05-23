@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-23 08:24 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-23 08:43 WIB · 89 distinct phones across 11 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
