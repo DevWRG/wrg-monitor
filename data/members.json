@@ -27,7 +27,10 @@
     "6281949637972-1603758195@g.us": "PENJUALAN JAKARTA-BANTEN",
     "6281949637972-1609891850@g.us": "PENJUALAN PROV. BALI",
     "120363042143432430@g.us": "HOD Squad",
-    "120363215877961952@g.us": "Accounting & Purchasing WRG"
+    "120363215877961952@g.us": "Accounting & Purchasing WRG",
+    "6281949637972-1609891981@g.us": "PENJUALAN CAB. TUBAN",
+    "6285649096261-1516620137@g.us": "GROUP INFO HARGA & LPSE",
+    "6285736763141-1515408009@g.us": "INFO PEMBAYARAN -FAKTURIS"
   },
   "members": [
     {
@@ -2275,5 +2278,6 @@
     "enriched": 45,
     "phantomed": 17,
     "roster_total": 62
-  }
+  },
+  "last_user_edit": "2026-05-23T14:50:00"
 }
