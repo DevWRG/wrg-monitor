@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-22 22:30 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-23 08:24 WIB · 89 distinct phones across 11 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -108,7 +108,7 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Warehouse1 | 366 | 15 |
 | admwahana2020 | 232 | 14 |
 | Warehouse WRG | 211 | 14 |
-| Ekba_Prastia | 195 | 4 |
+| Ekba_Prastia | 199 | 4 |
 | Denys Chandra | 184 | 2 |
 | Karib | 160 | 3 |
 | Shipping WRG | 150 | 3 |
@@ -124,11 +124,11 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | anggaadhitya2016 | 78 | 5 |
 | Ibnuuuu | 75 | 4 |
 | IRUL|PT WAHANA GUMILANG | 67 | 4 |
-| Nungky | 66 | 4 |
+| Nungky | 67 | 4 |
 | fanessa | 62 | 2 |
 | Keuangan Wahana Rizky | 61 | 3 |
 | Husni | 60 | 4 |
-| Aulia Ghozalina | 54 | 6 |
+| Aulia Ghozalina | 55 | 6 |
 | Boni3 | 52 | 3 |
 | Admin Penawaran | 50 | 1 |
 | Maskhan | 49 | 1 |
@@ -144,8 +144,8 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Kapten | 34 | 30 |
 | Rengga | 34 | 1 |
 | ASN | 32 | 1 |
+| Haris | 32 | 1 |
 | Baginda Naufal | 31 | 3 |
-| Haris | 31 | 1 |
 | Marimasmadu | 29 | 2 |
 | Vickyadi | 24 | 4 |
 | renika | 24 | 1 |
