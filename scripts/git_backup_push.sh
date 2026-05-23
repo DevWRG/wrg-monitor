@@ -11,6 +11,14 @@ set -eo pipefail
 # Inject PATH untuk cron context (macos gotcha: launchd/cron PATH minimal)
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
+# Cron context tidak punya akses ke osxkeychain (no TTY/login session) — gh auth
+# git-credential bakal return empty. Workaround: export GH_TOKEN dari file 600
+# yang gh credential helper akan pakai bypassing keychain.
+TOKEN_FILE="$HOME/.config/wrg-monitor/gh-token"
+if [ -f "$TOKEN_FILE" ]; then
+  export GH_TOKEN="$(cat "$TOKEN_FILE")"
+fi
+
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_DIR"
 
