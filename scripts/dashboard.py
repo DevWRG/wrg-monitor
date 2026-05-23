@@ -108,6 +108,22 @@ def _is_placeholder_bullet(entry: dict) -> bool:
     """Filter out '• Tidak ada' / '• Tidak ada outstanding' placeholder bullets."""
     topic = (entry.get("topic") or "").strip().lower()
     return topic in _PLACEHOLDER_TOPICS
+
+
+def _parse_bullet_line(line: str):
+    """Detect bullet lines. Returns (level, text) — level 0 = top '•',
+    indented '-' = level computed from leading spaces (4-space indent per level).
+    Returns (None, None) for non-bullet lines."""
+    stripped = line.strip()
+    if not stripped:
+        return None, None
+    if stripped.startswith("•"):
+        return 0, stripped.lstrip("•").strip()
+    if stripped.startswith("-"):
+        indent = len(line) - len(line.lstrip(" "))
+        level = max(1, indent // 4)
+        return level, stripped.lstrip("-").strip()
+    return None, None
 _REKAP_HEADER_RE = re.compile(r"^REKAP WRG\s*\|\s*(\S+)\s*WIB\s*\|\s*(\S+)")
 _RESUME_HEADER_RE = re.compile(r"^RESUME EKSEKUTIF WRG\s*$")
 _SECTION_RE = re.compile(r"^(\d+)\.\s+(.+)")
@@ -199,9 +215,11 @@ def parse_rekap_structured(content: str) -> dict:
                 flush_group()
                 current_group = {"jid": jid, "label": label, "bullets": [], "actions": []}
                 continue
-            if stripped.startswith("•") and current_group:
-                current_group["bullets"].append(stripped.lstrip("•").strip())
-                continue
+            if current_group:
+                lvl, text = _parse_bullet_line(line)
+                if lvl is not None:
+                    current_group["bullets"].append({"text": text, "level": lvl})
+                    continue
             if stripped.startswith("→ ACTION") and current_group:
                 act = stripped.replace("→ ACTION:", "").strip()
                 # split "PIC - tugas"
@@ -331,15 +349,16 @@ def parse_resume_structured(content: str) -> dict:
                         existing = {"label": label, "bullets": []}
                         current["hod_groups"].append(existing)
                     if body:
-                        existing["bullets"].append(body)
+                        existing["bullets"].append({"text": body, "level": 0})
                     continue
                 # Bullet without HOD prefix — fall through to normal bullets
             elif stripped.lower().startswith("tidak ada"):
                 # Section 8 totally empty
                 continue
-        # Normal bullets
-        if stripped.startswith("•"):
-            current["bullets"].append(stripped.lstrip("•").strip())
+        # Normal bullets — support indented sub-bullets
+        lvl, btext = _parse_bullet_line(line)
+        if lvl is not None:
+            current["bullets"].append({"text": btext, "level": lvl})
             continue
         # Free paragraph (e.g., Situasi Umum)
         if not stripped.startswith("•"):
@@ -463,11 +482,22 @@ def merge_rekap_day(rekaps: list[dict]) -> dict | None:
             entry = by_jid[jid]
             if g.get("label") and not entry["label"]:
                 entry["label"] = g["label"]
-            existing_bullets = set(entry["bullets"])
+            # Bullets are now dicts {text, level}. Dedup by (text, level).
+            existing_keys = set()
+            for b in entry["bullets"]:
+                if isinstance(b, dict):
+                    existing_keys.add((b.get("text", ""), b.get("level", 0)))
+                else:  # legacy string (defensive)
+                    existing_keys.add((b, 0))
             for b in g.get("bullets", []):
-                if b not in existing_bullets:
+                if isinstance(b, dict):
+                    key = (b.get("text", ""), b.get("level", 0))
+                else:
+                    key = (b, 0)
+                    b = {"text": b, "level": 0}
+                if key not in existing_keys:
                     entry["bullets"].append(b)
-                    existing_bullets.add(b)
+                    existing_keys.add(key)
             existing_actions = {(a["pic"], a["task"]) for a in entry["actions"]}
             for a in g.get("actions", []):
                 key = (a["pic"], a["task"])
@@ -1427,6 +1457,18 @@ main {
   line-height: 1.55;
 }
 .group-bullets li { margin-bottom: 3px; }
+.bullet-sub {
+  margin: 2px 0 2px 0;
+  padding-left: 18px;
+  color: #4a5868;
+  font-size: 12.5px;
+  list-style-type: '— ';
+}
+.bullet-sub .bullet-sub {
+  font-size: 12px;
+  color: #5a6878;
+  list-style-type: '· ';
+}
 .action-row {
   background: rgba(217, 119, 6, 0.08);
   border-left: 2px solid #d97706;
@@ -1991,6 +2033,33 @@ function renderContent(content) {
   return out;
 }
 
+// Build nested <ul><li> HTML from flat [{text, level}] bullets (legacy strings
+// also accepted — coerced to level 0). renderText callback can return marked-up
+// HTML for the text portion (used by resume for **bold** processing).
+function renderBulletsNested(items, options) {
+  if (!items || !items.length) return '';
+  options = options || {};
+  const topClass = options.className || 'group-bullets';
+  const renderText = options.renderText || (t => escapeHtml(t));
+  const norm = items.map(it => (typeof it === 'string') ? {text: it, level: 0} : it);
+  // Build tree using level-aware stack
+  const root = { children: [] };
+  const stack = [{ node: root, level: -1 }];
+  for (const it of norm) {
+    while (stack[stack.length - 1].level >= it.level) stack.pop();
+    const node = { text: it.text, children: [] };
+    stack[stack.length - 1].node.children.push(node);
+    stack.push({ node: node, level: it.level });
+  }
+  function ren(nodes, isTop) {
+    return '<ul class="' + (isTop ? topClass : 'bullet-sub') + '">' +
+      nodes.map(n => '<li>' + renderText(n.text) +
+        (n.children.length ? ren(n.children, false) : '') + '</li>').join('') +
+    '</ul>';
+  }
+  return ren(root.children, true);
+}
+
 // Format millisecond epoch timestamps (13-digit integer string) to human readable.
 // Returns "DD/MM HH:MM · Xh ago" so user sees absolute + relative at a glance.
 function formatMsTimestamp(ms) {
@@ -2078,14 +2147,14 @@ function renderRekapParsed(parsed, cardId) {
 
   // Panel: Grup
   const groupsHtml = parsed.groups.map(g => {
-    const bullets = g.bullets.map(b => '<li>' + escapeHtml(b) + '</li>').join('');
+    const bulletsHtml = renderBulletsNested(g.bullets, {className: 'group-bullets'});
     const actions = (g.actions || []).map(a =>
       '<div class="action-row"><span class="action-pic">' + escapeHtml(a.pic) + '</span> — ' + escapeHtml(a.task) + '</div>'
     ).join('');
     return '<div class="group-block">' +
       '<div class="group-header"><code>' + escapeHtml(g.jid) + '</code>' +
       (g.label ? '<span class="group-label">' + escapeHtml(g.label) + '</span>' : '') + '</div>' +
-      (bullets ? '<ul class="group-bullets">' + bullets + '</ul>' : '') +
+      bulletsHtml +
       actions +
     '</div>';
   }).join('') || '<div class="empty" style="padding:12px;text-align:left">Tidak ada grup aktif</div>';
@@ -2129,10 +2198,8 @@ const RESUME_TAB_SHORT = {
 };
 
 function renderResumeParsed(parsed, cardId) {
-  const renderBullet = b => {
-    let html = escapeHtml(b).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    return '<li>' + html + '</li>';
-  };
+  // Text-only renderer (used inside renderBulletsNested for **bold** support)
+  const renderBulletText = t => escapeHtml(t).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   const sections = parsed.sections || [];
   if (!sections.length) {
     return '<div class="parsed-body"><div class="empty">Resume kosong</div></div>';
@@ -2184,7 +2251,7 @@ function renderResumeParsed(parsed, cardId) {
       const totalItems = s.hod_groups.reduce((n, g) => n + g.bullets.length, 0);
       body += '<div class="hod-summary">📬 ' + totalItems + ' item ke ' + s.hod_groups.length + ' HOD</div>';
       body += '<div class="hod-grid">' + s.hod_groups.map(g => {
-        const bulletsHtml = '<ul class="resume-bullets">' + g.bullets.map(renderBullet).join('') + '</ul>';
+        const bulletsHtml = renderBulletsNested(g.bullets, {className: 'resume-bullets', renderText: renderBulletText});
         return '<div class="hod-card">' +
           '<div class="hod-label">' + escapeHtml(g.label) +
             ' <span class="hod-count">(' + g.bullets.length + ')</span>' +
@@ -2193,7 +2260,7 @@ function renderResumeParsed(parsed, cardId) {
         '</div>';
       }).join('') + '</div>';
     } else if (s.bullets.length) {
-      body += '<ul class="resume-bullets">' + s.bullets.map(renderBullet).join('') + '</ul>';
+      body += renderBulletsNested(s.bullets, {className: 'resume-bullets', renderText: renderBulletText});
     }
     if (!body) body = '<div class="empty" style="padding:12px;text-align:left">Tidak ada item</div>';
     return '<div class="section-panel" data-card="' + cardId + '" data-section="' + s.num + '"' +
