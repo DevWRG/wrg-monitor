@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T01:43:14+0700",
+  "generated_at": "2026-05-23T07:30:48+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
@@ -18,7 +18,16 @@
   "group_directory_user": {
     "6281335118687-1527497998@g.us": "GROUP TRAINING KRM-TAGIH",
     "120363404092121926@g.us": "Koord HoD",
-    "120363406071725731@g.us": "WRG - Accounting & Tax"
+    "120363406071725731@g.us": "WRG - Accounting & Tax",
+    "6281335118687-1527495664@g.us": "PENJUALAN CAB. MADIUN",
+    "6281335118687-1527496248@g.us": "PENJUALAN MALANG",
+    "6281335118687-1527496546@g.us": "PENJUALAN CAB. JEMBER",
+    "6281335118687-1527497274@g.us": "PENJUALAN SURABAYA",
+    "6281335118687-1527494977@g.us": "PENJUALAN CAB. KEDIRI",
+    "6281949637972-1603758195@g.us": "PENJUALAN JAKARTA-BANTEN",
+    "6281949637972-1609891850@g.us": "PENJUALAN PROV. BALI",
+    "120363042143432430@g.us": "HOD Squad",
+    "120363215877961952@g.us": "Accounting & Purchasing WRG"
   },
   "members": [
     {
@@ -1666,7 +1675,7 @@
     },
     {
       "sender_name": "Ekba_Prastia",
-      "count": 199,
+      "count": 201,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6281335118687-1527497274@g.us",
@@ -1738,7 +1747,7 @@
     },
     {
       "sender_name": "Yogi Nugroho",
-      "count": 86,
+      "count": 87,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1754,6 +1763,16 @@
       ]
     },
     {
+      "sender_name": "Arif_Official",
+      "count": 85,
+      "groups": [
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527497274@g.us",
+        "6281949637972-1523701417@g.us"
+      ]
+    },
+    {
       "sender_name": "M. Wildha Saputra",
       "count": 85,
       "groups": [
@@ -1762,16 +1781,6 @@
         "6281335118687-1527495664@g.us",
         "6281949637972-1523701417@g.us",
         "6285649096261-1516620137@g.us"
-      ]
-    },
-    {
-      "sender_name": "Arif_Official",
-      "count": 83,
-      "groups": [
-        "120363225099430838@g.us",
-        "120363405485256544@g.us",
-        "6281335118687-1527497274@g.us",
-        "6281949637972-1523701417@g.us"
       ]
     },
     {
@@ -1818,7 +1827,7 @@
     },
     {
       "sender_name": "IRUL|PT WAHANA GUMILANG",
-      "count": 67,
+      "count": 69,
       "groups": [
         "120363225099430838@g.us",
         "120363405485256544@g.us",
@@ -1900,7 +1909,7 @@
     },
     {
       "sender_name": "IKA",
-      "count": 45,
+      "count": 47,
       "groups": [
         "120363042143432430@g.us",
         "120363215877961952@g.us",
@@ -1910,11 +1919,23 @@
     },
     {
       "sender_name": "FIRMANSYAH",
-      "count": 42,
+      "count": 44,
       "groups": [
         "120363405485256544@g.us",
         "6281335118687-1527496248@g.us",
         "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Luripohan",
+      "count": 42,
+      "groups": [
+        "120363397960052940@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527496546@g.us",
+        "6281335118687-1527497732@g.us",
+        "6285649096261-1516620137@g.us",
+        "6285736763141-1515408009@g.us"
       ]
     },
     {
@@ -1929,18 +1950,6 @@
       "count": 39,
       "groups": [
         "6281335118687-1517798430@g.us"
-      ]
-    },
-    {
-      "sender_name": "Luripohan",
-      "count": 38,
-      "groups": [
-        "120363397960052940@g.us",
-        "120363405485256544@g.us",
-        "6281335118687-1527496546@g.us",
-        "6281335118687-1527497732@g.us",
-        "6285649096261-1516620137@g.us",
-        "6285736763141-1515408009@g.us"
       ]
     },
     {
@@ -1973,6 +1982,13 @@
     },
     {
       "sender_name": "Anas_Januar",
+      "count": 35,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rengga",
       "count": 35,
       "groups": [
         "6281335118687-1517798430@g.us"
@@ -2012,13 +2028,6 @@
         "6282232418991-1555990746@g.us",
         "6285649096261-1516620137@g.us",
         "6285736763141-1515408009@g.us"
-      ]
-    },
-    {
-      "sender_name": "Rengga",
-      "count": 34,
-      "groups": [
-        "6281335118687-1517798430@g.us"
       ]
     },
     {
@@ -2077,28 +2086,28 @@
       ]
     },
     {
-      "sender_name": "Fakturis WRG",
-      "count": 20,
+      "sender_name": "Sidqi",
+      "count": 22,
       "groups": [
-        "6281335118687-1517798430@g.us"
+        "120363225099430838@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527497998@g.us",
+        "6285649096261-1516620137@g.us"
       ]
     },
     {
       "sender_name": "Muhid",
-      "count": 20,
+      "count": 21,
       "groups": [
         "120363042143432430@g.us",
         "120363404092121926@g.us"
       ]
     },
     {
-      "sender_name": "Sidqi",
+      "sender_name": "Fakturis WRG",
       "count": 20,
       "groups": [
-        "120363225099430838@g.us",
-        "120363405485256544@g.us",
-        "6281335118687-1527497998@g.us",
-        "6285649096261-1516620137@g.us"
+        "6281335118687-1517798430@g.us"
       ]
     },
     {
@@ -2190,7 +2199,7 @@
     },
     {
       "sender_name": "Chafid",
-      "count": 7,
+      "count": 8,
       "groups": [
         "120363404092121926@g.us"
       ]
@@ -2211,6 +2220,21 @@
       ]
     },
     {
+      "sender_name": "Ari Kurnia Yuda",
+      "count": 4,
+      "groups": [
+        "120363397960052940@g.us",
+        "6281949637972-1609891850@g.us"
+      ]
+    },
+    {
+      "sender_name": "Firman W",
+      "count": 4,
+      "groups": [
+        "120363404092121926@g.us"
+      ]
+    },
+    {
       "sender_name": "S",
       "count": 4,
       "groups": [
@@ -2218,25 +2242,10 @@
       ]
     },
     {
-      "sender_name": "Ari Kurnia Yuda",
-      "count": 3,
-      "groups": [
-        "120363397960052940@g.us",
-        "6281949637972-1609891850@g.us"
-      ]
-    },
-    {
       "sender_name": "navisatris",
       "count": 3,
       "groups": [
         "6282232418991-1555990746@g.us"
-      ]
-    },
-    {
-      "sender_name": "Firman W",
-      "count": 2,
-      "groups": [
-        "120363404092121926@g.us"
       ]
     },
     {
@@ -2254,18 +2263,17 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-23T08:43:14",
+  "last_lid_resolve": "2026-05-23T14:30:48",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
-    "restored_labels": 4
+    "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-23T08:43:14",
+  "roster_merge_at": "2026-05-23T14:30:48",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,
     "roster_total": 62
-  },
-  "last_user_edit": "2026-05-23T13:52:02"
+  }
 }
