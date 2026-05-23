@@ -3163,8 +3163,8 @@ function switchTab(name) {
   document.querySelectorAll('.tab-panel').forEach(p => {
     p.classList.toggle('active', p.id === 'panel-' + name);
   });
-  // Persist in URL hash
-  location.hash = name;
+  // Persist tab + date in URL via replaceState (no history pollution)
+  syncUrlFromState();
   // Search bar visible only on Rekap/Resume
   const searchWrap = document.getElementById('search-wrap');
   if (searchWrap) {
@@ -3306,13 +3306,31 @@ function applySearch(rawQuery) {
   }
 }
 
-function start() {
+// Sync URL bar with currentDate + active tab. Clean URL for defaults
+// (today + overview) — keeps shareable links short.
+function syncUrlFromState() {
   const today = new Date().toISOString().slice(0, 10);
-  currentDate = today;
+  const activeBtn = document.querySelector('nav.tabs button.active');
+  const tab = activeBtn ? activeBtn.dataset.tab : 'overview';
+  const params = new URLSearchParams();
+  if (currentDate && currentDate !== today) params.set('date', currentDate);
+  const qs = params.toString() ? '?' + params.toString() : '';
+  const hash = (tab && tab !== 'overview') ? '#' + tab : '';
+  history.replaceState(null, '', location.pathname + qs + hash);
+}
+
+function start() {
+  // Parse initial state from URL: ?date=YYYY-MM-DD overrides today
+  const today = new Date().toISOString().slice(0, 10);
+  const urlParams = new URLSearchParams(location.search);
+  const urlDate = urlParams.get('date');
+  const validDateRe = /^\d{4}-\d{2}-\d{2}$/;
+  currentDate = (urlDate && validDateRe.test(urlDate)) ? urlDate : today;
   loadAndRender(currentDate);
 
   document.getElementById('date-picker').addEventListener('change', e => {
     currentDate = e.target.value;
+    syncUrlFromState();
     loadAndRender(currentDate);
   });
   document.getElementById('refresh-btn').addEventListener('click', () => loadAndRender(currentDate));

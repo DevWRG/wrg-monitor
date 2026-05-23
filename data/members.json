@@ -194,8 +194,8 @@
     {
       "phone": "+6281232432442",
       "auto_name": "",
-      "name": "",
-      "user_labeled": false,
+      "name": "HRD WRG",
+      "user_labeled": true,
       "groups": [
         "120363403842555552@g.us",
         "6281248476085-1530485384@g.us",
@@ -210,7 +210,8 @@
         "PENJUALAN PROV. NTT NTB",
         "PLAN PURCHASING WRG"
       ],
-      "appearance_count": 5
+      "appearance_count": 5,
+      "notes": "HRD"
     },
     {
       "phone": "+102808682496186",
@@ -2265,5 +2266,6 @@
     "enriched": 45,
     "phantomed": 17,
     "roster_total": 62
-  }
+  },
+  "last_user_edit": "2026-05-23T13:52:02"
 }
