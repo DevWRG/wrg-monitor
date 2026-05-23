@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-23 08:43 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-23 14:30 WIB · 89 distinct phones across 11 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -16,7 +16,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6285231034648` | — | **Adm Keuangan** | — | — | — | 5 | 5 |
 | `+6285808489080` | admwahana2020 | **adm Sales** | — | — | — | 5 | 5 |
 | `+6285853772380` | — | **Maslikha Purnamasari** 📋 | Sari | Admin Fakturis | Pusat | 5 | 5 |
-| `+6281232432442` | — | _(unlabeled)_ | — | — | — | 5 | 5 |
+| `+6281232432442` | — | **HRD WRG** | — | — | — | 5 | 5 |
 | `+102808682496186` | — | _(unlabeled)_ | — | — | — | 4 | 4 |
 | `+6281332170240` | — | **Muhid** 📋 | Muhid | HOD Aftersales | Pusat | 4 | 4 |
 | `+6285257118107` | — | **Diana** 📋 | Diana | Admin Shipping | Pusat | 4 | 4 |
@@ -108,7 +108,7 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Warehouse1 | 366 | 15 |
 | admwahana2020 | 232 | 14 |
 | Warehouse WRG | 211 | 14 |
-| Ekba_Prastia | 199 | 4 |
+| Ekba_Prastia | 201 | 4 |
 | Denys Chandra | 184 | 2 |
 | Karib | 160 | 3 |
 | Shipping WRG | 150 | 3 |
@@ -116,14 +116,14 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Fafa | 114 | 2 |
 | agus | 98 | 3 |
 | Rizal | 94 | 3 |
-| Yogi Nugroho | 86 | 11 |
+| Yogi Nugroho | 87 | 11 |
+| Arif_Official | 85 | 4 |
 | M. Wildha Saputra | 85 | 5 |
-| Arif_Official | 83 | 4 |
 | Putri Diana | 79 | 2 |
 | Mufidz | 78 | 7 |
 | anggaadhitya2016 | 78 | 5 |
 | Ibnuuuu | 75 | 4 |
-| IRUL|PT WAHANA GUMILANG | 67 | 4 |
+| IRUL|PT WAHANA GUMILANG | 69 | 4 |
 | Nungky | 67 | 4 |
 | fanessa | 62 | 2 |
 | Keuangan Wahana Rizky | 61 | 3 |
@@ -132,17 +132,17 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Boni3 | 52 | 3 |
 | Admin Penawaran | 50 | 1 |
 | Maskhan | 49 | 1 |
-| IKA | 45 | 4 |
-| FIRMANSYAH | 42 | 3 |
+| IKA | 47 | 4 |
+| FIRMANSYAH | 44 | 3 |
+| Luripohan | 42 | 6 |
 | Hanif | 40 | 1 |
 | DNIFXMMS | 39 | 1 |
-| Luripohan | 38 | 6 |
 | Siti Nurcholis | 38 | 1 |
 | Kadek Heriadi | 36 | 2 |
 | Admin Purchasing WRG | 35 | 7 |
 | Anas_Januar | 35 | 1 |
+| Rengga | 35 | 1 |
 | Kapten | 34 | 30 |
-| Rengga | 34 | 1 |
 | ASN | 32 | 1 |
 | Haris | 32 | 1 |
 | Baginda Naufal | 31 | 3 |
@@ -150,9 +150,9 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Vickyadi | 24 | 4 |
 | renika | 24 | 1 |
 | Rekarya | 23 | 1 |
+| Sidqi | 22 | 4 |
+| Muhid | 21 | 2 |
 | Fakturis WRG | 20 | 1 |
-| Muhid | 20 | 2 |
-| Sidqi | 20 | 4 |
 | Yugo | 19 | 3 |
 | Dito | 18 | 1 |
 | Pita | 17 | 1 |
@@ -164,12 +164,12 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | d | 12 | 1 |
 | Gilang Pratama | 11 | 2 |
 | Navisa | 10 | 1 |
-| Chafid | 7 | 1 |
+| Chafid | 8 | 1 |
 | Iqbal | 7 | 1 |
 | iqbal Wrg | 5 | 2 |
+| Ari Kurnia Yuda | 4 | 2 |
+| Firman W | 4 | 1 |
 | S | 4 | 1 |
-| Ari Kurnia Yuda | 3 | 2 |
 | navisatris | 3 | 1 |
-| Firman W | 2 | 1 |
 | Firmansyah | 1 | 1 |
 | HRD Wahana Gumilang Group | 1 | 1 |
