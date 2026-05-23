@@ -12,10 +12,18 @@ set -eo pipefail
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # Cron context tidak punya akses ke osxkeychain (no TTY/login session) — gh auth
-# git-credential bakal return empty. Workaround: export GH_TOKEN dari file 600
-# yang gh credential helper akan pakai bypassing keychain.
+# git-credential bakal return empty. Workaround: export GH_TOKEN dari file 600,
+# auto-refresh dari `gh auth token` setiap run supaya `gh auth refresh`/login
+# baru otomatis ke-pickup tanpa intervensi manual. Kalau gh CLI gagal (network
+# issue dll), fall back ke cached token yang sudah ada.
 TOKEN_FILE="$HOME/.config/wrg-monitor/gh-token"
-if [ -f "$TOKEN_FILE" ]; then
+mkdir -p "$(dirname "$TOKEN_FILE")"
+NEW_TOKEN=$(gh auth token 2>/dev/null || true)
+if [ -n "$NEW_TOKEN" ]; then
+  echo "$NEW_TOKEN" > "$TOKEN_FILE"
+  chmod 600 "$TOKEN_FILE"
+fi
+if [ -f "$TOKEN_FILE" ] && [ -s "$TOKEN_FILE" ]; then
   export GH_TOKEN="$(cat "$TOKEN_FILE")"
 fi
 
