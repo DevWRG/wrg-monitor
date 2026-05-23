@@ -87,6 +87,27 @@ def latest_resume(date: str) -> dict | None:
 _KE_RE = re.compile(r"\bke:\s*([^|]+)")
 _AGE_RE = re.compile(r"umur\s+(\d+)\s+jam(?:\s+(\d+)\s+menit)?")
 _JID_RE = re.compile(r"^(\d[\d\-]*@g\.us)(?:\s*\((.+?)\))?\s*$")
+# rekap.sh writes "LABEL (JID@g.us)" — label-first is the primary format
+_LABEL_JID_RE = re.compile(r"^(.+?)\s*\((\d[\d\-]*@g\.us)\)\s*$")
+_PLACEHOLDER_TOPICS = {"tidak ada", "tidak ada outstanding"}
+
+
+def _parse_group_header(line: str):
+    """Parse 'LABEL (JID)' (rekap-style) or 'JID' / 'JID (label)' (legacy).
+    Returns (jid, label) or (None, None)."""
+    m = _LABEL_JID_RE.match(line)
+    if m:
+        return m.group(2), m.group(1).strip()
+    m = _JID_RE.match(line)
+    if m:
+        return m.group(1), (m.group(2) or "").strip()
+    return None, None
+
+
+def _is_placeholder_bullet(entry: dict) -> bool:
+    """Filter out '• Tidak ada' / '• Tidak ada outstanding' placeholder bullets."""
+    topic = (entry.get("topic") or "").strip().lower()
+    return topic in _PLACEHOLDER_TOPICS
 _REKAP_HEADER_RE = re.compile(r"^REKAP WRG\s*\|\s*(\S+)\s*WIB\s*\|\s*(\S+)")
 _RESUME_HEADER_RE = re.compile(r"^RESUME EKSEKUTIF WRG\s*$")
 _SECTION_RE = re.compile(r"^(\d+)\.\s+(.+)")
@@ -173,10 +194,10 @@ def parse_rekap_structured(content: str) -> dict:
 
         # In groups section
         if state == "groups":
-            m = _JID_RE.match(stripped)
-            if m:
+            jid, label = _parse_group_header(stripped)
+            if jid:
                 flush_group()
-                current_group = {"jid": m.group(1), "label": m.group(2) or "", "bullets": [], "actions": []}
+                current_group = {"jid": jid, "label": label, "bullets": [], "actions": []}
                 continue
             if stripped.startswith("•") and current_group:
                 current_group["bullets"].append(stripped.lstrip("•").strip())
@@ -190,6 +211,8 @@ def parse_rekap_structured(content: str) -> dict:
         # In konfirmasi section
         if state in ("confirmed", "pending") and stripped.startswith("•"):
             entry = parse_kv_bullet(stripped)
+            if _is_placeholder_bullet(entry):
+                continue  # skip "• Tidak ada" placeholders
             out["konfirmasi"][state].append(entry)
             continue
     flush_group()
@@ -288,7 +311,10 @@ def parse_resume_structured(content: str) -> dict:
             if "OUTSTANDING" in stripped or "MENUNGGU" in stripped:
                 sub = "outstanding"; continue
             if stripped.startswith("•") and sub:
-                out["konfirmasi"][sub].append(parse_kv_bullet(stripped))
+                entry = parse_kv_bullet(stripped)
+                if _is_placeholder_bullet(entry):
+                    continue  # skip "• Tidak ada" placeholders
+                out["konfirmasi"][sub].append(entry)
                 continue
         # Section 8 HOD — bullets diawali "[HOD <label>] <body>"
         if current["num"] == 8:
@@ -1965,13 +1991,32 @@ function renderContent(content) {
   return out;
 }
 
+// Format millisecond epoch timestamps (13-digit integer string) to human readable.
+// Returns "DD/MM HH:MM · Xh ago" so user sees absolute + relative at a glance.
+function formatMsTimestamp(ms) {
+  const n = (typeof ms === 'number') ? ms : parseInt(ms, 10);
+  if (!Number.isFinite(n) || n < 1e12) return String(ms);
+  const d = new Date(n);
+  if (isNaN(d.getTime())) return String(ms);
+  const abs = d.toLocaleString('id-ID', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  const ageS = Math.max(0, Math.floor((Date.now() - n) / 1000));
+  let rel;
+  if (ageS < 60) rel = ageS + 's ago';
+  else if (ageS < 3600) rel = Math.floor(ageS / 60) + 'm ago';
+  else if (ageS < 86400) rel = Math.floor(ageS / 3600) + 'h ago';
+  else rel = Math.floor(ageS / 86400) + 'd ago';
+  return abs + ' · ' + rel;
+}
+
 function renderKonfList(items, type /* 'confirmed' | 'pending' | 'outstanding' */) {
   if (!items.length) return '<div class="empty" style="padding:8px;text-align:left">Tidak ada</div>';
   const cls = type === 'confirmed' ? '' : 'pending';
   return items.map(it => {
-    const fieldsHtml = Object.entries(it.fields || {}).map(([k, v]) =>
-      '<span class="chip"><span class="chip-key">' + escapeHtml(k.replace(/_/g, ' ')) + '</span>' + escapeHtml(v) + '</span>'
-    ).join('');
+    const fieldsHtml = Object.entries(it.fields || {}).map(([k, v]) => {
+      // Detect ms-epoch values (13-digit integer) and format human-readable
+      const displayVal = /^\d{13}$/.test(String(v)) ? formatMsTimestamp(v) : v;
+      return '<span class="chip"><span class="chip-key">' + escapeHtml(k.replace(/_/g, ' ')) + '</span>' + escapeHtml(displayVal) + '</span>';
+    }).join('');
     return '<div class="konf-item ' + cls + (it.tua ? ' tua' : '') + '">' +
       '<div class="konf-topic">' + escapeHtml(it.topic) + (it.tua ? ' <span class="badge-tua">TUA</span>' : '') + '</div>' +
       (fieldsHtml ? '<div class="konf-fields">' + fieldsHtml + '</div>' : '') +
