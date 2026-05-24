@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-23 22:30 WIB · 89 distinct phones across 11 groups_
+_Generated: 2026-05-24 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -9,7 +9,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 
 | Phone | Auto Name | Current Name | Panggilan | Posisi | Cabang | Groups | Appearances |
 |---|---|---|---|---|---|---:|---:|
-| `+6285168121906` | Kapten | **Kapten** | — | — | — | 8 | 8 |
+| `+6285168121906` | — | **Kapten** | — | — | — | 8 | 8 |
 | `+6281248476085` | — | **IKA PURWANINGSARI** 📋 | Ika | HOD Finance & Supply Chain | Pusat | 6 | 6 |
 | `+6281230460577` | — | **Gilang S Pratama** | — | — | — | 5 | 5 |
 | `+6281330088773` | — | **Yogi Nugroho** 📋 | Yogi | HOD Sales West Area | Pusat | 5 | 5 |
@@ -119,20 +119,20 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Yogi Nugroho | 87 | 11 |
 | Arif_Official | 85 | 4 |
 | M. Wildha Saputra | 85 | 5 |
+| Mufidz | 79 | 7 |
 | Putri Diana | 79 | 2 |
-| Mufidz | 78 | 7 |
 | anggaadhitya2016 | 78 | 5 |
+| Husni | 77 | 4 |
 | Ibnuuuu | 75 | 4 |
 | IRUL|PT WAHANA GUMILANG | 69 | 4 |
 | Nungky | 67 | 4 |
 | fanessa | 62 | 2 |
 | Keuangan Wahana Rizky | 61 | 3 |
-| Husni | 60 | 4 |
 | Aulia Ghozalina | 55 | 6 |
 | Boni3 | 52 | 3 |
+| IKA | 52 | 4 |
 | Admin Penawaran | 50 | 1 |
 | Maskhan | 49 | 1 |
-| IKA | 47 | 4 |
 | FIRMANSYAH | 44 | 3 |
 | Luripohan | 42 | 6 |
 | Hanif | 40 | 1 |
@@ -153,8 +153,8 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Sidqi | 22 | 4 |
 | Muhid | 21 | 2 |
 | Fakturis WRG | 20 | 1 |
+| Dito | 19 | 1 |
 | Yugo | 19 | 3 |
-| Dito | 18 | 1 |
 | Pita | 17 | 1 |
 | RG WG | 16 | 5 |
 | Arman | 15 | 3 |
@@ -173,3 +173,4 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | navisatris | 3 | 1 |
 | Firmansyah | 1 | 1 |
 | HRD Wahana Gumilang Group | 1 | 1 |
+| kuntdrg | 1 | 1 |

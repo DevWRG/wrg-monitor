@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-23T15:30:04+0700",
+  "generated_at": "2026-05-24T15:30:04+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
-    "distinct_sender_names": 68
+    "distinct_sender_names": 69
   },
   "group_directory": {
     "120363403842555552@g.us": "GA WRG",
@@ -41,7 +41,7 @@
   "members": [
     {
       "phone": "+6285168121906",
-      "auto_name": "Kapten",
+      "auto_name": "",
       "name": "Kapten",
       "user_labeled": true,
       "groups": [
@@ -1793,16 +1793,8 @@
       ]
     },
     {
-      "sender_name": "Putri Diana",
-      "count": 79,
-      "groups": [
-        "120363215877961952@g.us",
-        "120363406071725731@g.us"
-      ]
-    },
-    {
       "sender_name": "Mufidz",
-      "count": 78,
+      "count": 79,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1814,6 +1806,14 @@
       ]
     },
     {
+      "sender_name": "Putri Diana",
+      "count": 79,
+      "groups": [
+        "120363215877961952@g.us",
+        "120363406071725731@g.us"
+      ]
+    },
+    {
       "sender_name": "anggaadhitya2016",
       "count": 78,
       "groups": [
@@ -1822,6 +1822,16 @@
         "6281248476085-1539641961@g.us",
         "6281949637972-1523701417@g.us",
         "6285649096261-1516620137@g.us"
+      ]
+    },
+    {
+      "sender_name": "Husni",
+      "count": 77,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363403842555552@g.us",
+        "120363404092121926@g.us",
+        "120363409252019573@g.us"
       ]
     },
     {
@@ -1872,16 +1882,6 @@
       ]
     },
     {
-      "sender_name": "Husni",
-      "count": 60,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363403842555552@g.us",
-        "120363404092121926@g.us",
-        "120363409252019573@g.us"
-      ]
-    },
-    {
       "sender_name": "Aulia Ghozalina",
       "count": 55,
       "groups": [
@@ -1903,6 +1903,16 @@
       ]
     },
     {
+      "sender_name": "IKA",
+      "count": 52,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363215877961952@g.us",
+        "120363404092121926@g.us",
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
       "sender_name": "Admin Penawaran",
       "count": 50,
       "groups": [
@@ -1914,16 +1924,6 @@
       "count": 49,
       "groups": [
         "6281335118687-1517798430@g.us"
-      ]
-    },
-    {
-      "sender_name": "IKA",
-      "count": 47,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363215877961952@g.us",
-        "120363404092121926@g.us",
-        "6282232418991-1555990746@g.us"
       ]
     },
     {
@@ -2120,19 +2120,19 @@
       ]
     },
     {
+      "sender_name": "Dito",
+      "count": 19,
+      "groups": [
+        "120363403842555552@g.us"
+      ]
+    },
+    {
       "sender_name": "Yugo",
       "count": 19,
       "groups": [
         "120363225099430838@g.us",
         "6281949637972-1603758195@g.us",
         "6285736763141-1515408009@g.us"
-      ]
-    },
-    {
-      "sender_name": "Dito",
-      "count": 18,
-      "groups": [
-        "120363403842555552@g.us"
       ]
     },
     {
@@ -2270,16 +2270,23 @@
       "groups": [
         "120363048384809457@g.us"
       ]
+    },
+    {
+      "sender_name": "kuntdrg",
+      "count": 1,
+      "groups": [
+        "120363404092121926@g.us"
+      ]
     }
   ],
-  "last_lid_resolve": "2026-05-23T22:30:04",
+  "last_lid_resolve": "2026-05-24T22:30:04",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
     "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-23T22:30:04",
+  "roster_merge_at": "2026-05-24T22:30:04",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,
