@@ -208,6 +208,11 @@ HASIL=$(printf '%s\n' "$HASIL" | awk -v label="$MINGGU_LABEL" '
   { print }
 ')
 
+# Defensive: catch any "Minggu N..." or "Minggu N-M, Month Year" phrase AI may
+# fabricate anywhere in body (footer, side-comments). Replace with canonical label.
+# Word "Minggu" di B.Indonesia ambigu (Week vs Sunday) — AI bias produce ini.
+HASIL=$(printf '%s\n' "$HASIL" | sed -E "s/Minggu [0-9]+([–-][0-9]+)?,?[[:space:]]+(January|February|March|April|May|June|July|August|September|October|November|December|Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember)[[:space:]]+[0-9]{4}/${MINGGU_LABEL}/g")
+
 OUTPUT_FILE="$DATA_DIR/briefing/briefing_${TIMESTAMP}.txt"
 echo "$HASIL" > "$OUTPUT_FILE"
 
