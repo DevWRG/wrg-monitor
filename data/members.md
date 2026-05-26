@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-25 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-05-26 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -79,7 +79,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6289602081239` | Haris | **Haris Zul Hilmi** 📋 | Haris | Kirim Tagih | Malang | 1 | 1 |
 | `+6289605483157` | — | **Dito Anggara** 📋 | Dito | GA | Pusat | 1 | 1 |
 | `+6281210207065` | — | **Chafid Hersandi** | — | — | — | 1 | 1 |
-| `+73577101537521` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
+| `+6282334427022` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+87961316122799` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+62881036179456` | — | **Abib robi Nurhamsa** 📋 | Abib | Admin Sales & Penawaran | Pusat | 0 | 0 |
 | `+6285856613533` | — | **Achmad fahruddin arrazzy** 📋 | Boni | Logistik | Pusat | 0 | 0 |
@@ -105,70 +105,70 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 
 | Display Name | Msg Count | Groups |
 |---|---:|---|
-| Warehouse1 | 438 | 15 |
-| Warehouse WRG | 264 | 14 |
-| admwahana2020 | 262 | 15 |
-| Ekba_Prastia | 223 | 4 |
-| Denys Chandra | 210 | 2 |
-| Karib | 186 | 3 |
-| Shipping WRG | 180 | 3 |
-| Elok | 146 | 4 |
-| Fafa | 135 | 2 |
-| Rizal | 112 | 3 |
-| agus | 109 | 3 |
-| anggaadhitya2016 | 99 | 5 |
-| Putri Diana | 98 | 2 |
-| Arif_Official | 97 | 5 |
-| Yogi Nugroho | 96 | 11 |
-| M. Wildha Saputra | 87 | 5 |
-| Nungky | 85 | 4 |
-| Ibnuuuu | 83 | 4 |
+| Warehouse1 | 485 | 15 |
+| Warehouse WRG | 301 | 14 |
+| admwahana2020 | 294 | 16 |
+| Ekba_Prastia | 243 | 4 |
+| Denys Chandra | 213 | 2 |
+| Karib | 205 | 3 |
+| Shipping WRG | 202 | 3 |
+| Elok | 167 | 4 |
+| Fafa | 147 | 2 |
+| Rizal | 141 | 3 |
+| agus | 122 | 3 |
+| Putri Diana | 113 | 2 |
+| Nungky | 110 | 4 |
+| Arif_Official | 106 | 5 |
+| Yogi Nugroho | 106 | 11 |
+| anggaadhitya2016 | 105 | 5 |
+| M. Wildha Saputra | 103 | 5 |
+| Ibnuuuu | 96 | 4 |
+| Mufidz | 93 | 7 |
 | Husni | 82 | 4 |
-| Mufidz | 81 | 7 |
-| Keuangan Wahana Rizky | 74 | 4 |
-| IRUL|PT WAHANA GUMILANG | 73 | 4 |
-| fanessa | 70 | 2 |
-| FIRMANSYAH | 65 | 3 |
-| Aulia Ghozalina | 62 | 6 |
-| Admin Penawaran | 59 | 1 |
-| Boni3 | 55 | 3 |
-| Maskhan | 55 | 1 |
-| IKA | 53 | 4 |
-| Luripohan | 52 | 6 |
-| Hanif | 45 | 1 |
-| Admin Purchasing WRG | 43 | 9 |
-| Siti Nurcholis | 43 | 1 |
-| DNIFXMMS | 42 | 1 |
+| Keuangan Wahana Rizky | 79 | 4 |
+| IRUL|PT WAHANA GUMILANG | 78 | 4 |
+| fanessa | 78 | 2 |
+| Aulia Ghozalina | 75 | 7 |
+| FIRMANSYAH | 71 | 3 |
+| Admin Penawaran | 65 | 1 |
+| Luripohan | 63 | 6 |
+| Maskhan | 62 | 1 |
+| IKA | 59 | 4 |
+| Boni3 | 57 | 3 |
+| Anas_Januar | 52 | 1 |
+| DNIFXMMS | 51 | 1 |
+| Hanif | 51 | 1 |
+| Admin Purchasing WRG | 50 | 9 |
+| Kadek Heriadi | 48 | 3 |
+| Siti Nurcholis | 48 | 1 |
+| Rengga | 47 | 1 |
+| ASN | 41 | 1 |
 | Kapten | 41 | 30 |
-| Anas_Januar | 40 | 1 |
-| Rengga | 40 | 1 |
-| Kadek Heriadi | 39 | 2 |
+| Haris | 40 | 1 |
+| Marimasmadu | 38 | 2 |
+| Baginda Naufal | 37 | 3 |
 | Sidqi | 37 | 5 |
-| Haris | 36 | 1 |
-| ASN | 34 | 1 |
-| Baginda Naufal | 34 | 3 |
-| Marimasmadu | 34 | 2 |
-| renika | 29 | 1 |
-| Vickyadi | 28 | 4 |
-| RG WG | 26 | 5 |
-| Rekarya | 26 | 1 |
-| Fakturis WRG | 24 | 1 |
-| Muhid | 22 | 2 |
-| Dito | 21 | 1 |
-| Arman | 20 | 3 |
-| Yugo | 20 | 3 |
-| Ayume | 19 | 1 |
-| Rahma | 18 | 1 |
-| Sari | 18 | 2 |
+| RG WG | 34 | 5 |
+| Rekarya | 32 | 1 |
+| renika | 32 | 1 |
+| Fakturis WRG | 29 | 2 |
+| Vickyadi | 29 | 4 |
+| Arman | 28 | 6 |
+| Muhid | 28 | 2 |
+| Dito | 23 | 1 |
+| Ayume | 21 | 1 |
+| Yugo | 21 | 3 |
+| Rahma | 20 | 1 |
+| Sari | 20 | 2 |
 | Chafid | 17 | 1 |
 | Pita | 17 | 1 |
-| d | 14 | 1 |
-| Navisa | 13 | 1 |
-| Gilang Pratama | 12 | 2 |
-| Firman W | 7 | 1 |
+| d | 16 | 1 |
+| Navisa | 15 | 1 |
+| Gilang Pratama | 13 | 2 |
+| Ari Kurnia Yuda | 10 | 2 |
+| Firman W | 9 | 1 |
+| iqbal Wrg | 9 | 3 |
 | Iqbal | 7 | 1 |
-| iqbal Wrg | 6 | 3 |
-| Ari Kurnia Yuda | 5 | 2 |
 | S | 4 | 1 |
 | navisatris | 3 | 1 |
 | Firmansyah | 1 | 1 |
