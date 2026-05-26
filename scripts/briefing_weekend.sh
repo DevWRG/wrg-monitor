@@ -9,7 +9,16 @@ source "$(dirname "$0")/../config/config.sh"
 
 TANGGAL=$(date '+%Y-%m-%d')
 TIMESTAMP=$(date '+%Y-%m-%d_%H%M')
-MINGGU_LABEL="Minggu $(date '+%V'), $(date '+%B %Y')"
+# Explicit 7-day date range. Sebelumnya "Minggu $(date '+%V')" (ISO week number)
+# ambigu di B.Indonesia — AI bisa baca "Minggu" sebagai nama hari & hallucinate
+# range (e.g. "Minggu 21–22, May 2026"). Pakai date range nyata lebih clear.
+if date --version &>/dev/null 2>&1; then
+  WEEK_START=$(date -d "6 days ago" '+%-d %B %Y')   # Linux
+else
+  WEEK_START=$(date -v-6d '+%-d %B %Y')             # macOS
+fi
+WEEK_END=$(date '+%-d %B %Y')
+MINGGU_LABEL="Briefing Mingguan: ${WEEK_START} – ${WEEK_END}"
 
 mkdir -p "$LOG_DIR" "$DATA_DIR/briefing"
 
@@ -190,6 +199,14 @@ if [ -z "$HASIL" ]; then
   bash "$(dirname "$0")/notif_quota.sh" >/dev/null 2>&1 &
   exit 1
 fi
+
+# Force-correct the date line below "BRIEFING DIREKTUR" title — AI sometimes
+# rewrites $MINGGU_LABEL with hallucinated content (e.g. adds date ranges).
+# Script knows the real label; overwrite line right after BRIEFING DIREKTUR title.
+HASIL=$(printf '%s\n' "$HASIL" | awk -v label="$MINGGU_LABEL" '
+  /^#?[[:space:]]*BRIEFING DIREKTUR/ { print; getline; print "**" label "**"; next }
+  { print }
+')
 
 OUTPUT_FILE="$DATA_DIR/briefing/briefing_${TIMESTAMP}.txt"
 echo "$HASIL" > "$OUTPUT_FILE"
