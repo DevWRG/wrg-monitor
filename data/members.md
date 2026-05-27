@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-26 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-05-27 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -106,7 +106,7 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Display Name | Msg Count | Groups |
 |---|---:|---|
 | Warehouse1 | 485 | 15 |
-| Warehouse WRG | 301 | 14 |
+| Warehouse WRG | 307 | 15 |
 | admwahana2020 | 294 | 16 |
 | Ekba_Prastia | 243 | 4 |
 | Denys Chandra | 213 | 2 |
@@ -115,7 +115,7 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Elok | 167 | 4 |
 | Fafa | 147 | 2 |
 | Rizal | 141 | 3 |
-| agus | 122 | 3 |
+| agus | 124 | 3 |
 | Putri Diana | 113 | 2 |
 | Nungky | 110 | 4 |
 | Arif_Official | 106 | 5 |
@@ -123,12 +123,12 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | anggaadhitya2016 | 105 | 5 |
 | M. Wildha Saputra | 103 | 5 |
 | Ibnuuuu | 96 | 4 |
-| Mufidz | 93 | 7 |
-| Husni | 82 | 4 |
+| Mufidz | 96 | 7 |
+| Husni | 83 | 4 |
 | Keuangan Wahana Rizky | 79 | 4 |
 | IRUL|PT WAHANA GUMILANG | 78 | 4 |
 | fanessa | 78 | 2 |
-| Aulia Ghozalina | 75 | 7 |
+| Aulia Ghozalina | 76 | 7 |
 | FIRMANSYAH | 71 | 3 |
 | Admin Penawaran | 65 | 1 |
 | Luripohan | 63 | 6 |

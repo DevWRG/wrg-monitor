@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T15:30:04+0700",
+  "generated_at": "2026-05-27T15:30:04+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
@@ -1644,7 +1644,7 @@
     },
     {
       "sender_name": "Warehouse WRG",
-      "count": 301,
+      "count": 307,
       "groups": [
         "120363405145265597@g.us",
         "6281248476085-1539641961@g.us",
@@ -1657,6 +1657,7 @@
         "6281335118687-1527497732@g.us",
         "6281335118687-1527497998@g.us",
         "6281949637972-1603758195@g.us",
+        "6281949637972-1609761547@g.us",
         "6281949637972-1609891850@g.us",
         "6281949637972-1609891981@g.us",
         "6281949637972-1609892156@g.us"
@@ -1749,7 +1750,7 @@
     },
     {
       "sender_name": "agus",
-      "count": 122,
+      "count": 124,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6281335118687-1527495664@g.us",
@@ -1836,7 +1837,7 @@
     },
     {
       "sender_name": "Mufidz",
-      "count": 93,
+      "count": 96,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1849,7 +1850,7 @@
     },
     {
       "sender_name": "Husni",
-      "count": 82,
+      "count": 83,
       "groups": [
         "120363042143432430@g.us",
         "120363403842555552@g.us",
@@ -1887,7 +1888,7 @@
     },
     {
       "sender_name": "Aulia Ghozalina",
-      "count": 75,
+      "count": 76,
       "groups": [
         "120363397960052940@g.us",
         "120363405485256544@g.us",
@@ -2293,14 +2294,14 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-26T22:30:04",
+  "last_lid_resolve": "2026-05-27T22:30:04",
   "lid_resolve_summary": {
     "resolved": 7,
     "merged": 1,
     "renamed": 6,
     "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-26T22:30:04",
+  "roster_merge_at": "2026-05-27T22:30:04",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,
