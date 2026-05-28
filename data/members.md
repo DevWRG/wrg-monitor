@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-27 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-05-28 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -105,69 +105,69 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 
 | Display Name | Msg Count | Groups |
 |---|---:|---|
-| Warehouse1 | 485 | 15 |
-| Warehouse WRG | 307 | 15 |
-| admwahana2020 | 294 | 16 |
-| Ekba_Prastia | 243 | 4 |
-| Denys Chandra | 213 | 2 |
-| Karib | 205 | 3 |
-| Shipping WRG | 202 | 3 |
-| Elok | 167 | 4 |
-| Fafa | 147 | 2 |
-| Rizal | 141 | 3 |
-| agus | 124 | 3 |
-| Putri Diana | 113 | 2 |
-| Nungky | 110 | 4 |
-| Arif_Official | 106 | 5 |
-| Yogi Nugroho | 106 | 11 |
-| anggaadhitya2016 | 105 | 5 |
-| M. Wildha Saputra | 103 | 5 |
-| Ibnuuuu | 96 | 4 |
-| Mufidz | 96 | 7 |
-| Husni | 83 | 4 |
-| Keuangan Wahana Rizky | 79 | 4 |
+| Warehouse1 | 521 | 16 |
+| Warehouse WRG | 322 | 15 |
+| admwahana2020 | 304 | 16 |
+| Ekba_Prastia | 248 | 4 |
+| Denys Chandra | 232 | 2 |
+| Karib | 217 | 3 |
+| Shipping WRG | 216 | 4 |
+| Elok | 194 | 4 |
+| Rizal | 157 | 3 |
+| Fafa | 154 | 2 |
+| agus | 135 | 3 |
+| Putri Diana | 120 | 2 |
+| Nungky | 116 | 4 |
+| Ibnuuuu | 114 | 4 |
+| Yogi Nugroho | 113 | 11 |
+| anggaadhitya2016 | 110 | 5 |
+| Arif_Official | 108 | 5 |
+| M. Wildha Saputra | 104 | 5 |
+| Mufidz | 104 | 7 |
+| Keuangan Wahana Rizky | 93 | 5 |
+| Husni | 84 | 4 |
+| fanessa | 84 | 2 |
+| Aulia Ghozalina | 78 | 7 |
 | IRUL|PT WAHANA GUMILANG | 78 | 4 |
-| fanessa | 78 | 2 |
-| Aulia Ghozalina | 76 | 7 |
-| FIRMANSYAH | 71 | 3 |
-| Admin Penawaran | 65 | 1 |
-| Luripohan | 63 | 6 |
-| Maskhan | 62 | 1 |
-| IKA | 59 | 4 |
-| Boni3 | 57 | 3 |
+| IKA | 77 | 4 |
+| FIRMANSYAH | 72 | 3 |
+| Admin Penawaran | 71 | 1 |
+| Luripohan | 65 | 6 |
+| Maskhan | 65 | 1 |
+| Boni3 | 59 | 3 |
+| DNIFXMMS | 59 | 1 |
+| Admin Purchasing WRG | 58 | 9 |
+| Siti Nurcholis | 58 | 3 |
+| Hanif | 56 | 1 |
 | Anas_Januar | 52 | 1 |
-| DNIFXMMS | 51 | 1 |
-| Hanif | 51 | 1 |
-| Admin Purchasing WRG | 50 | 9 |
-| Kadek Heriadi | 48 | 3 |
-| Siti Nurcholis | 48 | 1 |
-| Rengga | 47 | 1 |
-| ASN | 41 | 1 |
+| Kadek Heriadi | 52 | 3 |
+| Rengga | 52 | 1 |
+| ASN | 49 | 1 |
+| Haris | 45 | 1 |
+| Marimasmadu | 45 | 3 |
+| Baginda Naufal | 43 | 3 |
 | Kapten | 41 | 30 |
-| Haris | 40 | 1 |
-| Marimasmadu | 38 | 2 |
-| Baginda Naufal | 37 | 3 |
 | Sidqi | 37 | 5 |
+| Fakturis WRG | 36 | 2 |
+| Rekarya | 36 | 1 |
+| renika | 35 | 1 |
 | RG WG | 34 | 5 |
-| Rekarya | 32 | 1 |
-| renika | 32 | 1 |
-| Fakturis WRG | 29 | 2 |
-| Vickyadi | 29 | 4 |
-| Arman | 28 | 6 |
+| Vickyadi | 34 | 4 |
+| Arman | 29 | 6 |
 | Muhid | 28 | 2 |
-| Dito | 23 | 1 |
-| Ayume | 21 | 1 |
+| Dito | 25 | 1 |
+| Ayume | 23 | 1 |
+| Rahma | 22 | 1 |
+| Sari | 22 | 2 |
+| Pita | 21 | 1 |
 | Yugo | 21 | 3 |
-| Rahma | 20 | 1 |
-| Sari | 20 | 2 |
+| d | 19 | 1 |
 | Chafid | 17 | 1 |
-| Pita | 17 | 1 |
-| d | 16 | 1 |
-| Navisa | 15 | 1 |
-| Gilang Pratama | 13 | 2 |
+| Navisa | 17 | 1 |
+| Gilang Pratama | 14 | 2 |
 | Ari Kurnia Yuda | 10 | 2 |
-| Firman W | 9 | 1 |
-| iqbal Wrg | 9 | 3 |
+| Firman W | 10 | 1 |
+| iqbal Wrg | 10 | 3 |
 | Iqbal | 7 | 1 |
 | S | 4 | 1 |
 | navisatris | 3 | 1 |
