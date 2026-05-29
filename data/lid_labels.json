@@ -1,0 +1,4 @@
+{
+  "_doc": "Manual label override untuk WhatsApp LIDs yang punya mapping ke real phone tapi phone-nya tidak ada di members.json (mis. contact Pak Gilang yang tidak pernah kirim msg ke group monitored). Key = LID digit-string, value = display name. Override mengalahkan auto-resolution via members.json.",
+  "160344232202446": "Admin Penawaran"
+}

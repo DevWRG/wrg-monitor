@@ -153,7 +153,9 @@ _LID_CACHE_TTL = 300  # 5 minutes
 
 
 def _load_lid_resolver() -> dict:
-    """Build {lid_digits: display_name_or_phone}. Cached 5min for performance."""
+    """Build {lid_digits: display_name_or_phone}. Cached 5min for performance.
+    Layer order (first wins): data/lid_labels.json override → members.json name
+    via LID→phone lookup → +<phone> fallback when no name match."""
     now = time.time()
     if _lid_cache["map"] is not None and (now - _lid_cache["loaded_at"]) < _LID_CACHE_TTL:
         return _lid_cache["map"]
@@ -169,6 +171,17 @@ def _load_lid_resolver() -> dict:
                 phone_to_name[ph] = nm
     except (FileNotFoundError, json.JSONDecodeError):
         pass
+    # User-override layer: data/lid_labels.json (authoritative untuk LID yang
+    # tidak ke-link ke phone yang ada di members.json)
+    lid_override = {}
+    labels_path = DATA_DIR / "lid_labels.json"
+    if labels_path.is_file():
+        try:
+            with open(labels_path) as f:
+                raw = json.load(f) or {}
+            lid_override = {k: v for k, v in raw.items() if not k.startswith("_") and isinstance(v, str)}
+        except (OSError, json.JSONDecodeError):
+            pass
     # lid → phone, then resolve to name if possible
     out = {}
     if _LID_DIR.is_dir():
@@ -178,10 +191,14 @@ def _load_lid_resolver() -> dict:
                 with open(f) as fp:
                     val = json.load(fp)
                 if isinstance(val, str):
-                    name = phone_to_name.get(val)
-                    out[lid] = name if name else "+" + val
+                    # Priority: user override > members.json name > +phone fallback
+                    out[lid] = lid_override.get(lid) or phone_to_name.get(val) or ("+" + val)
             except (OSError, json.JSONDecodeError):
                 continue
+    # Add overrides for LIDs with no reverse mapping file (rare)
+    for lid, name in lid_override.items():
+        if lid not in out:
+            out[lid] = name
     _lid_cache["map"] = out
     _lid_cache["loaded_at"] = now
     return out
