@@ -16,6 +16,7 @@ import json
 import os
 import re
 import socketserver
+import time
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -144,8 +145,63 @@ def truncate_at_footer(content: str, kind: str) -> str:
     return content
 
 
+# === LID resolver: @<14-20 digit LID> → @<name> or @<+phone> ===
+_LID_DIR = Path.home() / ".openclaw" / "credentials" / "whatsapp" / "default"
+_LID_MENTION_RE = re.compile(r"@(\d{10,20})")
+_lid_cache = {"map": None, "loaded_at": 0.0}
+_LID_CACHE_TTL = 300  # 5 minutes
+
+
+def _load_lid_resolver() -> dict:
+    """Build {lid_digits: display_name_or_phone}. Cached 5min for performance."""
+    now = time.time()
+    if _lid_cache["map"] is not None and (now - _lid_cache["loaded_at"]) < _LID_CACHE_TTL:
+        return _lid_cache["map"]
+    # phone (no plus) → name
+    phone_to_name = {}
+    try:
+        with open(MEMBERS_FILE) as f:
+            data = json.load(f)
+        for m in data.get("members", []):
+            ph = re.sub(r"\D", "", m.get("phone") or "")
+            nm = (m.get("name") or "").strip()
+            if ph and nm:
+                phone_to_name[ph] = nm
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    # lid → phone, then resolve to name if possible
+    out = {}
+    if _LID_DIR.is_dir():
+        for f in _LID_DIR.glob("lid-mapping-*_reverse.json"):
+            lid = f.name.replace("lid-mapping-", "").replace("_reverse.json", "")
+            try:
+                with open(f) as fp:
+                    val = json.load(fp)
+                if isinstance(val, str):
+                    name = phone_to_name.get(val)
+                    out[lid] = name if name else "+" + val
+            except (OSError, json.JSONDecodeError):
+                continue
+    _lid_cache["map"] = out
+    _lid_cache["loaded_at"] = now
+    return out
+
+
+def resolve_lids_in_text(text: str) -> str:
+    """Replace @<lid> mentions in text with @<resolved-name-or-phone>."""
+    if not text or "@" not in text:
+        return text
+    lid_map = _load_lid_resolver()
+    if not lid_map:
+        return text
+    def _sub(m):
+        return "@" + lid_map[m.group(1)] if m.group(1) in lid_map else m.group(0)
+    return _LID_MENTION_RE.sub(_sub, text)
+
+
 def parse_kv_bullet(line: str) -> dict:
-    """Parse '• topic | k1: v1 | k2: v2 | ...' into {topic, fields, raw, tua}."""
+    """Parse '• topic | k1: v1 | k2: v2 | ...' into {topic, fields, raw, tua}.
+    Auto-resolves @<LID> mentions in topic and field values to @<Name>."""
     raw = line.strip()
     body = raw.lstrip("•").strip()
     parts = [p.strip() for p in body.split("|")]
@@ -155,9 +211,9 @@ def parse_kv_bullet(line: str) -> dict:
         m = re.match(r"^([\w\s]+?):\s*(.+)$", p)
         if m:
             key = m.group(1).strip().lower().replace(" ", "_")
-            fields[key] = m.group(2).strip()
+            fields[key] = resolve_lids_in_text(m.group(2).strip())
     return {
-        "topic": topic.replace("[TUA]", "").strip(),
+        "topic": resolve_lids_in_text(topic.replace("[TUA]", "").strip()),
         "fields": fields,
         "tua": "[TUA]" in raw,
         "raw": raw,
