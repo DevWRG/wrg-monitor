@@ -58,6 +58,24 @@ fi
 
 log "Membaca ${#ALL_FILES[@]} file pesan…"
 
+# ── Ignored groups: Research di-skip (trial bot only) — sama pattern dengan rekap.sh
+build_ignored_jids() {
+  local FILE="$DATA_DIR/members.json"
+  echo "120363409252019573@g.us"
+  [ ! -f "$FILE" ] && return
+  jq -r '
+    ((.group_directory_user // {}) as $u
+    | (.group_directory // {}) as $a
+    | ($a + $u)
+    | to_entries[]
+    | select(.value != null and (.value | test("research"; "i")))
+    | .key)
+  ' "$FILE" 2>/dev/null
+}
+IGNORED_JIDS_JSON=$(build_ignored_jids | jq -R . | jq -sc 'unique')
+IGNORED_COUNT=$(echo "$IGNORED_JIDS_JSON" | jq 'length')
+[ "$IGNORED_COUNT" -gt 0 ] && log "Filter $IGNORED_COUNT grup Research/ignored: $(echo "$IGNORED_JIDS_JSON" | jq -r 'join(", ")')"
+
 # Distinct group_jids active in window.
 # NOTE: do NOT name this variable GROUPS — bash has a readonly array GROUPS=(<user gids>),
 # and assigning to it is silently ignored, so $GROUPS would return the user's primary GID.
@@ -74,6 +92,13 @@ AI_FAILURES=0
 
 while IFS= read -r JID; do
   [ -z "$JID" ] && continue
+
+  # Skip Research/ignored groups (trial bot, etc.)
+  if echo "$IGNORED_JIDS_JSON" | jq -e --arg j "$JID" 'index($j)' >/dev/null 2>&1; then
+    log "  skip $JID (ignored — Research/trial group)"
+    SKIPPED=$((SKIPPED + 1))
+    continue
+  fi
 
   # Aggregate this group's messages across the window
   GROUP_MSGS=$(cat "${ALL_FILES[@]}" | jq -c --arg jid "$JID" --argjson since "$CUTOFF_MS" '
