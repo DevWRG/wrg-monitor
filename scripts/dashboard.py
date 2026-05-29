@@ -732,6 +732,42 @@ def weekly_stats(end_date: str, days: int = 7) -> list[dict]:
     return out
 
 
+def latest_briefing_meta() -> dict | None:
+    """Return latest briefing file metadata + Section A excerpt (compact, ~1KB)
+    for Overview card preview. Returns None if no briefings exist."""
+    if not BRIEFING_DIR.is_dir():
+        return None
+    files = sorted(BRIEFING_DIR.glob("briefing_*.txt"), reverse=True)
+    if not files:
+        return None
+    f = files[0]
+    m = re.match(r"briefing_(\d{4}-\d{2}-\d{2})_(\d{4})\.txt$", f.name)
+    if not m:
+        return None
+    try:
+        content = f.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+    parsed = parse_briefing_structured(content)
+    # Excerpt of Section A (Ringkasan Eksekutif) — first ~500 chars
+    section_a = next((s for s in parsed["sections"] if s.get("id") == "A"), None)
+    excerpt = ""
+    if section_a:
+        body = section_a["body"].strip()
+        excerpt = body[:500] + ("…" if len(body) > 500 else "")
+    return {
+        "filename": f.name,
+        "date": m.group(1),
+        "time": m.group(2)[:2] + ":" + m.group(2)[2:],
+        "size": f.stat().st_size,
+        "mtime": int(f.stat().st_mtime),
+        "label": parsed["header"].get("label", ""),
+        "disiapkan": parsed["header"].get("disiapkan", ""),
+        "section_count": len(parsed["sections"]),
+        "ringkasan_excerpt": excerpt,
+    }
+
+
 def fetch_data(date: str) -> dict:
     rekaps = list_files(REKAP_DIR, date)
     resumes = list_files(RESUME_DIR, date)
@@ -742,6 +778,7 @@ def fetch_data(date: str) -> dict:
         "rekap": rekaps,
         "resume": resumes,
         "latest_resume": resumes[0] if resumes else None,
+        "latest_briefing": latest_briefing_meta(),
         "collective_rekap": merge_rekap_day(rekaps),
         "collective_resume": merge_resume_day(resumes),
         "stats": {**daily, "weekly": weekly_stats(date)},
@@ -1590,6 +1627,32 @@ main {
   background: #f0f4fa; padding: 1px 5px; border-radius: 3px;
   font-size: 12px; color: #c2410c;
 }
+
+/* === Briefing card di Overview === */
+.briefing-overview-card .section-head {
+  color: #c2410c; border-left: 3px solid #c2410c;
+  padding-left: 10px;
+}
+.briefing-overview-meta {
+  color: #4a5568; font-size: 12px; margin-bottom: 10px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e6ee;
+}
+.briefing-overview-excerpt {
+  background: #fafbfd; border: 1px solid #e0e6ee; border-radius: 4px;
+  padding: 12px 14px; margin: 10px 0;
+  font-size: 13px; line-height: 1.6; color: #1f2933;
+}
+.briefing-excerpt-label {
+  font-size: 11px; font-weight: 700; color: #c2410c;
+  text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px;
+}
+.briefing-open-btn {
+  background: #c2410c; color: #fff; border: none;
+  padding: 8px 16px; border-radius: 4px; cursor: pointer;
+  font-size: 13px; font-weight: 600; font-family: inherit;
+  transition: background 0.15s;
+}
+.briefing-open-btn:hover { background: #9a3208; }
 .group-bullets {
   margin: 4px 0 4px 0;
   padding-left: 18px;
@@ -2691,6 +2754,32 @@ function renderOverview(data) {
       '<div class="chart-card"><div class="chart-title">Umur Item Pending</div>' + renderAgeChart(st.age_buckets || {}) + '</div>' +
     '</div>';
 
+  // Latest weekend briefing card — compact preview + link ke tab Briefing
+  let briefingPreview = '';
+  if (data.latest_briefing) {
+    const b = data.latest_briefing;
+    const sizeKb = (b.size / 1024).toFixed(1);
+    // Calculate age in days
+    const briefDate = new Date(b.date);
+    const ageDays = Math.floor((Date.now() - briefDate.getTime()) / 86400000);
+    const ageText = ageDays === 0 ? 'hari ini' : ageDays === 1 ? '1 hari lalu' : ageDays + ' hari lalu';
+    briefingPreview = '<div class="section briefing-overview-card">' +
+      '<div class="section-head">📋 Briefing Direktur Terbaru ' +
+        '<span class="meta">' + escapeHtml(b.date) + ' · ' + escapeHtml(b.time) + ' WIB · ' + ageText + '</span>' +
+      '</div>' +
+      '<div class="section-body">' +
+        '<div class="briefing-overview-meta">' +
+          '<strong>' + escapeHtml(b.label || 'Briefing Mingguan') + '</strong>' +
+          (b.disiapkan ? ' · Disiapkan ' + escapeHtml(b.disiapkan) : '') +
+          ' · ' + b.section_count + ' sections · ' + sizeKb + ' KB' +
+        '</div>' +
+        (b.ringkasan_excerpt ? '<div class="briefing-overview-excerpt"><div class="briefing-excerpt-label">A. Ringkasan Eksekutif</div>' +
+          renderInlineMd(b.ringkasan_excerpt) + '</div>' : '') +
+        '<button class="briefing-open-btn" onclick="switchTab(\'briefing\')">📋 Buka Briefing Lengkap →</button>' +
+      '</div>' +
+    '</div>';
+  }
+
   // Latest resume preview at bottom of overview
   let resumePreview = '';
   if (data.latest_resume) {
@@ -2700,7 +2789,7 @@ function renderOverview(data) {
       '</div>';
   }
 
-  document.getElementById('panel-overview').innerHTML = sysStatusHtml + stats + charts + resumePreview;
+  document.getElementById('panel-overview').innerHTML = sysStatusHtml + stats + charts + briefingPreview + resumePreview;
 }
 
 function makeCollectiveCard(kind, parsed, meta) {
