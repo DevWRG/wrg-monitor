@@ -870,7 +870,7 @@ INDEX_HTML = r"""<!doctype html>
 <title>WRG Monitor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════════════
    ADMINATOR-INSPIRED DESIGN TOKENS
@@ -952,9 +952,20 @@ INDEX_HTML = r"""<!doctype html>
   --shadow-lg:      0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
 }
 
+/* Native system UI font stack — crisp di semua OS tanpa Google Fonts download.
+   macOS: San Francisco (-apple-system, BlinkMacSystemFont)
+   Windows: Segoe UI Variable / Segoe UI
+   Linux: Cantarell / Ubuntu (via system-ui)
+   Fallback: Helvetica Neue, Arial */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI",
+               system-ui, "Helvetica Neue", Arial, "Apple Color Emoji", sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+}
+
 * { box-sizing: border-box; }
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   background: var(--bg-page);
   color: var(--text-primary);
@@ -964,11 +975,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4 {
-  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 700;
 }
 code, pre, .mono, .phone, .stat strong {
-  font-family: 'JetBrains Mono', ui-monospace, "SF Mono", monospace;
+  font-family: var(--font-mono);
 }
 
 /* ═══ App shell (sidebar + main) ═══ */
@@ -993,7 +1004,7 @@ code, pre, .mono, .phone, .stat strong {
   align-items: center;
   gap: 10px;
   padding: 16px 20px;
-  font-family: 'Inter Tight', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 17px;
   color: var(--text-primary);
@@ -1085,7 +1096,7 @@ code, pre, .mono, .phone, .stat strong {
   z-index: 5;
 }
 .topbar-title {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: var(--font-sans);
   font-size: 17px;
   font-weight: 700;
   margin: 0;
@@ -1107,7 +1118,7 @@ code, pre, .mono, .phone, .stat strong {
 .topbar .meta {
   font-size: 12px;
   color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 .topbar #date-picker,
 .topbar #refresh-btn,
@@ -1121,7 +1132,7 @@ code, pre, .mono, .phone, .stat strong {
   cursor: pointer;
   font-family: inherit;
 }
-.topbar #date-picker { font-family: 'JetBrains Mono', monospace; }
+.topbar #date-picker { font-family: var(--font-mono); }
 .topbar #refresh-btn:hover,
 .topbar #qr-btn:hover { background: var(--bg-hover); border-color: var(--accent); color: var(--accent); }
 .tab-panel { display: none; padding: 20px; }
@@ -1727,7 +1738,7 @@ main {
 .card.rekap .badge { background: var(--text-muted); color: #fff; }
 .card-body {
   padding: 14px 16px;
-  font-family: 'JetBrains Mono', "SF Mono", "Menlo", monospace;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -1799,13 +1810,13 @@ main {
 }
 .chart-svg { width: 100%; height: auto; display: block; }
 .chart-svg .axis { stroke: var(--border); stroke-width: 1; }
-.chart-svg .axis-label { fill: var(--text-secondary); font-size: 10px; font-family: 'JetBrains Mono', monospace; }
+.chart-svg .axis-label { fill: var(--text-secondary); font-size: 10px; font-family: var(--font-mono); }
 .chart-svg .bar-confirmed { fill: var(--ok); }
 .chart-svg .bar-pending { fill: var(--warn); }
 .chart-svg .bar-tua { fill: var(--danger); }
 .chart-svg .bar-pic { fill: var(--info); }
 .chart-svg .grid { stroke: var(--border-soft); stroke-width: 1; stroke-dasharray: 2,3; }
-.chart-svg .value-label { fill: var(--text-primary); font-size: 10px; font-family: 'JetBrains Mono', monospace; }
+.chart-svg .value-label { fill: var(--text-primary); font-size: 10px; font-family: var(--font-mono); }
 .chart-svg .bar-tua-text { fill: var(--danger); }
 .chart-empty { color: var(--text-secondary); font-size: 12px; padding: 20px; text-align: center; font-style: italic; }
 
