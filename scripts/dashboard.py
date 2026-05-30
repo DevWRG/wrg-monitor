@@ -1712,6 +1712,26 @@ mark.hit.mark-current {
   white-space: pre-wrap;
 }
 .pola-section-body strong { color: var(--text-primary); }
+/* Table inside pola section — reset pre-wrap (table tidak butuh) + Adminator style */
+.pola-table {
+  white-space: normal;
+  border-collapse: collapse; width: 100%; margin: 10px 0 12px 0;
+  font-size: 12.5px; background: var(--bg-panel);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
+}
+.pola-table th, .pola-table td {
+  padding: 8px 12px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--border-soft);
+}
+.pola-table tbody tr:last-child td { border-bottom: none; }
+.pola-table th {
+  background: var(--bg-soft); font-weight: 600; color: var(--text-muted);
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.6px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.pola-table tbody tr:hover { background: var(--bg-hover); }
 @media (max-width: 768px) {
   #search-wrap { width: 100%; }
   #search-input { min-width: 0; flex: 1; }
@@ -3535,8 +3555,35 @@ async function loadPola() {
 }
 
 function renderMarkdownBody(text) {
-  // Minimal MD rendering: bold via **x**, bullets, preserve newlines via white-space:pre-wrap
-  return escapeHtml(text).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // MD rendering for pola sections: detect markdown tables → HTML table,
+  // bold via **x**, inline `code`, preserve other lines as text.
+  if (!text) return '';
+  const lines = text.split('\n');
+  const out = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    const stripped = line.trim();
+    // Table detection: row starts with | AND next line is | --- separator
+    if (stripped.startsWith('|') && i + 1 < lines.length && lines[i+1].trim().match(/^\|[\s:|\-]+\|$/)) {
+      const headers = stripped.replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+      let tableHtml = '<table class="pola-table"><thead><tr>' +
+        headers.map(h => '<th>' + renderInlineMd(h) + '</th>').join('') +
+      '</tr></thead><tbody>';
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith('|')) {
+        const cells = lines[i].trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+        tableHtml += '<tr>' + cells.map(c => '<td>' + renderInlineMd(c) + '</td>').join('') + '</tr>';
+        i++;
+      }
+      tableHtml += '</tbody></table>';
+      out.push(tableHtml);
+      continue;
+    }
+    out.push(renderInlineMd(line));
+    i++;
+  }
+  return out.join('\n');
 }
 
 function renderPolaPanel() {
