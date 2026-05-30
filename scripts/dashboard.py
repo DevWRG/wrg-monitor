@@ -1938,21 +1938,84 @@ main {
 .briefing-card {
   background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 14px;
 }
+/* Briefing section tabs — Adminator-style card-grid dengan colored letter chips */
 .briefing-section-tabs {
-  display: flex; flex-wrap: wrap; gap: 4px;
-  border-bottom: 2px solid #d4dbe5; padding-bottom: 0; margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 0;
+  border-bottom: none;
 }
 .briefing-section-tabs .section-tab {
-  background: transparent; border: none; padding: 8px 12px; cursor: pointer;
-  font-size: 12.5px; font-weight: 500; color: var(--text-secondary);
-  border-bottom: 2px solid transparent; margin-bottom: -2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  cursor: pointer;
   font-family: inherit;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
-.briefing-section-tabs .section-tab:hover { color: var(--text-primary); background: var(--bg-soft); }
+.briefing-section-tabs .section-tab:hover {
+  border-color: var(--text-muted);
+  box-shadow: var(--shadow-sm);
+}
+.tab-letter {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+  transition: background 0.15s, color 0.15s;
+}
+/* Color variants — soft bg + colored text (inactive state) */
+.tab-accent .tab-letter { background: var(--accent-soft); color: var(--accent); }
+.tab-info   .tab-letter { background: var(--info-soft);   color: var(--info); }
+.tab-ok     .tab-letter { background: var(--ok-soft);     color: var(--ok); }
+.tab-warn   .tab-letter { background: var(--warn-soft);   color: var(--warn); }
+.tab-danger .tab-letter { background: var(--danger-soft); color: var(--danger); }
+.briefing-tab-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+/* Active state — letter chip filled, card border + bg accent */
 .briefing-section-tabs .section-tab.active {
-  color: var(--accent); border-bottom-color: var(--accent); font-weight: 700;
+  border-color: currentColor;
+  box-shadow: var(--shadow-md);
 }
-.briefing-tab-title { font-weight: 500; }
+.tab-accent.active { background: var(--accent-soft); }
+.tab-info.active   { background: var(--info-soft); }
+.tab-ok.active     { background: var(--ok-soft); }
+.tab-warn.active   { background: var(--warn-soft); }
+.tab-danger.active { background: var(--danger-soft); }
+.tab-accent.active .tab-letter { background: var(--accent); color: #fff; }
+.tab-info.active   .tab-letter { background: var(--info);   color: #fff; }
+.tab-ok.active     .tab-letter { background: var(--ok);     color: #fff; }
+.tab-warn.active   .tab-letter { background: var(--warn);   color: #fff; }
+.tab-danger.active .tab-letter { background: var(--danger); color: #fff; }
+.tab-accent.active { border-color: var(--accent); }
+.tab-info.active   { border-color: var(--info); }
+.tab-ok.active     { border-color: var(--ok); }
+.tab-warn.active   { border-color: var(--warn); }
+.tab-danger.active { border-color: var(--danger); }
+.tab-accent.active .briefing-tab-title { color: var(--accent); }
+.tab-info.active   .briefing-tab-title { color: var(--info); }
+.tab-ok.active     .briefing-tab-title { color: var(--ok); }
+.tab-warn.active   .briefing-tab-title { color: var(--warn); }
+.tab-danger.active .briefing-tab-title { color: var(--danger); }
 .briefing-section-title {
   font-size: 16px; font-weight: 700; color: var(--accent);
   text-transform: uppercase; letter-spacing: 0.4px;
@@ -3305,11 +3368,14 @@ function renderBriefingPanel() {
   } else {
     const sections = cur.parsed.sections || [];
     if (!briefingActiveSection && sections.length) briefingActiveSection = sections[0].id;
-    // Sub-tabs
-    const tabsHtml = sections.map(s => {
+    // Color cycle per section — Adminator-style colored letter chips
+    const sectionColors = ['accent', 'info', 'ok', 'warn', 'danger', 'accent', 'info', 'ok'];
+    // Sub-tabs (card-grid dengan letter chip + title)
+    const tabsHtml = sections.map((s, idx) => {
       const active = (s.id === briefingActiveSection) ? ' active' : '';
-      return '<button class="section-tab' + active + '" data-section="' + escapeHtml(s.id) + '">' +
-        s.id + (s.id !== 'Rek' ? '. ' : ' ') +
+      const colorVar = sectionColors[idx % sectionColors.length];
+      return '<button class="section-tab tab-' + colorVar + active + '" data-section="' + escapeHtml(s.id) + '">' +
+        '<span class="tab-letter">' + escapeHtml(s.id) + '</span>' +
         '<span class="briefing-tab-title">' + escapeHtml(s.short) + '</span>' +
       '</button>';
     }).join('');
