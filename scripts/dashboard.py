@@ -877,38 +877,41 @@ INDEX_HTML = r"""<!doctype html>
    Light + dark variant via data-theme attribute on <html>
    ═══════════════════════════════════════════════════════════════════ */
 :root, [data-theme="light"] {
-  /* Surfaces */
-  --bg-page:        #f6f8fa;
+  /* Surfaces — Adminator palette */
+  --bg-page:        #f0f4f8;
   --bg-panel:       #ffffff;
-  --bg-sidebar:     #1a2332;
+  --bg-sidebar:     #ffffff;
   --bg-topbar:      #ffffff;
-  --bg-soft:        #f0f4fa;
-  --bg-hover:       #edf2f7;
-  /* Text */
-  --text-primary:   #1f2933;
-  --text-secondary: #4a5568;
-  --text-muted:     #97a3b3;
-  --text-on-dark:   #d4dbe5;
-  --text-on-dark-active: #ffffff;
-  --text-on-dark-muted:  #6b7588;
-  /* Brand & accent */
+  --bg-soft:        #f1f5f9;
+  --bg-hover:       #f8fafc;
+  --bg-muted:       #f1f5f9;
+  /* Text — Adminator slate scale */
+  --text-primary:   #1e293b;
+  --text-secondary: #64748b;
+  --text-muted:     #94a3b8;
+  /* Sidebar text (now white sidebar) — same as body text in light mode */
+  --text-on-dark:   #64748b;          /* inactive nav */
+  --text-on-dark-active: #c2410c;     /* active nav = WRG orange */
+  --text-on-dark-muted:  #94a3b8;
+  /* Brand accent — WRG orange (retained) */
   --accent:         #c2410c;
   --accent-soft:    rgba(194, 65, 12, 0.10);
   --accent-strong:  #9a3208;
-  --info:           #2d5b8e;
-  --info-soft:      rgba(45, 91, 142, 0.10);
-  --ok:             #5a7a1a;
-  --ok-soft:        rgba(90, 122, 26, 0.10);
-  --warn:           #d97706;
-  --warn-soft:      rgba(217, 119, 6, 0.10);
-  --danger:         #c53030;
-  --danger-soft:    rgba(197, 48, 48, 0.10);
-  /* Borders & shadow */
-  --border: var(--border-soft);
-  --border-soft:    #edf2f7;
-  --shadow-sm:      0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md:      0 2px 8px rgba(15, 23, 42, 0.06);
-  --shadow-lg:      0 8px 24px rgba(15, 23, 42, 0.08);
+  /* Status colors — Adminator tailwind-style */
+  --info:           #0ea5e9;
+  --info-soft:      #f0f9ff;
+  --ok:             #10b981;
+  --ok-soft:        #ecfdf5;
+  --warn:           #f59e0b;
+  --warn-soft:      #fffbeb;
+  --danger:         #ef4444;
+  --danger-soft:    #fef2f2;
+  /* Borders & shadow — Adminator */
+  --border:         #e4e8ef;
+  --border-soft:    #eef1f5;
+  --shadow-sm:      0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-md:      0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg:      0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
   /* Geometry */
   --radius-sm:      4px;
   --radius:         8px;
@@ -918,28 +921,35 @@ INDEX_HTML = r"""<!doctype html>
   --topbar-height:  56px;
 }
 [data-theme="dark"] {
-  --bg-page:        #0f1419;
-  --bg-panel:       #1a2332;
-  --bg-sidebar:     #0a0f15;
-  --bg-topbar:      #1a2332;
-  --bg-soft:        #232f3e;
-  --bg-hover:       #2a3441;
-  --text-primary:   #e8edf3;
-  --text-secondary: #b4c0d0;
-  --text-muted:     #6b7588;
-  --text-on-dark:   #d4dbe5;
-  --text-on-dark-active: #ffffff;
-  --text-on-dark-muted:  #6b7588;
-  --border:         #2a3441;
-  --border-soft:    #232f3e;
-  --accent-soft:    rgba(194, 65, 12, 0.18);
-  --info-soft:      rgba(45, 91, 142, 0.18);
-  --ok-soft:        rgba(90, 122, 26, 0.18);
-  --warn-soft:      rgba(217, 119, 6, 0.18);
-  --danger-soft:    rgba(197, 48, 48, 0.18);
-  --shadow-sm:      0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md:      0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.5);
+  --bg-page:        #0b1120;
+  --bg-panel:       #141b2d;
+  --bg-sidebar:     #141b2d;
+  --bg-topbar:      #141b2d;
+  --bg-soft:        #1a2237;
+  --bg-hover:       #1c2438;
+  --bg-muted:       #1a2237;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+  --text-on-dark:   #94a3b8;          /* inactive nav in dark */
+  --text-on-dark-active: #fb923c;     /* active = light orange (dark mode visible) */
+  --text-on-dark-muted:  #64748b;
+  --accent:         #fb923c;
+  --accent-soft:    rgba(251, 146, 60, 0.12);
+  --accent-strong:  #c2410c;
+  --info:           #38bdf8;
+  --info-soft:      #0d2232;
+  --ok:             #34d399;
+  --ok-soft:        #0f2a20;
+  --warn:           #fbbf24;
+  --warn-soft:      #2b1f08;
+  --danger:         #f87171;
+  --danger-soft:    #2b1414;
+  --border:         #222c42;
+  --border-soft:    #1a2237;
+  --shadow-sm:      0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md:      0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.25);
+  --shadow-lg:      0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; }
@@ -976,23 +986,25 @@ code, pre, .mono, .phone, .stat strong {
   top: 0; left: 0; bottom: 0;
   z-index: 10;
   transition: width 0.2s ease;
+  border-right: 1px solid var(--border);
 }
 .sidebar-brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 18px 20px;
+  padding: 16px 20px;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  color: var(--text-on-dark-active);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 17px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-soft);
+  min-height: var(--topbar-height);
 }
 .brand-icon { font-size: 22px; }
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  padding: 12px 8px;
+  padding: 16px 10px;
   gap: 2px;
   flex: 1;
 }
@@ -1010,20 +1022,23 @@ code, pre, .mono, .phone, .stat strong {
   font-weight: 500;
   font-family: inherit;
   text-align: left;
-  transition: background 0.12s, color 0.12s;
+  transition: background 0.12s, color 0.12s, border-left-color 0.12s;
+  border-left: 3px solid transparent;
 }
 .sidebar-nav button:hover {
-  background: rgba(255,255,255,0.04);
-  color: var(--text-on-dark-active);
+  background: var(--bg-hover);
+  color: var(--text-primary);
 }
 .sidebar-nav button.active {
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  font-weight: 600;
 }
 .sidebar-nav .nav-icon { font-size: 16px; width: 18px; text-align: center; }
 .sidebar-footer {
-  padding: 10px 8px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 10px;
+  border-top: 1px solid var(--border-soft);
 }
 .sidebar-footer button {
   display: flex;
@@ -1040,8 +1055,8 @@ code, pre, .mono, .phone, .stat strong {
   font-family: inherit;
 }
 .sidebar-footer button:hover {
-  background: rgba(255,255,255,0.04);
-  color: var(--text-on-dark-active);
+  background: var(--bg-hover);
+  color: var(--text-primary);
 }
 
 .app-main {
