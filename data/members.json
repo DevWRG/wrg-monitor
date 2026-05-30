@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-29T15:30:05+0700",
+  "generated_at": "2026-05-30T15:30:05+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
-    "distinct_sender_names": 69
+    "distinct_sender_names": 70
   },
   "group_directory": {
     "120363403842555552@g.us": "GA WRG",
@@ -1646,7 +1646,7 @@
     },
     {
       "sender_name": "Warehouse WRG",
-      "count": 339,
+      "count": 342,
       "groups": [
         "120363405145265597@g.us",
         "6281248476085-1539641961@g.us",
@@ -1667,7 +1667,7 @@
     },
     {
       "sender_name": "admwahana2020",
-      "count": 317,
+      "count": 318,
       "groups": [
         "120363405145265597@g.us",
         "120363405485256544@g.us",
@@ -1699,7 +1699,7 @@
     },
     {
       "sender_name": "Denys Chandra",
-      "count": 247,
+      "count": 261,
       "groups": [
         "6281248476085-1530485384@g.us",
         "6281335118687-1526342601@g.us"
@@ -1735,16 +1735,8 @@
       ]
     },
     {
-      "sender_name": "Fafa",
-      "count": 167,
-      "groups": [
-        "120363404092121926@g.us",
-        "120363406071725731@g.us"
-      ]
-    },
-    {
       "sender_name": "Rizal",
-      "count": 166,
+      "count": 178,
       "groups": [
         "6281248476085-1539641961@g.us",
         "6281335118687-1517798430@g.us",
@@ -1752,8 +1744,16 @@
       ]
     },
     {
+      "sender_name": "Fafa",
+      "count": 168,
+      "groups": [
+        "120363404092121926@g.us",
+        "120363406071725731@g.us"
+      ]
+    },
+    {
       "sender_name": "agus",
-      "count": 149,
+      "count": 150,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6281335118687-1527495664@g.us",
@@ -1779,18 +1779,8 @@
       ]
     },
     {
-      "sender_name": "Ibnuuuu",
-      "count": 120,
-      "groups": [
-        "6281335118687-1517798430@g.us",
-        "6281949637972-1603758195@g.us",
-        "6281949637972-1609761547@g.us",
-        "6285736763141-1515408009@g.us"
-      ]
-    },
-    {
       "sender_name": "anggaadhitya2016",
-      "count": 118,
+      "count": 124,
       "groups": [
         "120363397960052940@g.us",
         "120363405485256544@g.us",
@@ -1801,7 +1791,7 @@
     },
     {
       "sender_name": "Yogi Nugroho",
-      "count": 117,
+      "count": 121,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1817,13 +1807,24 @@
       ]
     },
     {
+      "sender_name": "Ibnuuuu",
+      "count": 120,
+      "groups": [
+        "6281335118687-1517798430@g.us",
+        "6281949637972-1603758195@g.us",
+        "6281949637972-1609761547@g.us",
+        "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
       "sender_name": "Arif_Official",
-      "count": 113,
+      "count": 116,
       "groups": [
         "120363225099430838@g.us",
         "120363405485256544@g.us",
         "6281335118687-1517798430@g.us",
         "6281335118687-1527497274@g.us",
+        "6281949637972-1523701186@g.us",
         "6281949637972-1523701417@g.us"
       ]
     },
@@ -1852,6 +1853,16 @@
       ]
     },
     {
+      "sender_name": "Husni",
+      "count": 98,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363403842555552@g.us",
+        "120363404092121926@g.us",
+        "120363409252019573@g.us"
+      ]
+    },
+    {
       "sender_name": "Keuangan Wahana Rizky",
       "count": 97,
       "groups": [
@@ -1860,16 +1871,6 @@
         "6281335118687-1527497998@g.us",
         "6282232418991-1555990746@g.us",
         "6285736763141-1515408009@g.us"
-      ]
-    },
-    {
-      "sender_name": "Husni",
-      "count": 90,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363403842555552@g.us",
-        "120363404092121926@g.us",
-        "120363409252019573@g.us"
       ]
     },
     {
@@ -1922,6 +1923,13 @@
       ]
     },
     {
+      "sender_name": "Hanif",
+      "count": 76,
+      "groups": [
+        "6281335118687-1517798430@g.us"
+      ]
+    },
+    {
       "sender_name": "Maskhan",
       "count": 74,
       "groups": [
@@ -1930,11 +1938,12 @@
     },
     {
       "sender_name": "FIRMANSYAH",
-      "count": 72,
+      "count": 73,
       "groups": [
         "120363405485256544@g.us",
         "6281335118687-1527496248@g.us",
-        "6285649096261-1516620137@g.us"
+        "6285649096261-1516620137@g.us",
+        "6285736763141-1515408009@g.us"
       ]
     },
     {
@@ -1958,7 +1967,7 @@
     },
     {
       "sender_name": "Admin Purchasing WRG",
-      "count": 64,
+      "count": 66,
       "groups": [
         "120363215877961952@g.us",
         "6281248476085-1539641961@g.us",
@@ -1972,15 +1981,8 @@
       ]
     },
     {
-      "sender_name": "Hanif",
-      "count": 64,
-      "groups": [
-        "6281335118687-1517798430@g.us"
-      ]
-    },
-    {
       "sender_name": "Siti Nurcholis",
-      "count": 64,
+      "count": 66,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6282232418991-1555990746@g.us",
@@ -1989,7 +1991,7 @@
     },
     {
       "sender_name": "Rengga",
-      "count": 63,
+      "count": 65,
       "groups": [
         "6281335118687-1517798430@g.us"
       ]
@@ -2115,6 +2117,14 @@
       ]
     },
     {
+      "sender_name": "Muhid",
+      "count": 40,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363404092121926@g.us"
+      ]
+    },
+    {
       "sender_name": "renika",
       "count": 38,
       "groups": [
@@ -2123,7 +2133,7 @@
     },
     {
       "sender_name": "RG WG",
-      "count": 36,
+      "count": 37,
       "groups": [
         "120363042143432430@g.us",
         "120363397960052940@g.us",
@@ -2156,14 +2166,6 @@
       ]
     },
     {
-      "sender_name": "Muhid",
-      "count": 30,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363404092121926@g.us"
-      ]
-    },
-    {
       "sender_name": "Dito",
       "count": 27,
       "groups": [
@@ -2171,15 +2173,8 @@
       ]
     },
     {
-      "sender_name": "Ayume",
-      "count": 25,
-      "groups": [
-        "6282232418991-1555990746@g.us"
-      ]
-    },
-    {
       "sender_name": "Sari",
-      "count": 25,
+      "count": 27,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6282232418991-1555990746@g.us"
@@ -2187,14 +2182,21 @@
     },
     {
       "sender_name": "Pita",
-      "count": 24,
+      "count": 26,
       "groups": [
         "120363215877961952@g.us"
       ]
     },
     {
       "sender_name": "Rahma",
-      "count": 24,
+      "count": 26,
+      "groups": [
+        "6282232418991-1555990746@g.us"
+      ]
+    },
+    {
+      "sender_name": "Ayume",
+      "count": 25,
       "groups": [
         "6282232418991-1555990746@g.us"
       ]
@@ -2291,6 +2293,13 @@
       ]
     },
     {
+      "sender_name": "NovalAndriawan",
+      "count": 2,
+      "groups": [
+        "6281949637972-1523701186@g.us"
+      ]
+    },
+    {
       "sender_name": "Firmansyah",
       "count": 1,
       "groups": [
@@ -2305,18 +2314,17 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-29T22:30:05",
+  "last_lid_resolve": "2026-05-30T22:30:05",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
     "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-29T22:30:05",
+  "roster_merge_at": "2026-05-30T22:30:05",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,
     "roster_total": 62
-  },
-  "last_user_edit": "2026-05-30T15:00:00"
+  }
 }

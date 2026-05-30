@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-29 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-05-30 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -106,39 +106,39 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Display Name | Msg Count | Groups |
 |---|---:|---|
 | Warehouse1 | 545 | 16 |
-| Warehouse WRG | 339 | 15 |
-| admwahana2020 | 317 | 16 |
+| Warehouse WRG | 342 | 15 |
+| admwahana2020 | 318 | 16 |
 | Ekba_Prastia | 269 | 4 |
-| Denys Chandra | 247 | 2 |
+| Denys Chandra | 261 | 2 |
 | Karib | 233 | 3 |
 | Shipping WRG | 225 | 4 |
 | Elok | 200 | 4 |
-| Fafa | 167 | 2 |
-| Rizal | 166 | 3 |
-| agus | 149 | 3 |
+| Rizal | 178 | 3 |
+| Fafa | 168 | 2 |
+| agus | 150 | 3 |
 | Nungky | 130 | 4 |
 | Putri Diana | 129 | 2 |
+| anggaadhitya2016 | 124 | 5 |
+| Yogi Nugroho | 121 | 11 |
 | Ibnuuuu | 120 | 4 |
-| anggaadhitya2016 | 118 | 5 |
-| Yogi Nugroho | 117 | 11 |
-| Arif_Official | 113 | 5 |
+| Arif_Official | 116 | 6 |
 | M. Wildha Saputra | 112 | 5 |
 | Mufidz | 106 | 7 |
+| Husni | 98 | 4 |
 | Keuangan Wahana Rizky | 97 | 5 |
-| Husni | 90 | 4 |
 | fanessa | 88 | 2 |
 | Aulia Ghozalina | 85 | 7 |
 | IKA | 82 | 4 |
 | IRUL|PT WAHANA GUMILANG | 81 | 5 |
 | Admin Penawaran | 78 | 1 |
+| Hanif | 76 | 1 |
 | Maskhan | 74 | 1 |
-| FIRMANSYAH | 72 | 3 |
+| FIRMANSYAH | 73 | 4 |
 | Luripohan | 71 | 6 |
 | DNIFXMMS | 68 | 1 |
-| Admin Purchasing WRG | 64 | 9 |
-| Hanif | 64 | 1 |
-| Siti Nurcholis | 64 | 3 |
-| Rengga | 63 | 1 |
+| Admin Purchasing WRG | 66 | 9 |
+| Siti Nurcholis | 66 | 3 |
+| Rengga | 65 | 1 |
 | Boni3 | 61 | 3 |
 | Kadek Heriadi | 59 | 3 |
 | ASN | 53 | 1 |
@@ -150,16 +150,16 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Rekarya | 41 | 1 |
 | Sidqi | 41 | 5 |
 | Fakturis WRG | 40 | 3 |
+| Muhid | 40 | 2 |
 | renika | 38 | 1 |
-| RG WG | 36 | 6 |
+| RG WG | 37 | 6 |
 | Vickyadi | 35 | 4 |
 | Arman | 30 | 6 |
-| Muhid | 30 | 2 |
 | Dito | 27 | 1 |
+| Sari | 27 | 2 |
+| Pita | 26 | 1 |
+| Rahma | 26 | 1 |
 | Ayume | 25 | 1 |
-| Sari | 25 | 2 |
-| Pita | 24 | 1 |
-| Rahma | 24 | 1 |
 | Yugo | 22 | 3 |
 | d | 21 | 1 |
 | Navisa | 19 | 1 |
@@ -172,5 +172,6 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | S | 4 | 1 |
 | navisatris | 3 | 1 |
 | HRD Wahana Gumilang Group | 2 | 1 |
+| NovalAndriawan | 2 | 1 |
 | Firmansyah | 1 | 1 |
 | kuntdrg | 1 | 1 |
