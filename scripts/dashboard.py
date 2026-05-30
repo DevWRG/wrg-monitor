@@ -1218,23 +1218,32 @@ mark.hit.mark-current {
 .members-filter {
   display: flex;
   gap: 4px;
-  background: var(--bg-panel);
+  background: var(--bg-soft);
   padding: 4px;
-  border-radius: 6px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
 }
 .members-filter button {
   background: transparent;
   color: var(--text-secondary);
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.members-filter button:hover:not(.active) {
+  background: var(--bg-hover);
+  color: var(--text-primary);
 }
 .members-filter button.active {
-  background: #b5c0cd;
-  color: var(--ok);
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
 }
 .members-search {
   background: var(--bg-panel);
