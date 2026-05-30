@@ -36,7 +36,8 @@
     "6281949637972-1523701417@g.us": "GROUP ECATALOG SUPPORT",
     "120363225099430838@g.us": "The Ironman Team 2026",
     "120363397960052940@g.us": "THE SUPERMAN TIM 2026",
-    "120363405145265597@g.us": "PENJUALAN DISTRIBUTOR"
+    "120363405145265597@g.us": "PENJUALAN DISTRIBUTOR",
+    "6281949637972-1609761547@g.us": "PENJUALAN JAWA BARAT"
   },
   "members": [
     {
@@ -2316,5 +2317,6 @@
     "enriched": 45,
     "phantomed": 17,
     "roster_total": 62
-  }
+  },
+  "last_user_edit": "2026-05-30T15:00:00"
 }
