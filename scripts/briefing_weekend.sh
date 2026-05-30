@@ -180,6 +180,39 @@ F. PROYEKSI & ANTISIPASI MINGGU DEPAN
 • [hal yang perlu disiapkan atau diantisipasi]
 
 ============================================
+G. RINGKASAN KEPUTUSAN YANG PERLU DARI DIREKTUR (SUMMARY FOR QUICK DECISION-MAKING)
+
+Format: tabel markdown dengan kolom # | Item | Decision Needed | Recommended Decision.
+Untuk setiap item action/agenda yang butuh sign-off direktur, kasih rekomendasi keputusan
+yang sudah pre-marked dengan ✅ APPROVE / 🔴 HOLD / dll. Tujuannya: direktur scan sebentar,
+langsung approve atau adjust. Target 5-10 items, urut prioritas.
+
+| # | Item | Decision Needed | Recommended Decision |
+|---|------|---|---|
+| 1 | [topik singkat + konteks] | [Approve / Reject / Hold / Performance intervention / dll] | ✅ [recommended] |
+
+============================================
+H. EXECUTIVE SUMMARY FOR QUICK REFERENCE
+
+Format ringkas untuk director yang time-pressed. 3 blok:
+
+**WRG Status (${MINGGU_LABEL}):**
+- 📊 [Sales/YTD]
+- 📦 [Delivery/Operasi]
+- ⚠️ [Supply chain risk]
+- 🚨 [Approval bottleneck]
+- 📈 [Sales responsiveness]
+- ✅ [Operations status]
+- 💰 [Finance status]
+
+**Key Asks:**
+1. ✅ [keputusan critical 1]
+2. ✅ [keputusan critical 2]
+... (3-5 items)
+
+**Tone:** [1-2 kalimat overall situasi + outlook]
+
+============================================
 Generated otomatis oleh WRG Monitor
 ${TANGGAL} | Data dari 30 grup WhatsApp
 
