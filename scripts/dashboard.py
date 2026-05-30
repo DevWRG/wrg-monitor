@@ -866,55 +866,250 @@ INDEX_HTML = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#e2e8ef">
+<meta name="theme-color" content="#f6f8fa">
 <title>WRG Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* ═══════════════════════════════════════════════════════════════════
+   ADMINATOR-INSPIRED DESIGN TOKENS
+   Light + dark variant via data-theme attribute on <html>
+   ═══════════════════════════════════════════════════════════════════ */
+:root, [data-theme="light"] {
+  /* Surfaces */
+  --bg-page:        #f6f8fa;
+  --bg-panel:       #ffffff;
+  --bg-sidebar:     #1a2332;
+  --bg-topbar:      #ffffff;
+  --bg-soft:        #f0f4fa;
+  --bg-hover:       #edf2f7;
+  /* Text */
+  --text-primary:   #1f2933;
+  --text-secondary: #4a5568;
+  --text-muted:     #97a3b3;
+  --text-on-dark:   #d4dbe5;
+  --text-on-dark-active: #ffffff;
+  --text-on-dark-muted:  #6b7588;
+  /* Brand & accent */
+  --accent:         #c2410c;
+  --accent-soft:    rgba(194, 65, 12, 0.10);
+  --accent-strong:  #9a3208;
+  --info:           #2d5b8e;
+  --info-soft:      rgba(45, 91, 142, 0.10);
+  --ok:             #5a7a1a;
+  --ok-soft:        rgba(90, 122, 26, 0.10);
+  --warn:           #d97706;
+  --warn-soft:      rgba(217, 119, 6, 0.10);
+  --danger:         #c53030;
+  --danger-soft:    rgba(197, 48, 48, 0.10);
+  /* Borders & shadow */
+  --border:         #e0e6ee;
+  --border-soft:    #edf2f7;
+  --shadow-sm:      0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md:      0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-lg:      0 8px 24px rgba(15, 23, 42, 0.08);
+  /* Geometry */
+  --radius-sm:      4px;
+  --radius:         8px;
+  --radius-lg:      12px;
+  --sidebar-width:  220px;
+  --sidebar-width-collapsed: 60px;
+  --topbar-height:  56px;
+}
+[data-theme="dark"] {
+  --bg-page:        #0f1419;
+  --bg-panel:       #1a2332;
+  --bg-sidebar:     #0a0f15;
+  --bg-topbar:      #1a2332;
+  --bg-soft:        #232f3e;
+  --bg-hover:       #2a3441;
+  --text-primary:   #e8edf3;
+  --text-secondary: #b4c0d0;
+  --text-muted:     #6b7588;
+  --text-on-dark:   #d4dbe5;
+  --text-on-dark-active: #ffffff;
+  --text-on-dark-muted:  #6b7588;
+  --border:         #2a3441;
+  --border-soft:    #232f3e;
+  --accent-soft:    rgba(194, 65, 12, 0.18);
+  --info-soft:      rgba(45, 91, 142, 0.18);
+  --ok-soft:        rgba(90, 122, 26, 0.18);
+  --warn-soft:      rgba(217, 119, 6, 0.18);
+  --danger-soft:    rgba(197, 48, 48, 0.18);
+  --shadow-sm:      0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:      0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 * { box-sizing: border-box; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   margin: 0;
-  background: #e2e8ef;
-  color: #1f2933;
+  background: var(--bg-page);
+  color: var(--text-primary);
   line-height: 1.5;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-header {
-  background: #d4dbe5;
-  padding: 14px 24px;
+h1, h2, h3, h4 {
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-weight: 700;
+}
+code, pre, .mono, .phone, .stat strong {
+  font-family: 'JetBrains Mono', ui-monospace, "SF Mono", monospace;
+}
+
+/* ═══ App shell (sidebar + main) ═══ */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--bg-sidebar);
+  color: var(--text-on-dark);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 10;
+  transition: width 0.2s ease;
+}
+.sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  border-bottom: 1px solid #b5c0cd;
+  gap: 10px;
+  padding: 18px 20px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-on-dark-active);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand-icon { font-size: 22px; }
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px;
+  gap: 2px;
+  flex: 1;
+}
+.sidebar-nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.12s, color 0.12s;
+}
+.sidebar-nav button:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-on-dark-active);
+}
+.sidebar-nav button.active {
+  background: var(--accent);
+  color: #fff;
+}
+.sidebar-nav .nav-icon { font-size: 16px; width: 18px; text-align: center; }
+.sidebar-footer {
+  padding: 10px 8px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.sidebar-footer button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark-muted);
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+}
+.sidebar-footer button:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-on-dark-active);
+}
+
+.app-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  min-width: 0;
+  transition: margin-left 0.2s ease;
+}
+.app-shell.sidebar-collapsed .sidebar { width: var(--sidebar-width-collapsed); }
+.app-shell.sidebar-collapsed .app-main { margin-left: var(--sidebar-width-collapsed); }
+.app-shell.sidebar-collapsed .brand-text,
+.app-shell.sidebar-collapsed .nav-label { display: none; }
+.app-shell.sidebar-collapsed .sidebar-nav button { justify-content: center; padding: 10px 8px; }
+.app-shell.sidebar-collapsed .sidebar-footer button { justify-content: center; }
+
+.topbar {
+  height: var(--topbar-height);
+  background: var(--bg-topbar);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   position: sticky;
   top: 0;
-  z-index: 100;
-  flex-wrap: wrap;
+  z-index: 5;
 }
-header h1 { font-size: 18px; margin: 0; color: #5a7a1a; }
-header .meta { font-size: 12px; color: #4a5568; }
-
-nav.tabs {
-  display: flex;
-  gap: 4px;
-  background: #ffffff;
-  padding: 4px;
-  border-radius: 6px;
+.topbar-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
 }
-nav.tabs button {
+.topbar-spacer { flex: 1; }
+#sidebar-toggle {
   background: transparent;
-  color: #4a5568;
   border: none;
-  padding: 6px 16px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 18px;
   cursor: pointer;
+  color: var(--text-secondary);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
 }
-nav.tabs button.active {
-  background: #b5c0cd;
-  color: #5a7a1a;
+#sidebar-toggle:hover { background: var(--bg-hover); }
+#theme-icon { font-size: 15px; }
+/* Topbar.meta + buttons (right side) */
+.topbar .meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
 }
-nav.tabs button:hover:not(.active) { background: #c4cdd9; color: #1f2933; }
-.tab-panel { display: none; }
+.topbar #date-picker,
+.topbar #refresh-btn,
+.topbar #qr-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.topbar #date-picker { font-family: 'JetBrains Mono', monospace; }
+.topbar #refresh-btn:hover,
+.topbar #qr-btn:hover { background: var(--bg-hover); border-color: var(--accent); color: var(--accent); }
+.tab-panel { display: none; padding: 20px; }
 .tab-panel.active { display: block; }
 
 /* Search bar */
@@ -922,8 +1117,8 @@ nav.tabs button:hover:not(.active) { background: #c4cdd9; color: #1f2933; }
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 4px;
   padding: 2px 8px;
 }
@@ -994,10 +1189,10 @@ mark.hit.mark-current {
 .members-filter {
   display: flex;
   gap: 4px;
-  background: #ffffff;
+  background: var(--bg-panel);
   padding: 4px;
   border-radius: 6px;
-  border: 1px solid #b5c0cd;
+  border: 1px solid var(--border);
 }
 .members-filter button {
   background: transparent;
@@ -1013,8 +1208,8 @@ mark.hit.mark-current {
   color: #5a7a1a;
 }
 .members-search {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   color: #1f2933;
   padding: 6px 12px;
   border-radius: 4px;
@@ -1026,14 +1221,14 @@ mark.hit.mark-current {
 .members-table {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
   font-size: 13px;
 }
 .members-table thead {
-  background: #d4dbe5;
+  background: var(--bg-soft);
   border-bottom: 2px solid #b5c0cd;
 }
 .members-table th, .members-table td {
@@ -1047,11 +1242,11 @@ mark.hit.mark-current {
   color: #0e7c66;
   font-weight: 700;
   letter-spacing: 0.5px;
-  background: #d4dbe5;
+  background: var(--bg-soft);
 }
 /* Note: sticky thead removed — interaksi border-collapse + sticky bermasalah
    di Safari/Chrome dengan tabel ini (thead overlap row 1). Tetap natural scroll. */
-.members-table tbody tr:hover { background: #d4dbe5; }
+.members-table tbody tr:hover { background: var(--bg-soft); }
 .members-table tbody tr:last-child td { border-bottom: none; }
 .members-table .phone {
   font-family: "SF Mono", monospace;
@@ -1107,7 +1302,7 @@ mark.hit.mark-current {
   transition: background 0.15s;
 }
 .members-table td.name-cell:hover {
-  background: #d4dbe5;
+  background: var(--bg-soft);
 }
 .members-table td.name-cell::after {
   content: '✏️';
@@ -1119,7 +1314,7 @@ mark.hit.mark-current {
 .members-table td.name-cell:hover::after { opacity: 0.4; }
 .members-table .name-edit {
   width: 100%;
-  background: #ffffff;
+  background: var(--bg-panel);
   border: 1px solid #5a7a1a;
   color: #1f2933;
   padding: 4px 8px;
@@ -1152,8 +1347,8 @@ mark.hit.mark-current {
 .qr-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 .qr-content {
   position: relative;
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
   text-align: center;
@@ -1172,8 +1367,8 @@ mark.hit.mark-current {
 .member-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 .member-modal-content {
   position: relative;
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 22px 26px;
   width: 100%;
@@ -1212,8 +1407,8 @@ mark.hit.mark-current {
   border-radius: 3px;
 }
 .mm-name-edit {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   color: #1f2933;
   padding: 6px 10px;
   border-radius: 4px;
@@ -1235,7 +1430,7 @@ mark.hit.mark-current {
 .mm-badge.unlabeled { background: #8a9aab; color: #fff; }
 .mm-groups { display: flex; flex-direction: column; gap: 6px; }
 .mm-group-row {
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #3a7ab8;
   padding: 6px 10px;
   border-radius: 0 3px 3px 0;
@@ -1260,8 +1455,8 @@ mark.hit.mark-current {
 .mm-save-status.err { color: #dc2626; }
 
 .mm-notes-edit {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   color: #1f2933;
   padding: 8px 10px;
   border-radius: 4px;
@@ -1289,8 +1484,8 @@ mark.hit.mark-current {
   margin-bottom: 18px;
 }
 .status-card {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-left: 3px solid #5a7a1a;
   border-radius: 5px;
   padding: 10px 14px;
@@ -1340,14 +1535,14 @@ mark.hit.mark-current {
 /* Pola tab cards */
 .pola-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
 .pola-card {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
 }
 .pola-card-head {
   padding: 10px 14px;
-  background: #d4dbe5;
+  background: var(--bg-soft);
   border-bottom: 1px solid #b5c0cd;
   display: flex;
   justify-content: space-between;
@@ -1383,7 +1578,7 @@ mark.hit.mark-current {
   font-size: 14px;
   font-weight: 600;
   color: #b8860b;
-  background: #ffffff;
+  background: var(--bg-panel);
   border: 1px solid #b8860b;
   border-radius: 3px;
   padding: 3px 8px;
@@ -1417,7 +1612,7 @@ mark.hit.mark-current {
 .pola-section {
   margin-bottom: 14px;
   padding: 10px 12px;
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #0e7c66;
   border-radius: 0 4px 4px 0;
 }
@@ -1453,19 +1648,21 @@ select, button {
 button:hover { background: #aab4c0; }
 main {
   padding: 20px 24px;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
+  background: var(--bg-page);
+  color: var(--text-primary);
 }
 .section {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 6px;
   margin-bottom: 24px;
   overflow: hidden;
 }
 .section-head {
   padding: 12px 16px;
-  background: #d4dbe5;
+  background: var(--bg-soft);
   border-bottom: 1px solid #b5c0cd;
   font-weight: 600;
   font-size: 14px;
@@ -1476,14 +1673,14 @@ main {
 .section-body { padding: 16px; }
 .cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .card {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
 }
 .card-head {
   padding: 10px 14px;
-  background: #d4dbe5;
+  background: var(--bg-soft);
   border-bottom: 1px solid #b5c0cd;
   display: flex;
   justify-content: space-between;
@@ -1491,7 +1688,7 @@ main {
   font-size: 13px;
 }
 .card.resume .card-head { background: #d4e3f5; }
-.card.rekap .card-head { background: #d4dbe5; }
+.card.rekap .card-head { background: var(--bg-soft); }
 .card-head .badge {
   font-size: 11px;
   padding: 2px 8px;
@@ -1544,7 +1741,7 @@ main {
   margin-bottom: 12px;
   flex-wrap: wrap;
 }
-.stat { background: #ffffff; padding: 6px 12px; border-radius: 4px; }
+.stat { background: var(--bg-panel); padding: 6px 12px; border-radius: 4px; }
 .stat strong { color: #1f2933; font-size: 14px; }
 .stat.alert strong { color: #dc2626; }
 .stat.ok strong { color: #5a7a1a; }
@@ -1557,8 +1754,8 @@ main {
   margin-bottom: 24px;
 }
 .chart-card {
-  background: #ffffff;
-  border: 1px solid #b5c0cd;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   border-radius: 6px;
   padding: 14px 16px;
 }
@@ -1610,7 +1807,7 @@ main {
 }
 
 .group-block {
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #3a7ab8;
   padding: 10px 12px;
   margin-bottom: 8px;
@@ -1642,7 +1839,7 @@ main {
 .briefing-toolbar {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 14px; margin-bottom: 12px;
-  background: #f0f4fa; border: 1px solid #c4cdd9; border-radius: 6px;
+  background: var(--bg-soft); border: 1px solid var(--border); border-radius: 6px;
 }
 .briefing-label { font-weight: 600; color: #2d5b8e; font-size: 13px; }
 #briefing-file-picker {
@@ -1651,7 +1848,7 @@ main {
 }
 .briefing-meta { color: #4a5568; font-size: 12px; margin-left: auto; font-style: italic; }
 .briefing-card {
-  background: #fff; border: 1px solid #c4cdd9; border-radius: 6px; padding: 14px;
+  background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 14px;
 }
 .briefing-section-tabs {
   display: flex; flex-wrap: wrap; gap: 4px;
@@ -1663,7 +1860,7 @@ main {
   border-bottom: 2px solid transparent; margin-bottom: -2px;
   font-family: inherit;
 }
-.briefing-section-tabs .section-tab:hover { color: #1f2933; background: #f0f4fa; }
+.briefing-section-tabs .section-tab:hover { color: #1f2933; background: var(--bg-soft); }
 .briefing-section-tabs .section-tab.active {
   color: #c2410c; border-bottom-color: #c2410c; font-weight: 700;
 }
@@ -1686,18 +1883,18 @@ main {
 .briefing-bullets li, .briefing-ol li { margin-bottom: 4px; }
 .briefing-table {
   border-collapse: collapse; width: 100%; margin: 8px 0 12px 0;
-  font-size: 12.5px; background: #fafbfd;
+  font-size: 12.5px; background: var(--bg-soft);
 }
 .briefing-table th, .briefing-table td {
-  border: 1px solid #d4dbe5; padding: 6px 10px; text-align: left; vertical-align: top;
+  border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top;
 }
 .briefing-table th {
   background: #e8edf3; font-weight: 700; color: #2d5b8e;
   font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.3px;
 }
-.briefing-table tbody tr:nth-child(even) { background: #f0f4fa; }
+.briefing-table tbody tr:nth-child(even) { background: var(--bg-soft); }
 .briefing-section code {
-  background: #f0f4fa; padding: 1px 5px; border-radius: 3px;
+  background: var(--bg-soft); padding: 1px 5px; border-radius: 3px;
   font-size: 12px; color: #c2410c;
 }
 
@@ -1711,7 +1908,7 @@ main {
   padding-bottom: 8px; border-bottom: 1px solid #e0e6ee;
 }
 .briefing-overview-excerpt {
-  background: #fafbfd; border: 1px solid #e0e6ee; border-radius: 4px;
+  background: var(--bg-soft); border: 1px solid var(--border-soft); border-radius: 4px;
   padding: 12px 14px; margin: 10px 0;
   font-size: 13px; line-height: 1.6; color: #1f2933;
 }
@@ -1782,7 +1979,7 @@ main {
 }
 @media (max-width: 900px) { .hod-grid { grid-template-columns: 1fr; } }
 .hod-card {
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #b8860b;
   border-radius: 4px;
   padding: 10px 14px;
@@ -1815,7 +2012,7 @@ main {
 .hod-card .resume-bullets li { margin-bottom: 4px; font-size: 13px; }
 
 .konf-item {
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #5a7a1a;
   padding: 8px 12px;
   margin-bottom: 6px;
@@ -1847,7 +2044,7 @@ main {
   font-size: 11.5px;
 }
 .chip {
-  background: #d4dbe5;
+  background: var(--bg-soft);
   color: #3a4756;
   padding: 2px 8px;
   border-radius: 10px;
@@ -1915,9 +2112,9 @@ main {
 }
 .section-tab:hover { background: #c4cdd9; color: #1f2933; }
 .section-tab.active {
-  background: #ffffff;
+  background: var(--bg-panel);
   color: #d97706;
-  border-color: #b5c0cd;
+  border-color: var(--border);
   border-bottom-color: #ffffff;
   font-weight: 600;
 }
@@ -1941,7 +2138,7 @@ main {
 
 /* Actions aggregated panel — grouped by PIC */
 .action-pic-block {
-  background: #ffffff;
+  background: var(--bg-panel);
   border-left: 3px solid #d97706;
   padding: 10px 12px;
   margin-bottom: 8px;
@@ -1986,7 +2183,7 @@ main {
 
 .footer-row {
   padding: 8px 14px;
-  background: #ffffff;
+  background: var(--bg-panel);
   border-top: 1px solid #b5c0cd;
   font-size: 11px;
   color: #4a5568;
@@ -2008,23 +2205,22 @@ main {
 }
 .view-toggle.active { background: #aab4c0; color: #1f2933; }
 
-/* ── Mobile-first responsive (≤768px) ─────────────────────── */
+/* ── Mobile: auto-collapse sidebar (≤768px) ───────────────── */
 @media (max-width: 768px) {
   body { font-size: 14px; }
-  header {
-    padding: 10px 14px;
-    gap: 8px;
+  .sidebar {
+    width: var(--sidebar-width-collapsed);
   }
-  header h1 { font-size: 16px; width: 100%; }
-  nav.tabs { width: 100%; justify-content: stretch; }
-  nav.tabs button {
-    flex: 1;
-    padding: 8px 10px;
-    font-size: 13px;
-    min-height: 38px;
-  }
-  select, button { min-height: 36px; padding: 8px 12px; }
+  .sidebar .brand-text,
+  .sidebar .nav-label { display: none; }
+  .sidebar-nav button { justify-content: center; padding: 10px 8px; }
+  .sidebar-footer button { justify-content: center; }
+  .app-main { margin-left: var(--sidebar-width-collapsed); }
+  .topbar { padding: 0 12px; gap: 8px; flex-wrap: wrap; height: auto; min-height: var(--topbar-height); padding-top: 8px; padding-bottom: 8px; }
+  .topbar-title { font-size: 15px; }
+  .topbar select, .topbar button { min-height: 34px; padding: 6px 10px; font-size: 12.5px; }
   #last-update, #auto-status { font-size: 11px; }
+  .tab-panel { padding: 12px 14px; }
   main { padding: 12px 14px; }
   .stat-row { gap: 8px; }
   .stat { padding: 5px 10px; font-size: 11px; flex: 1 1 auto; }
@@ -2061,51 +2257,66 @@ main {
 </style>
 </head>
 <body>
-<header>
-  <h1>🦞 WRG Monitor</h1>
-  <nav class="tabs">
-    <button data-tab="overview" class="active">Overview</button>
-    <button data-tab="rekap">Rekap</button>
-    <button data-tab="resume">Resume</button>
-    <button data-tab="members">Members</button>
-    <button data-tab="pola">Pola</button>
-    <button data-tab="briefing">📋 Briefing</button>
-  </nav>
-  <select id="date-picker"></select>
-  <button id="refresh-btn" title="Refresh sekarang">⟳ Refresh</button>
-  <button id="qr-btn" title="Scan QR untuk akses dari HP">📱</button>
-  <div id="search-wrap" style="display:none">
-    <input id="search-input" type="search" placeholder="Cari di rekap/resume…" autocomplete="off">
-    <button class="search-nav" id="search-prev" title="Match sebelumnya (Shift+Enter)" disabled>‹</button>
-    <button class="search-nav" id="search-next" title="Match berikutnya (Enter)" disabled>›</button>
-    <button id="search-clear" title="Reset (Esc)">✕</button>
-    <span class="meta" id="search-stat"></span>
-  </div>
-  <span class="meta" id="last-update">—</span>
-  <span class="meta" id="auto-status" style="margin-left:auto">auto-refresh: 60s</span>
-</header>
-<main>
-  <div id="qr-modal" style="display:none">
-    <div class="qr-backdrop"></div>
-    <div class="qr-content">
-      <h3>Akses dari HP</h3>
-      <div id="qr-canvas"></div>
-      <p class="qr-url"></p>
-      <p class="qr-hint">Scan dengan kamera HP / WhatsApp scanner. HP harus di WiFi yang sama.</p>
-      <button id="qr-close">Close</button>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">🦞</span>
+      <span class="brand-text">WRG Monitor</span>
     </div>
+    <nav class="sidebar-nav tabs">
+      <button data-tab="overview" class="active"><span class="nav-icon">📊</span><span class="nav-label">Overview</span></button>
+      <button data-tab="rekap"><span class="nav-icon">📝</span><span class="nav-label">Rekap</span></button>
+      <button data-tab="resume"><span class="nav-icon">📑</span><span class="nav-label">Resume</span></button>
+      <button data-tab="members"><span class="nav-icon">👥</span><span class="nav-label">Members</span></button>
+      <button data-tab="pola"><span class="nav-icon">🧬</span><span class="nav-label">Pola</span></button>
+      <button data-tab="briefing"><span class="nav-icon">📋</span><span class="nav-label">Briefing</span></button>
+    </nav>
+    <div class="sidebar-footer">
+      <button id="theme-toggle" title="Toggle light/dark"><span id="theme-icon">🌙</span> <span class="nav-label">Theme</span></button>
+    </div>
+  </aside>
+  <div class="app-main">
+    <header class="topbar">
+      <button id="sidebar-toggle" title="Toggle sidebar">☰</button>
+      <h1 class="topbar-title" id="topbar-title">Overview</h1>
+      <div class="topbar-spacer"></div>
+      <div id="search-wrap" style="display:none">
+        <input id="search-input" type="search" placeholder="Cari di rekap/resume…" autocomplete="off">
+        <button class="search-nav" id="search-prev" title="Match sebelumnya (Shift+Enter)" disabled>‹</button>
+        <button class="search-nav" id="search-next" title="Match berikutnya (Enter)" disabled>›</button>
+        <button id="search-clear" title="Reset (Esc)">✕</button>
+        <span class="meta" id="search-stat"></span>
+      </div>
+      <select id="date-picker"></select>
+      <button id="refresh-btn" title="Refresh sekarang">⟳ Refresh</button>
+      <button id="qr-btn" title="Scan QR untuk akses dari HP">📱</button>
+      <span class="meta" id="last-update">—</span>
+      <span class="meta" id="auto-status">auto-refresh: 60s</span>
+    </header>
+    <main>
+      <div id="qr-modal" style="display:none">
+        <div class="qr-backdrop"></div>
+        <div class="qr-content">
+          <h3>Akses dari HP</h3>
+          <div id="qr-canvas"></div>
+          <p class="qr-url"></p>
+          <p class="qr-hint">Scan dengan kamera HP / WhatsApp scanner. HP harus di WiFi yang sama.</p>
+          <button id="qr-close">Close</button>
+        </div>
+      </div>
+      <div id="member-modal" style="display:none">
+        <div class="member-modal-backdrop"></div>
+        <div class="member-modal-content"></div>
+      </div>
+      <div id="panel-overview" class="tab-panel active"><div class="empty">Loading…</div></div>
+      <div id="panel-rekap" class="tab-panel"><div class="empty">Loading…</div></div>
+      <div id="panel-resume" class="tab-panel"><div class="empty">Loading…</div></div>
+      <div id="panel-members" class="tab-panel"><div class="empty">Loading…</div></div>
+      <div id="panel-pola" class="tab-panel"><div class="empty">Loading…</div></div>
+      <div id="panel-briefing" class="tab-panel"><div class="empty">Loading…</div></div>
+    </main>
   </div>
-  <div id="member-modal" style="display:none">
-    <div class="member-modal-backdrop"></div>
-    <div class="member-modal-content"></div>
-  </div>
-  <div id="panel-overview" class="tab-panel active"><div class="empty">Loading…</div></div>
-  <div id="panel-rekap" class="tab-panel"><div class="empty">Loading…</div></div>
-  <div id="panel-resume" class="tab-panel"><div class="empty">Loading…</div></div>
-  <div id="panel-members" class="tab-panel"><div class="empty">Loading…</div></div>
-  <div id="panel-pola" class="tab-panel"><div class="empty">Loading…</div></div>
-  <div id="panel-briefing" class="tab-panel"><div class="empty">Loading…</div></div>
-</main>
+</div>
 
 <script>
 let currentDate = null;
@@ -3634,6 +3845,16 @@ async function loadAndRender(date) {
   });
 }
 
+// Tab labels for topbar title
+const TAB_TITLES = {
+  overview: 'Overview',
+  rekap: 'Rekap',
+  resume: 'Resume',
+  members: 'Members Directory',
+  pola: 'Pola Komunikasi',
+  briefing: '📋 Briefing Direktur',
+};
+
 function switchTab(name) {
   document.querySelectorAll('nav.tabs button').forEach(b => {
     b.classList.toggle('active', b.dataset.tab === name);
@@ -3641,6 +3862,9 @@ function switchTab(name) {
   document.querySelectorAll('.tab-panel').forEach(p => {
     p.classList.toggle('active', p.id === 'panel-' + name);
   });
+  // Sync topbar title
+  const titleEl = document.getElementById('topbar-title');
+  if (titleEl) titleEl.textContent = TAB_TITLES[name] || name;
   // Persist tab + date in URL via replaceState (no history pollution)
   syncUrlFromState();
   // Search bar visible only on Rekap/Resume
@@ -3800,7 +4024,19 @@ function syncUrlFromState() {
   history.replaceState(null, '', location.pathname + qs + hash);
 }
 
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.getElementById('theme-icon');
+  if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+
 function start() {
+  // Apply persisted theme + sidebar state EARLY (before render to avoid flash)
+  const savedTheme = localStorage.getItem('wrg.theme') || 'light';
+  applyTheme(savedTheme);
+  const savedCollapsed = localStorage.getItem('wrg.sidebar.collapsed') === '1';
+  if (savedCollapsed) document.querySelector('.app-shell').classList.add('sidebar-collapsed');
+
   // Parse initial state from URL: ?date=YYYY-MM-DD overrides today
   const today = new Date().toISOString().slice(0, 10);
   const urlParams = new URLSearchParams(location.search);
@@ -3808,6 +4044,22 @@ function start() {
   const validDateRe = /^\d{4}-\d{2}-\d{2}$/;
   currentDate = (urlDate && validDateRe.test(urlDate)) ? urlDate : today;
   loadAndRender(currentDate);
+
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) themeBtn.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = cur === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('wrg.theme', next);
+  });
+  // Sidebar collapse
+  const sbToggle = document.getElementById('sidebar-toggle');
+  if (sbToggle) sbToggle.addEventListener('click', () => {
+    const shell = document.querySelector('.app-shell');
+    shell.classList.toggle('sidebar-collapsed');
+    localStorage.setItem('wrg.sidebar.collapsed', shell.classList.contains('sidebar-collapsed') ? '1' : '0');
+  });
 
   document.getElementById('date-picker').addEventListener('change', e => {
     currentDate = e.target.value;
