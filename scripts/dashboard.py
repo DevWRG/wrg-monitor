@@ -1256,39 +1256,41 @@ mark.hit.mark-current {
 }
 .members-stat { font-size: 12px; color: var(--text-secondary); margin-left: auto; }
 
+/* Adminator default table — clean, minimal border, hover highlight, uppercase header */
 .members-table {
   width: 100%;
   border-collapse: collapse;
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   overflow: hidden;
   font-size: 13px;
+  box-shadow: var(--shadow-sm);
 }
 .members-table thead {
   background: var(--bg-soft);
-  border-bottom: 2px solid #b5c0cd;
 }
 .members-table th, .members-table td {
-  padding: 10px 14px;
+  padding: 12px 16px;
   text-align: left;
-  border-bottom: 1px solid #b5c0cd;
+  border-bottom: 1px solid var(--border-soft);
 }
 .members-table th {
   font-size: 11px;
   text-transform: uppercase;
-  color: #0e7c66;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.6px;
   background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
-/* Note: sticky thead removed — interaksi border-collapse + sticky bermasalah
-   di Safari/Chrome dengan tabel ini (thead overlap row 1). Tetap natural scroll. */
-.members-table tbody tr:hover { background: var(--bg-soft); }
+.members-table tbody tr { transition: background 0.1s; }
+.members-table tbody tr:hover { background: var(--bg-hover); }
 .members-table tbody tr:last-child td { border-bottom: none; }
 .members-table .phone {
-  font-family: "SF Mono", monospace;
-  color: #0066cc;
+  font-family: var(--font-mono);
+  color: var(--info);
   font-size: 12.5px;
   white-space: nowrap;
 }
@@ -1331,9 +1333,9 @@ mark.hit.mark-current {
   margin-left: 6px;
   cursor: help;
 }
-.members-table tr.phantom-row { background: #faf6e8; }
-.members-table tr.phantom-row:hover { background: #f4ecc8; }
-.members-table tr.phantom-row .badge-roster { background: #8a6d1a; }
+.members-table tr.phantom-row { background: var(--warn-soft); }
+.members-table tr.phantom-row:hover { background: var(--warn-soft); filter: brightness(0.97); }
+.members-table tr.phantom-row .badge-roster { background: var(--warn); }
 .members-table td.name-cell {
   cursor: pointer;
   position: relative;
@@ -1945,18 +1947,26 @@ main {
   margin: 6px 0 10px 0; padding-left: 22px;
 }
 .briefing-bullets li, .briefing-ol li { margin-bottom: 4px; }
+/* Briefing table — match members-table Adminator pattern */
 .briefing-table {
-  border-collapse: collapse; width: 100%; margin: 8px 0 12px 0;
-  font-size: 12.5px; background: var(--bg-soft);
+  border-collapse: collapse; width: 100%; margin: 10px 0 14px 0;
+  font-size: 13px; background: var(--bg-panel);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
 }
 .briefing-table th, .briefing-table td {
-  border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top;
+  padding: 10px 14px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--border-soft);
 }
+.briefing-table tbody tr:last-child td { border-bottom: none; }
 .briefing-table th {
-  background: var(--bg-hover); font-weight: 700; color: var(--info);
-  font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.3px;
+  background: var(--bg-soft); font-weight: 600; color: var(--text-muted);
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
-.briefing-table tbody tr:nth-child(even) { background: var(--bg-soft); }
+.briefing-table tbody tr { transition: background 0.1s; }
+.briefing-table tbody tr:hover { background: var(--bg-hover); }
 .briefing-section code {
   background: var(--bg-soft); padding: 1px 5px; border-radius: 3px;
   font-size: 12px; color: var(--accent);
