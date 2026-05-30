@@ -26,6 +26,13 @@ REKAP_DIR = DATA_DIR / "rekap"
 RESUME_DIR = DATA_DIR / "resume"
 POLA_DIR = DATA_DIR / "pola"
 BRIEFING_DIR = DATA_DIR / "briefing"
+ASSETS_DIR = PROJECT_DIR / "assets"
+
+_MIME_BY_EXT = {
+    ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
+    ".svg": "image/svg+xml", ".webp": "image/webp", ".gif": "image/gif",
+    ".ico": "image/x-icon",
+}
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 MEMBERS_FILE = DATA_DIR / "members.json"
@@ -866,8 +873,9 @@ INDEX_HTML = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f6f8fa">
-<title>WRG Monitor</title>
+<meta name="theme-color" content="#f0f4f8">
+<title>WRG Monitor — Wahana LifeLine</title>
+<link rel="icon" type="image/png" href="/assets/logo-wahana-lifeline.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1005,16 +1013,30 @@ code, pre, .mono, .phone, .stat strong {
 .sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 16px 20px;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 17px;
-  color: var(--text-primary);
+  justify-content: flex-start;
+  padding: 10px 16px;
   border-bottom: 1px solid var(--border-soft);
   min-height: var(--topbar-height);
+  overflow: hidden;
 }
-.brand-icon { font-size: 22px; }
+.brand-logo {
+  height: 32px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transition: max-width 0.2s ease;
+}
+/* When sidebar collapsed: clip logo to show only the colored-square icon */
+.app-shell.sidebar-collapsed .sidebar-brand {
+  padding: 10px 8px;
+  justify-content: center;
+}
+.app-shell.sidebar-collapsed .brand-logo {
+  max-width: 36px;
+  object-fit: cover;
+  object-position: left center;
+}
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -2335,8 +2357,7 @@ main {
 <div class="app-shell">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-brand">
-      <span class="brand-icon">🦞</span>
-      <span class="brand-text">WRG Monitor</span>
+      <img src="/assets/logo-wahana-lifeline.png" alt="Wahana LifeLine" class="brand-logo">
     </div>
     <nav class="sidebar-nav tabs">
       <button data-tab="overview" class="active"><span class="nav-icon">📊</span><span class="nav-label">Overview</span></button>
@@ -4328,6 +4349,20 @@ class Handler(http.server.BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         if parsed.path == "/" or parsed.path == "/index.html":
             return self._send(200, "text/html; charset=utf-8", INDEX_HTML.encode("utf-8"))
+        # Static asset serving (logos, etc.) — safe path resolution, no traversal
+        if parsed.path.startswith("/assets/"):
+            rel = parsed.path[len("/assets/"):]
+            # Resolve + verify it's still under ASSETS_DIR (no .. traversal)
+            try:
+                target = (ASSETS_DIR / rel).resolve()
+                if not str(target).startswith(str(ASSETS_DIR.resolve())) or not target.is_file():
+                    return self._send(404, "text/plain", b"not found")
+                mime = _MIME_BY_EXT.get(target.suffix.lower(), "application/octet-stream")
+                with open(target, "rb") as f:
+                    body = f.read()
+                return self._send(200, mime, body)
+            except (OSError, ValueError):
+                return self._send(404, "text/plain", b"not found")
         if parsed.path == "/api/data":
             qs = parse_qs(parsed.query)
             date = (qs.get("date") or [datetime.date.today().isoformat()])[0]
