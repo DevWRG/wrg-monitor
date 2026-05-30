@@ -1690,55 +1690,64 @@ main {
   background: var(--bg-page);
   color: var(--text-primary);
 }
+/* Adminator default card — white bg, subtle border + shadow, no fill section-head */
 .section {
   background: var(--bg-panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin-bottom: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 .section-head {
-  padding: 14px 18px;
-  background: var(--bg-soft);
-  border-bottom: 1px solid var(--border);
+  padding: 16px 20px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-soft);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--text-primary);
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
-.section-body { padding: 16px; }
-.cards { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.section-head .meta { font-family: var(--font-sans); font-weight: 400; font-size: 12px; color: var(--text-muted); }
+.section-body { padding: 18px 20px; }
+.cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
 .card {
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   overflow: hidden;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: box-shadow 0.15s;
+  box-shadow: var(--shadow-sm);
 }
-.card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.card:hover { box-shadow: var(--shadow-md); }
+.card.collective { box-shadow: var(--shadow-md); }
 .card-head {
-  padding: 10px 14px;
-  background: var(--bg-soft);
-  border-bottom: 1px solid var(--border);
+  padding: 12px 16px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-soft);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
   color: var(--text-primary);
+  font-weight: 500;
 }
-.card.resume .card-head { background: var(--info-soft); }
-.card.rekap .card-head { background: var(--bg-soft); }
+.card.resume .card-head,
+.card.rekap .card-head { background: var(--bg-panel); }
 .card-head .badge {
-  font-size: 11px;
-  padding: 2px 10px;
-  border-radius: 10px;
+  font-size: 10.5px;
+  padding: 3px 10px;
+  border-radius: 12px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.card.resume .badge { background: var(--info); color: #fff; }
-.card.rekap .badge { background: var(--text-muted); color: #fff; }
+.card.resume .badge { background: var(--info-soft); color: var(--info); border: 1px solid var(--info); }
+.card.rekap .badge { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
 .card-body {
   padding: 14px 16px;
   font-family: var(--font-sans);
@@ -3134,7 +3143,7 @@ function makeCollectiveCard(kind, parsed, meta) {
     '<button class="toggle" data-target="' + id + '" title="Collapse/expand">▾</button></div>';
   const parsedHtml = kind === 'rekap' ? renderRekapParsed(parsed, id) : renderResumeParsed(parsed, id);
   const body = '<div class="card-body" id="' + id + '">' + parsedHtml + '</div>';
-  return '<div class="card ' + kind + '" style="border-color:#5a7a1a">' + head + body + '</div>';
+  return '<div class="card ' + kind + ' collective">' + head + body + '</div>';
 }
 
 function renderRekapPanel(data) {
