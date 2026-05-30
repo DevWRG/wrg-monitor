@@ -1602,98 +1602,108 @@ mark.hit.mark-current {
   .members-table th.col-groups, .members-table td.col-groups { display: none; }
 }
 
-/* Pola tab cards */
-.pola-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+/* Pola tab cards — Adminator default card style */
+.pola-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
 .pola-card {
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s;
 }
+.pola-card:hover { box-shadow: var(--shadow-md); }
 .pola-card-head {
-  padding: 10px 14px;
-  background: var(--bg-soft);
-  border-bottom: 1px solid #b5c0cd;
+  padding: 14px 18px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-soft);
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   font-size: 13px;
+  transition: background 0.1s;
 }
+.pola-card-head:hover { background: var(--bg-hover); }
+.pola-card.open .pola-card-head { border-bottom-color: var(--border); background: var(--bg-soft); }
 .pola-card-head code {
-  color: #0066cc;
-  font-family: "SF Mono", monospace;
-  font-size: 12px;
-  background: rgba(0, 102, 204, 0.08);
+  color: var(--info);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  background: var(--info-soft);
   padding: 2px 8px;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 .pola-title { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
 .pola-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #b8860b;
-  letter-spacing: 0.2px;
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.01em;
   cursor: pointer;
-  border-radius: 3px;
-  padding: 1px 4px;
-  margin-left: -4px;
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  margin-left: -6px;
   transition: background 0.12s;
 }
-.pola-name:hover { background: rgba(184, 134, 11, 0.12); }
-.pola-name-unknown { color: var(--text-secondary); font-style: italic; font-weight: 500; }
-.pola-name-unknown:hover { background: rgba(138, 154, 171, 0.15); color: var(--text-primary); }
-.pola-name-badge { color: #0e7c66; font-size: 11px; margin-left: 6px; opacity: 0.75; }
+.pola-name:hover { background: var(--accent-soft); }
+.pola-name-unknown { color: var(--text-muted); font-style: italic; font-weight: 500; }
+.pola-name-unknown:hover { background: var(--bg-hover); color: var(--text-secondary); }
+.pola-name-badge { color: var(--ok); font-size: 11px; margin-left: 6px; opacity: 0.75; }
 .pola-name-input {
-  font-size: 14px;
-  font-weight: 600;
-  color: #b8860b;
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--accent);
   background: var(--bg-panel);
-  border: 1px solid #b8860b;
-  border-radius: 3px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
   padding: 3px 8px;
   min-width: 280px;
-  font-family: inherit;
   outline: none;
 }
 .pola-name-input::placeholder { color: var(--text-muted); font-weight: 400; font-style: italic; font-size: 12px; }
 .pola-jid {
   font-size: 11px;
-  color: #0066cc;
-  font-family: "SF Mono", monospace;
-  background: rgba(0, 102, 204, 0.08);
-  padding: 1px 6px;
-  border-radius: 3px;
+  color: var(--info);
+  font-family: var(--font-mono);
+  background: var(--info-soft);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
   align-self: flex-start;
 }
 .pola-card-head .pola-meta {
   font-size: 11px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   white-space: nowrap;
   margin-left: 12px;
+  font-family: var(--font-mono);
 }
 .pola-card-body {
-  padding: 14px;
+  padding: 18px 20px;
   display: none;
+  background: var(--bg-panel);
 }
 .pola-card.open .pola-card-body { display: block; }
-.pola-card.open .pola-card-head::after { content: "▾"; color: var(--text-secondary); margin-left: 8px; }
-.pola-card:not(.open) .pola-card-head::after { content: "▸"; color: var(--text-secondary); margin-left: 8px; }
+.pola-card.open .pola-card-head::after { content: "▾"; color: var(--text-muted); margin-left: 8px; font-size: 12px; }
+.pola-card:not(.open) .pola-card-head::after { content: "▸"; color: var(--text-muted); margin-left: 8px; font-size: 12px; }
 .pola-section {
-  margin-bottom: 14px;
-  padding: 10px 12px;
-  background: var(--bg-panel);
-  border-left: 3px solid #0e7c66;
-  border-radius: 0 4px 4px 0;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
 }
 .pola-section:last-child { margin-bottom: 0; }
 .pola-section-title {
+  font-family: var(--font-display);
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #0e7c66;
-  margin-bottom: 6px;
+  letter-spacing: 0.6px;
+  color: var(--info);
+  margin-bottom: 8px;
 }
 .pola-section-body {
   font-size: 13px;
