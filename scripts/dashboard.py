@@ -1938,14 +1938,21 @@ main {
 .briefing-card {
   background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 14px;
 }
-/* Briefing section tabs — Adminator-style card-grid dengan colored letter chips */
+/* Briefing section tabs — Adminator-style card-grid dengan colored letter chips
+   Layout: 4 cols × 2 rows untuk 8 sections (consistent, no scroll). Mobile: 2 cols. */
 .briefing-section-tabs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   margin-bottom: 20px;
   padding: 0;
   border-bottom: none;
+}
+@media (max-width: 900px) {
+  .briefing-section-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .briefing-section-tabs { grid-template-columns: 1fr; }
 }
 .briefing-section-tabs .section-tab {
   display: flex;
@@ -1953,12 +1960,14 @@ main {
   gap: 10px;
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  padding: 10px 14px;
+  padding: 10px 12px;
   cursor: pointer;
   font-family: inherit;
   border-radius: var(--radius);
   text-align: left;
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+  min-width: 0;  /* allow flex child to shrink below content width */
+  overflow: hidden;
 }
 .briefing-section-tabs .section-tab:hover {
   border-color: var(--text-muted);
@@ -1985,11 +1994,19 @@ main {
 .tab-warn   .tab-letter { background: var(--warn-soft);   color: var(--warn); }
 .tab-danger .tab-letter { background: var(--danger-soft); color: var(--danger); }
 .briefing-tab-title {
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.25;
   letter-spacing: -0.01em;
+  /* Allow 2 lines max; ellipsis kalau lebih */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
 }
 /* Active state — letter chip filled, card border + bg accent */
 .briefing-section-tabs .section-tab.active {
@@ -3374,7 +3391,7 @@ function renderBriefingPanel() {
     const tabsHtml = sections.map((s, idx) => {
       const active = (s.id === briefingActiveSection) ? ' active' : '';
       const colorVar = sectionColors[idx % sectionColors.length];
-      return '<button class="section-tab tab-' + colorVar + active + '" data-section="' + escapeHtml(s.id) + '">' +
+      return '<button class="section-tab tab-' + colorVar + active + '" data-section="' + escapeHtml(s.id) + '" title="' + escapeHtml(s.title) + '">' +
         '<span class="tab-letter">' + escapeHtml(s.id) + '</span>' +
         '<span class="briefing-tab-title">' + escapeHtml(s.short) + '</span>' +
       '</button>';
@@ -3389,7 +3406,7 @@ function renderBriefingPanel() {
     }).join('');
     panel.innerHTML = picker +
       '<div class="briefing-card">' +
-        '<div class="section-tabs briefing-section-tabs">' + tabsHtml + '</div>' +
+        '<div class="briefing-section-tabs">' + tabsHtml + '</div>' +
         '<div class="briefing-panels">' + panelsHtml + '</div>' +
       '</div>';
   }
