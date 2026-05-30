@@ -1961,12 +1961,15 @@ main {
 }
 .briefing-label { font-weight: 600; color: var(--info); font-size: 13px; }
 #briefing-file-picker {
-  padding: 5px 10px; font-size: 13px; font-family: ui-monospace, monospace;
-  border: 1px solid var(--border); border-radius: 4px; background: #fff;
+  padding: 6px 12px; font-size: 13px; font-family: var(--font-mono);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-panel); color: var(--text-primary);
 }
 .briefing-meta { color: var(--text-secondary); font-size: 12px; margin-left: auto; font-style: italic; }
 .briefing-card {
-  background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 14px;
+  background: var(--bg-panel); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px;
+  box-shadow: var(--shadow-sm);
 }
 /* Briefing section tabs — Adminator-style card-grid dengan colored letter chips
    Layout: 4 cols × 2 rows untuk 8 sections (consistent, no scroll). Mobile: 2 cols. */
