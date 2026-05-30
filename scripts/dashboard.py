@@ -870,7 +870,7 @@ INDEX_HTML = r"""<!doctype html>
 <title>WRG Monitor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════════════
    ADMINATOR-INSPIRED DESIGN TOKENS
@@ -952,15 +952,13 @@ INDEX_HTML = r"""<!doctype html>
   --shadow-lg:      0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
 }
 
-/* Native system UI font stack — crisp di semua OS tanpa Google Fonts download.
-   macOS: San Francisco (-apple-system, BlinkMacSystemFont)
-   Windows: Segoe UI Variable / Segoe UI
-   Linux: Cantarell / Ubuntu (via system-ui)
-   Fallback: Helvetica Neue, Arial */
+/* Font stack — ikuti Adminator template:
+   Inter untuk body, Inter Tight untuk headings, JetBrains Mono untuk code/numerics.
+   System fallback supaya tetep crispy kalau Google Fonts gagal load. */
 :root {
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI",
-               system-ui, "Helvetica Neue", Arial, "Apple Color Emoji", sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
 }
 
 * { box-sizing: border-box; }
@@ -977,6 +975,11 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-sans);
   font-weight: 700;
+}
+h1, h2, h3, h4, .topbar-title, .sidebar-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 code, pre, .mono, .phone, .stat strong {
   font-family: var(--font-mono);
@@ -1738,8 +1741,9 @@ main {
 .card.rekap .badge { background: var(--text-muted); color: #fff; }
 .card-body {
   padding: 14px 16px;
-  font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.6;
   white-space: pre-wrap;
   word-wrap: break-word;
   max-height: 600px;
@@ -2224,16 +2228,17 @@ main {
 }
 
 .footer-row {
-  padding: 8px 14px;
-  background: var(--bg-panel);
-  border-top: 1px solid #b5c0cd;
-  font-size: 11px;
+  padding: 10px 16px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
   color: var(--text-secondary);
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
-.footer-row .urgent-alert { color: #dc2626; font-weight: 600; }
+.footer-row .urgent-alert { color: var(--danger); font-weight: 600; }
 
 .view-toggle {
   background: transparent;
