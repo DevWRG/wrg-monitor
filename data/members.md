@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-30 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-05-31 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -118,23 +118,23 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | agus | 150 | 3 |
 | Nungky | 130 | 4 |
 | Putri Diana | 129 | 2 |
-| anggaadhitya2016 | 124 | 5 |
-| Yogi Nugroho | 121 | 11 |
+| anggaadhitya2016 | 125 | 5 |
+| Yogi Nugroho | 122 | 11 |
 | Ibnuuuu | 120 | 4 |
+| Husni | 117 | 4 |
 | Arif_Official | 116 | 6 |
 | M. Wildha Saputra | 112 | 5 |
 | Mufidz | 106 | 7 |
-| Husni | 98 | 4 |
 | Keuangan Wahana Rizky | 97 | 5 |
 | fanessa | 88 | 2 |
-| Aulia Ghozalina | 85 | 7 |
+| Aulia Ghozalina | 86 | 7 |
 | IKA | 82 | 4 |
 | IRUL|PT WAHANA GUMILANG | 81 | 5 |
 | Admin Penawaran | 78 | 1 |
 | Hanif | 76 | 1 |
 | Maskhan | 74 | 1 |
 | FIRMANSYAH | 73 | 4 |
-| Luripohan | 71 | 6 |
+| Luripohan | 72 | 7 |
 | DNIFXMMS | 68 | 1 |
 | Admin Purchasing WRG | 66 | 9 |
 | Siti Nurcholis | 66 | 3 |
@@ -146,15 +146,15 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Haris | 50 | 1 |
 | Baginda Naufal | 49 | 3 |
 | Marimasmadu | 47 | 3 |
+| Muhid | 44 | 2 |
 | Kapten | 41 | 30 |
 | Rekarya | 41 | 1 |
 | Sidqi | 41 | 5 |
 | Fakturis WRG | 40 | 3 |
-| Muhid | 40 | 2 |
+| RG WG | 38 | 6 |
 | renika | 38 | 1 |
-| RG WG | 37 | 6 |
 | Vickyadi | 35 | 4 |
-| Arman | 30 | 6 |
+| Arman | 32 | 6 |
 | Dito | 27 | 1 |
 | Sari | 27 | 2 |
 | Pita | 26 | 1 |
@@ -162,8 +162,8 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Ayume | 25 | 1 |
 | Yugo | 22 | 3 |
 | d | 21 | 1 |
+| Ari Kurnia Yuda | 19 | 3 |
 | Navisa | 19 | 1 |
-| Ari Kurnia Yuda | 18 | 3 |
 | Chafid | 18 | 1 |
 | Gilang Pratama | 15 | 2 |
 | iqbal Wrg | 12 | 3 |
@@ -171,7 +171,8 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Iqbal | 7 | 1 |
 | S | 4 | 1 |
 | navisatris | 3 | 1 |
+| Firmansyah | 2 | 1 |
 | HRD Wahana Gumilang Group | 2 | 1 |
 | NovalAndriawan | 2 | 1 |
-| Firmansyah | 1 | 1 |
+| Halim | 1 | 1 |
 | kuntdrg | 1 | 1 |

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-30T15:30:05+0700",
+  "generated_at": "2026-05-31T15:30:04+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
-    "distinct_sender_names": 70
+    "distinct_sender_names": 71
   },
   "group_directory": {
     "120363403842555552@g.us": "GA WRG",
@@ -1780,7 +1780,7 @@
     },
     {
       "sender_name": "anggaadhitya2016",
-      "count": 124,
+      "count": 125,
       "groups": [
         "120363397960052940@g.us",
         "120363405485256544@g.us",
@@ -1791,7 +1791,7 @@
     },
     {
       "sender_name": "Yogi Nugroho",
-      "count": 121,
+      "count": 122,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1814,6 +1814,16 @@
         "6281949637972-1603758195@g.us",
         "6281949637972-1609761547@g.us",
         "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Husni",
+      "count": 117,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363403842555552@g.us",
+        "120363404092121926@g.us",
+        "120363409252019573@g.us"
       ]
     },
     {
@@ -1853,16 +1863,6 @@
       ]
     },
     {
-      "sender_name": "Husni",
-      "count": 98,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363403842555552@g.us",
-        "120363404092121926@g.us",
-        "120363409252019573@g.us"
-      ]
-    },
-    {
       "sender_name": "Keuangan Wahana Rizky",
       "count": 97,
       "groups": [
@@ -1883,7 +1883,7 @@
     },
     {
       "sender_name": "Aulia Ghozalina",
-      "count": 85,
+      "count": 86,
       "groups": [
         "120363397960052940@g.us",
         "120363405485256544@g.us",
@@ -1948,12 +1948,13 @@
     },
     {
       "sender_name": "Luripohan",
-      "count": 71,
+      "count": 72,
       "groups": [
         "120363397960052940@g.us",
         "120363405485256544@g.us",
         "6281335118687-1527496546@g.us",
         "6281335118687-1527497732@g.us",
+        "6281949637972-1523701186@g.us",
         "6285649096261-1516620137@g.us",
         "6285736763141-1515408009@g.us"
       ]
@@ -2054,6 +2055,14 @@
       ]
     },
     {
+      "sender_name": "Muhid",
+      "count": 44,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363404092121926@g.us"
+      ]
+    },
+    {
       "sender_name": "Kapten",
       "count": 41,
       "groups": [
@@ -2117,23 +2126,8 @@
       ]
     },
     {
-      "sender_name": "Muhid",
-      "count": 40,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363404092121926@g.us"
-      ]
-    },
-    {
-      "sender_name": "renika",
-      "count": 38,
-      "groups": [
-        "6282232418991-1555990746@g.us"
-      ]
-    },
-    {
       "sender_name": "RG WG",
-      "count": 37,
+      "count": 38,
       "groups": [
         "120363042143432430@g.us",
         "120363397960052940@g.us",
@@ -2141,6 +2135,13 @@
         "120363405485256544@g.us",
         "6281248476085-1539641961@g.us",
         "6281335118687-1527497732@g.us"
+      ]
+    },
+    {
+      "sender_name": "renika",
+      "count": 38,
+      "groups": [
+        "6282232418991-1555990746@g.us"
       ]
     },
     {
@@ -2155,7 +2156,7 @@
     },
     {
       "sender_name": "Arman",
-      "count": 30,
+      "count": 32,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -2218,19 +2219,19 @@
       ]
     },
     {
-      "sender_name": "Navisa",
-      "count": 19,
-      "groups": [
-        "6282232418991-1555990746@g.us"
-      ]
-    },
-    {
       "sender_name": "Ari Kurnia Yuda",
-      "count": 18,
+      "count": 19,
       "groups": [
         "120363397960052940@g.us",
         "6281949637972-1609891850@g.us",
         "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Navisa",
+      "count": 19,
+      "groups": [
+        "6282232418991-1555990746@g.us"
       ]
     },
     {
@@ -2286,6 +2287,13 @@
       ]
     },
     {
+      "sender_name": "Firmansyah",
+      "count": 2,
+      "groups": [
+        "120363397960052940@g.us"
+      ]
+    },
+    {
       "sender_name": "HRD Wahana Gumilang Group",
       "count": 2,
       "groups": [
@@ -2300,10 +2308,10 @@
       ]
     },
     {
-      "sender_name": "Firmansyah",
+      "sender_name": "Halim",
       "count": 1,
       "groups": [
-        "120363397960052940@g.us"
+        "6281949637972-1523701186@g.us"
       ]
     },
     {
@@ -2314,14 +2322,14 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-05-30T22:30:05",
+  "last_lid_resolve": "2026-05-31T22:30:04",
   "lid_resolve_summary": {
     "resolved": 6,
     "merged": 1,
     "renamed": 5,
     "restored_labels": 5
   },
-  "roster_merge_at": "2026-05-30T22:30:05",
+  "roster_merge_at": "2026-05-31T22:30:04",
   "roster_summary": {
     "enriched": 45,
     "phantomed": 17,
