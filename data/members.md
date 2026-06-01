@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-05-31 22:30 WIB · 89 distinct phones across 12 groups_
+_Generated: 2026-06-01 22:30 WIB · 89 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -114,17 +114,17 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Shipping WRG | 225 | 4 |
 | Elok | 200 | 4 |
 | Rizal | 178 | 3 |
-| Fafa | 168 | 2 |
+| Fafa | 170 | 2 |
 | agus | 150 | 3 |
+| Husni | 140 | 4 |
 | Nungky | 130 | 4 |
-| Putri Diana | 129 | 2 |
+| Putri Diana | 130 | 2 |
+| Yogi Nugroho | 125 | 11 |
 | anggaadhitya2016 | 125 | 5 |
-| Yogi Nugroho | 122 | 11 |
 | Ibnuuuu | 120 | 4 |
-| Husni | 117 | 4 |
 | Arif_Official | 116 | 6 |
+| Mufidz | 113 | 7 |
 | M. Wildha Saputra | 112 | 5 |
-| Mufidz | 106 | 7 |
 | Keuangan Wahana Rizky | 97 | 5 |
 | fanessa | 88 | 2 |
 | Aulia Ghozalina | 86 | 7 |
@@ -139,19 +139,19 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Admin Purchasing WRG | 66 | 9 |
 | Siti Nurcholis | 66 | 3 |
 | Rengga | 65 | 1 |
+| Kadek Heriadi | 62 | 3 |
 | Boni3 | 61 | 3 |
-| Kadek Heriadi | 59 | 3 |
 | ASN | 53 | 1 |
 | Anas_Januar | 52 | 1 |
+| Baginda Naufal | 50 | 3 |
 | Haris | 50 | 1 |
-| Baginda Naufal | 49 | 3 |
+| Muhid | 50 | 2 |
 | Marimasmadu | 47 | 3 |
-| Muhid | 44 | 2 |
 | Kapten | 41 | 30 |
 | Rekarya | 41 | 1 |
 | Sidqi | 41 | 5 |
 | Fakturis WRG | 40 | 3 |
-| RG WG | 38 | 6 |
+| RG WG | 40 | 6 |
 | renika | 38 | 1 |
 | Vickyadi | 35 | 4 |
 | Arman | 32 | 6 |
