@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-06-06 22:30 WIB · 88 distinct phones across 12 groups_
+_Generated: 2026-06-07 22:30 WIB · 88 distinct phones across 12 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -119,12 +119,12 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Nungky | 203 | 4 |
 | Hanif | 192 | 2 |
 | Rizal | 182 | 3 |
+| Mufidz | 179 | 7 |
 | Aulia Ghozalina | 176 | 8 |
 | M. Wildha Saputra | 170 | 5 |
 | Putri Diana | 170 | 2 |
 | Husni | 168 | 5 |
-| Mufidz | 166 | 7 |
-| Yogi Nugroho | 164 | 12 |
+| Yogi Nugroho | 165 | 12 |
 | IRUL|PT WAHANA GUMILANG | 158 | 5 |
 | Luripohan | 156 | 7 |
 | Ibnuuuu | 146 | 4 |
@@ -132,10 +132,10 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | FIRMANSYAH | 127 | 5 |
 | fanessa | 116 | 2 |
 | Admin Penawaran | 111 | 1 |
-| DNIFXMMS | 110 | 1 |
+| DNIFXMMS | 111 | 1 |
 | iqbal Wrg | 102 | 4 |
 | Maskhan | 98 | 1 |
-| IKA | 95 | 4 |
+| IKA | 96 | 4 |
 | Siti Nurcholis | 89 | 4 |
 | Kadek Heriadi | 88 | 3 |
 | Sidqi | 87 | 5 |
@@ -147,10 +147,10 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Marimasmadu | 71 | 3 |
 | Haris | 70 | 1 |
 | ASN | 68 | 1 |
+| RG WG | 65 | 7 |
+| Baginda Naufal | 64 | 3 |
+| Muhid | 64 | 2 |
 | Rekarya | 64 | 1 |
-| Muhid | 63 | 2 |
-| RG WG | 62 | 7 |
-| Baginda Naufal | 61 | 3 |
 | Ari Kurnia Yuda | 59 | 4 |
 | renika | 56 | 1 |
 | Fakturis WRG | 55 | 3 |

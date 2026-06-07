@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T15:30:04+0700",
+  "generated_at": "2026-06-07T15:30:05+0700",
   "source_summary": {
     "runtime_context_entries": 184,
     "distinct_phones": 73,
@@ -1796,6 +1796,19 @@
       ]
     },
     {
+      "sender_name": "Mufidz",
+      "count": 179,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363225099430838@g.us",
+        "120363404092121926@g.us",
+        "120363405145265597@g.us",
+        "120363405485256544@g.us",
+        "6281335118687-1527494977@g.us",
+        "6281949637972-1609891981@g.us"
+      ]
+    },
+    {
       "sender_name": "Aulia Ghozalina",
       "count": 176,
       "groups": [
@@ -1840,21 +1853,8 @@
       ]
     },
     {
-      "sender_name": "Mufidz",
-      "count": 166,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363225099430838@g.us",
-        "120363404092121926@g.us",
-        "120363405145265597@g.us",
-        "120363405485256544@g.us",
-        "6281335118687-1527494977@g.us",
-        "6281949637972-1609891981@g.us"
-      ]
-    },
-    {
       "sender_name": "Yogi Nugroho",
-      "count": 164,
+      "count": 165,
       "groups": [
         "120363042143432430@g.us",
         "120363225099430838@g.us",
@@ -1945,7 +1945,7 @@
     },
     {
       "sender_name": "DNIFXMMS",
-      "count": 110,
+      "count": 111,
       "groups": [
         "6281335118687-1517798430@g.us"
       ]
@@ -1969,7 +1969,7 @@
     },
     {
       "sender_name": "IKA",
-      "count": 95,
+      "count": 96,
       "groups": [
         "120363042143432430@g.us",
         "120363215877961952@g.us",
@@ -2084,23 +2084,8 @@
       ]
     },
     {
-      "sender_name": "Rekarya",
-      "count": 64,
-      "groups": [
-        "6281335118687-1517798430@g.us"
-      ]
-    },
-    {
-      "sender_name": "Muhid",
-      "count": 63,
-      "groups": [
-        "120363042143432430@g.us",
-        "120363404092121926@g.us"
-      ]
-    },
-    {
       "sender_name": "RG WG",
-      "count": 62,
+      "count": 65,
       "groups": [
         "120363042143432430@g.us",
         "120363397960052940@g.us",
@@ -2113,11 +2098,26 @@
     },
     {
       "sender_name": "Baginda Naufal",
-      "count": 61,
+      "count": 64,
       "groups": [
         "6281335118687-1517798430@g.us",
         "6281335118687-1527497732@g.us",
         "6285736763141-1515408009@g.us"
+      ]
+    },
+    {
+      "sender_name": "Muhid",
+      "count": 64,
+      "groups": [
+        "120363042143432430@g.us",
+        "120363404092121926@g.us"
+      ]
+    },
+    {
+      "sender_name": "Rekarya",
+      "count": 64,
+      "groups": [
+        "6281335118687-1517798430@g.us"
       ]
     },
     {
@@ -2345,14 +2345,14 @@
       ]
     }
   ],
-  "last_lid_resolve": "2026-06-06T22:30:04",
+  "last_lid_resolve": "2026-06-07T22:30:05",
   "lid_resolve_summary": {
     "resolved": 8,
     "merged": 1,
     "renamed": 7,
     "restored_labels": 6
   },
-  "roster_merge_at": "2026-06-06T22:30:04",
+  "roster_merge_at": "2026-06-07T22:30:05",
   "roster_summary": {
     "enriched": 46,
     "phantomed": 16,
