@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-06-08 22:30 WIB · 88 distinct phones across 12 groups_
+_Generated: 2026-06-09 22:30 WIB · 88 distinct phones across 16 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -104,76 +104,78 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 
 | Display Name | Msg Count | Groups |
 |---|---:|---|
-| Warehouse1 | 983 | 16 |
-| Warehouse WRG | 535 | 16 |
-| admwahana2020 | 484 | 16 |
-| Denys Chandra | 478 | 2 |
-| Shipping WRG | 421 | 5 |
-| Ekba_Prastia | 395 | 4 |
-| Karib | 347 | 3 |
-| Elok | 299 | 4 |
-| agus | 267 | 3 |
-| Fafa | 242 | 2 |
-| anggaadhitya2016 | 225 | 5 |
-| Arif_Official | 222 | 7 |
-| Nungky | 214 | 4 |
-| Hanif | 203 | 2 |
+| Warehouse1 | 1038 | 16 |
+| Warehouse WRG | 564 | 16 |
+| admwahana2020 | 515 | 16 |
+| Denys Chandra | 490 | 2 |
+| Shipping WRG | 451 | 6 |
+| Ekba_Prastia | 413 | 4 |
+| Karib | 358 | 3 |
+| Elok | 328 | 4 |
+| agus | 286 | 3 |
+| Fafa | 249 | 3 |
+| anggaadhitya2016 | 249 | 5 |
+| Arif_Official | 241 | 7 |
+| Nungky | 224 | 4 |
+| Rizal | 221 | 3 |
+| Hanif | 217 | 2 |
+| M. Wildha Saputra | 207 | 5 |
+| Luripohan | 199 | 7 |
+| Aulia Ghozalina | 197 | 9 |
+| IRUL|PT WAHANA GUMILANG | 194 | 5 |
 | Putri Diana | 191 | 2 |
-| Rizal | 191 | 3 |
-| Aulia Ghozalina | 190 | 8 |
-| IRUL|PT WAHANA GUMILANG | 183 | 5 |
-| Mufidz | 181 | 7 |
-| M. Wildha Saputra | 176 | 5 |
-| Luripohan | 173 | 7 |
+| Mufidz | 186 | 7 |
+| Ibnuuuu | 177 | 4 |
+| Yogi Nugroho | 174 | 12 |
 | Husni | 170 | 5 |
-| Yogi Nugroho | 169 | 12 |
-| Ibnuuuu | 161 | 4 |
-| FIRMANSYAH | 147 | 5 |
-| Keuangan Wahana Rizky | 136 | 7 |
-| fanessa | 122 | 2 |
-| Admin Penawaran | 118 | 1 |
-| DNIFXMMS | 118 | 1 |
-| Yugo | 115 | 5 |
-| iqbal Wrg | 115 | 4 |
-| Maskhan | 103 | 1 |
-| IKA | 96 | 4 |
+| FIRMANSYAH | 159 | 5 |
+| Keuangan Wahana Rizky | 153 | 8 |
+| iqbal Wrg | 128 | 4 |
+| Yugo | 127 | 5 |
+| fanessa | 127 | 2 |
+| DNIFXMMS | 122 | 1 |
+| Admin Penawaran | 119 | 1 |
+| Maskhan | 115 | 1 |
+| Sidqi | 103 | 5 |
+| Kadek Heriadi | 100 | 3 |
+| Vickyadi | 100 | 5 |
+| IKA | 98 | 4 |
+| Admin Purchasing WRG | 96 | 9 |
 | Siti Nurcholis | 94 | 4 |
-| Kadek Heriadi | 93 | 3 |
-| Vickyadi | 93 | 5 |
 | Rengga | 92 | 1 |
-| Admin Purchasing WRG | 90 | 9 |
-| Sidqi | 88 | 5 |
-| Ari Kurnia Yuda | 80 | 4 |
-| ASN | 76 | 1 |
-| Marimasmadu | 75 | 3 |
-| Boni3 | 74 | 3 |
-| Haris | 74 | 1 |
-| Muhid | 70 | 2 |
-| RG WG | 69 | 7 |
-| Rekarya | 69 | 1 |
-| Baginda Naufal | 68 | 3 |
-| renika | 63 | 1 |
-| Fakturis WRG | 60 | 3 |
+| Ari Kurnia Yuda | 88 | 4 |
+| Marimasmadu | 85 | 3 |
+| Muhid | 83 | 2 |
+| ASN | 82 | 1 |
+| Haris | 80 | 1 |
+| RG WG | 79 | 8 |
+| Boni3 | 76 | 3 |
+| Rekarya | 76 | 1 |
+| Baginda Naufal | 70 | 3 |
+| renika | 67 | 1 |
+| Fakturis WRG | 62 | 3 |
 | Anas_Januar | 52 | 1 |
-| Arman | 51 | 6 |
+| Arman | 52 | 6 |
 | Kapten | 41 | 30 |
-| Dito | 38 | 1 |
-| Sari | 37 | 2 |
-| Pita | 36 | 1 |
-| Rahma | 36 | 1 |
-| Ayume | 35 | 1 |
-| d | 33 | 2 |
-| Chafid | 30 | 1 |
-| Navisa | 30 | 1 |
-| Gilang Pratama | 20 | 2 |
-| Firman W | 15 | 1 |
+| Dito | 40 | 1 |
+| Sari | 39 | 2 |
+| Pita | 38 | 1 |
+| Rahma | 38 | 1 |
+| Ayume | 37 | 1 |
+| d | 35 | 2 |
+| Chafid | 34 | 1 |
+| Navisa | 33 | 1 |
+| Gilang Pratama | 21 | 2 |
+| Firman W | 17 | 1 |
 | Iqbal | 7 | 1 |
 | Firmansyah | 4 | 1 |
 | S | 4 | 1 |
+| HRD Wahana Gumilang Group | 3 | 2 |
 | Halim | 3 | 1 |
 | abib_robi | 3 | 2 |
 | navisatris | 3 | 1 |
-| HRD Wahana Gumilang Group | 2 | 1 |
 | NovalAndriawan | 2 | 1 |
 | kuntdrg | 2 | 1 |
+| Aulia | 1 | 1 |
+| Call Center Wahana Group | 1 | 1 |
 | Dwi Wintarto | 1 | 1 |
