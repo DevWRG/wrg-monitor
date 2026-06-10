@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-06-09 22:30 WIB · 88 distinct phones across 16 groups_
+_Generated: 2026-06-10 22:30 WIB · 88 distinct phones across 16 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -59,7 +59,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6285714819906` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+111755216851047` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+12631582728230` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
-| `+253553562153141` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
+| `+6287887152800` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+6281216995625` | — | **achmad surya nugraha** 📋 | Surya | kirim tagih | Jember | 1 | 1 |
 | `+6281234504296` | — | **DIMAS BAGUS PRAKOSO** 📋 | Dimas | Kirim tagih | Jember | 1 | 1 |
 | `+6281336530830` | — | **Arif rahman hakim** 📋 | Arman | HOD Business Medical | Pusat | 1 | 1 |
@@ -104,71 +104,71 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 
 | Display Name | Msg Count | Groups |
 |---|---:|---|
-| Warehouse1 | 1038 | 16 |
+| Warehouse1 | 1074 | 16 |
 | Warehouse WRG | 564 | 16 |
-| admwahana2020 | 515 | 16 |
-| Denys Chandra | 490 | 2 |
-| Shipping WRG | 451 | 6 |
-| Ekba_Prastia | 413 | 4 |
-| Karib | 358 | 3 |
-| Elok | 328 | 4 |
-| agus | 286 | 3 |
-| Fafa | 249 | 3 |
-| anggaadhitya2016 | 249 | 5 |
-| Arif_Official | 241 | 7 |
-| Nungky | 224 | 4 |
-| Rizal | 221 | 3 |
-| Hanif | 217 | 2 |
-| M. Wildha Saputra | 207 | 5 |
-| Luripohan | 199 | 7 |
-| Aulia Ghozalina | 197 | 9 |
-| IRUL|PT WAHANA GUMILANG | 194 | 5 |
-| Putri Diana | 191 | 2 |
-| Mufidz | 186 | 7 |
-| Ibnuuuu | 177 | 4 |
-| Yogi Nugroho | 174 | 12 |
-| Husni | 170 | 5 |
-| FIRMANSYAH | 159 | 5 |
-| Keuangan Wahana Rizky | 153 | 8 |
-| iqbal Wrg | 128 | 4 |
-| Yugo | 127 | 5 |
-| fanessa | 127 | 2 |
-| DNIFXMMS | 122 | 1 |
-| Admin Penawaran | 119 | 1 |
-| Maskhan | 115 | 1 |
-| Sidqi | 103 | 5 |
-| Kadek Heriadi | 100 | 3 |
-| Vickyadi | 100 | 5 |
-| IKA | 98 | 4 |
-| Admin Purchasing WRG | 96 | 9 |
-| Siti Nurcholis | 94 | 4 |
-| Rengga | 92 | 1 |
-| Ari Kurnia Yuda | 88 | 4 |
-| Marimasmadu | 85 | 3 |
+| admwahana2020 | 535 | 16 |
+| Denys Chandra | 504 | 2 |
+| Shipping WRG | 482 | 9 |
+| Ekba_Prastia | 428 | 4 |
+| Karib | 367 | 3 |
+| Elok | 335 | 4 |
+| agus | 297 | 3 |
+| anggaadhitya2016 | 268 | 5 |
+| Fafa | 260 | 3 |
+| Arif_Official | 258 | 7 |
+| Rizal | 245 | 3 |
+| Nungky | 237 | 4 |
+| Hanif | 225 | 2 |
+| M. Wildha Saputra | 221 | 5 |
+| Luripohan | 219 | 8 |
+| Aulia Ghozalina | 205 | 9 |
+| IRUL|PT WAHANA GUMILANG | 204 | 5 |
+| Putri Diana | 198 | 2 |
+| Mufidz | 187 | 7 |
+| Ibnuuuu | 184 | 4 |
+| Yogi Nugroho | 176 | 12 |
+| Husni | 171 | 5 |
+| FIRMANSYAH | 168 | 5 |
+| Keuangan Wahana Rizky | 159 | 8 |
+| iqbal Wrg | 137 | 4 |
+| Yugo | 136 | 5 |
+| fanessa | 136 | 2 |
+| DNIFXMMS | 129 | 1 |
+| Maskhan | 122 | 1 |
+| Admin Penawaran | 120 | 1 |
+| Vickyadi | 113 | 5 |
+| Sidqi | 112 | 5 |
+| IKA | 105 | 5 |
+| Kadek Heriadi | 105 | 3 |
+| Admin Purchasing WRG | 100 | 9 |
+| Siti Nurcholis | 99 | 5 |
+| Ari Kurnia Yuda | 96 | 4 |
+| Rengga | 96 | 1 |
+| Marimasmadu | 91 | 3 |
+| RG WG | 86 | 9 |
+| ASN | 85 | 1 |
+| Haris | 85 | 1 |
 | Muhid | 83 | 2 |
-| ASN | 82 | 1 |
-| Haris | 80 | 1 |
-| RG WG | 79 | 8 |
-| Boni3 | 76 | 3 |
-| Rekarya | 76 | 1 |
-| Baginda Naufal | 70 | 3 |
-| renika | 67 | 1 |
+| Rekarya | 83 | 1 |
+| Baginda Naufal | 79 | 3 |
+| Boni3 | 78 | 3 |
+| renika | 71 | 1 |
 | Fakturis WRG | 62 | 3 |
 | Anas_Januar | 52 | 1 |
 | Arman | 52 | 6 |
+| Dito | 42 | 1 |
 | Kapten | 41 | 30 |
-| Dito | 40 | 1 |
+| Ayume | 40 | 1 |
+| Pita | 40 | 1 |
+| Rahma | 40 | 1 |
 | Sari | 39 | 2 |
-| Pita | 38 | 1 |
-| Rahma | 38 | 1 |
-| Ayume | 37 | 1 |
-| d | 35 | 2 |
+| d | 37 | 2 |
+| Navisa | 35 | 1 |
 | Chafid | 34 | 1 |
-| Navisa | 33 | 1 |
-| Gilang Pratama | 21 | 2 |
-| Firman W | 17 | 1 |
+| Gilang Pratama | 24 | 2 |
+| Firman W | 20 | 1 |
 | Iqbal | 7 | 1 |
-| Firmansyah | 4 | 1 |
+| Firmansyah | 5 | 1 |
 | S | 4 | 1 |
 | HRD Wahana Gumilang Group | 3 | 2 |
 | Halim | 3 | 1 |
