@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-06-11 22:30 WIB · 88 distinct phones across 16 groups_
+_Generated: 2026-06-12 22:30 WIB · 92 distinct phones across 18 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -10,16 +10,16 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | Phone | Auto Name | Current Name | Panggilan | Posisi | Cabang | Groups | Appearances |
 |---|---|---|---|---|---|---:|---:|
 | `+6285168121906` | — | **Kapten** | — | — | — | 8 | 8 |
-| `+6281248476085` | — | **IKA PURWANINGSARI** 📋 | Ika | HOD Finance & Supply Chain | Pusat | 6 | 6 |
 | `+6281230460577` | — | **Gilang S Pratama** | — | — | — | 5 | 5 |
+| `+6281248476085` | — | **IKA PURWANINGSARI** 📋 | Ika | HOD Finance & Supply Chain | Pusat | 5 | 5 |
 | `+6281330088773` | — | **Yogi Nugroho** 📋 | Yogi | HOD Sales West Area | Pusat | 5 | 5 |
 | `+6285231034648` | — | **Adm Keuangan** | — | — | — | 5 | 5 |
 | `+6285808489080` | admwahana2020 | **adm Sales** | — | — | — | 5 | 5 |
 | `+6285853772380` | — | **Maslikha Purnamasari** 📋 | Sari | Admin Fakturis | Pusat | 5 | 5 |
-| `+6281232432442` | — | **HRD WRG** | — | — | — | 5 | 5 |
+| `+90142840770783` | — | _(unlabeled)_ | — | — | — | 5 | 5 |
 | `+102808682496186` | — | _(unlabeled)_ | — | — | — | 4 | 4 |
-| `+6281332170240` | — | **Muhid** 📋 | Muhid | HOD Aftersales | Pusat | 4 | 4 |
-| `+6285257118107` | — | **Diana** 📋 | Diana | Admin Shipping | Pusat | 4 | 4 |
+| `+145908830322776` | — | _(unlabeled)_ | — | — | — | 4 | 4 |
+| `+250783241117799` | — | _(unlabeled)_ | — | — | — | 4 | 4 |
 | `+6281230791487` | — | **CHOIRUL HUDA SETYAWAN** 📋 | Irul | AM | Lamongan | 4 | 4 |
 | `+6281235590851` | — | **Adm Teknisi** | — | — | — | 4 | 4 |
 | `+6281358245675` | — | **Adm Gudang** | — | — | — | 4 | 4 |
@@ -30,7 +30,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6285755247126` | — | **Adm Pembelian** | — | — | — | 4 | 4 |
 | `+6285854718057` | Siti Nurcholis | **Siti Nurcholis** 📋 | Kolis | Finance | Pusat | 4 | 4 |
 | `+6285878287784` | Vickyadi | **Vickyadi** 📋 | Vicky | AM | NTB | 4 | 4 |
-| `+6285842934016` | — | **Admin Shipping** | — | — | — | 4 | 4 |
+| `+85333198782619` | — | _(unlabeled)_ | — | — | — | 4 | 4 |
 | `+6282131121079` | — | **Akhmad Iqbal Asshiddiqi** 📋 | Iqbal | AM | Cirebon | 3 | 3 |
 | `+6282178705010` | — | **Luri Anpulan Mulia Pohan** 📋 | Luri | AM | Jember | 3 | 3 |
 | `+6282273757478` | — | **Muhammad arif prayogi** 📋 | Arif | AM | SBY 2 | 3 | 3 |
@@ -41,7 +41,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+628983451067` | — | **Baginda Naufal** 📋 | Baginda | Kirim Tagih & Admin Cabang | NTB | 3 | 3 |
 | `+109363238846504` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+11540744925281` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
-| `+62881036179456` | — | **Abib robi Nurhamsa** 📋 | Abib | Admin Sales & Penawaran | Pusat | 2 | 2 |
+| `+12516038045733` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+6281228983310` | — | **Muhammad Prayugo** 📋 | Yugo | AM | Palembang | 2 | 2 |
 | `+6281232554911` | — | **Ekba Prastia** 📋 | Ekba | Kirim Tagih & Admin Cabang | SBY 2 | 2 | 2 |
 | `+6282326239278` | — | **MIFTAHUL WILDHA SAPUTRA** 📋 | Wildha | AM | Madiun | 2 | 2 |
@@ -56,10 +56,11 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+628979472943` | — | **Sidqi** 📋 | Sidqi | AM | Solo & Yogyakarta | 2 | 2 |
 | `+628999303274` | — | **Aulia Ghozalina** 📋 | Aulia | AM | Kediri | 2 | 2 |
 | `+9290047848571` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
-| `+6285714819906` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
+| `+96765764223134` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+111755216851047` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+12631582728230` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
-| `+6287887152800` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
+| `+1584859762795` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
+| `+253553562153141` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+6281216995625` | — | **achmad surya nugraha** 📋 | Surya | kirim tagih | Jember | 1 | 1 |
 | `+6281234504296` | — | **DIMAS BAGUS PRAKOSO** 📋 | Dimas | Kirim tagih | Jember | 1 | 1 |
 | `+6281336530830` | — | **Arif rahman hakim** 📋 | Arman | HOD Business Medical | Pusat | 1 | 1 |
@@ -79,10 +80,12 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+62895806909911` | — | **Achmad Miftahul Munir** 📋 | Munir | Kirim Tagih | SBY 2 | 1 | 1 |
 | `+6289602081239` | Haris | **Haris Zul Hilmi** 📋 | Haris | Kirim Tagih | Malang | 1 | 1 |
 | `+6289605483157` | — | **Dito Anggara** 📋 | Dito | GA | Pusat | 1 | 1 |
-| `+6281210207065` | — | **Chafid Hersandi** | — | — | — | 1 | 1 |
+| `+73469727395989` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+87961316122799` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
+| `+62881036179456` | — | **Abib robi Nurhamsa** 📋 | Abib | Admin Sales & Penawaran | Pusat | 0 | 0 |
 | `+6285856613533` | — | **Achmad fahruddin arrazzy** 📋 | Boni | Logistik | Pusat | 0 | 0 |
 | `+6285262444989` | — | **Claudya fikayanti** 📋 | Claudya | purchasing | Pusat | 0 | 0 |
+| `+6285257118107` | — | **Diana** 📋 | Diana | Admin Shipping | Pusat | 0 | 0 |
 | `+6285656002508` | — | **Maskhanudin** 📋 | Udin | Kirim tagih | SBY 2 | 0 | 0 |
 | `+6285331769132` | — | **Enggar Robbi Novianto** 📋 | Enggar | Teknisi | Pusat | 0 | 0 |
 | `+62895328255580` | — | **Fanessa Rahayu Putri Waluyo** 📋 | Fanessa | Accounting | Pusat | 0 | 0 |
@@ -92,6 +95,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6281333029926` | — | **NURUL FADHILAH** 📋 | Fafa | HOD Accounting | Pusat | 0 | 0 |
 | `+6285755602302` | — | **MOCHAMAD JASYIM** 📋 | Jasyim | Admin Sales & Penawaran | Pusat | 0 | 0 |
 | `+6282331319794` | — | **Muhammad Halim Prayogo** 📋 | Halim | Teknisi | Pusat | 0 | 0 |
+| `+6281332170240` | — | **Muhid** 📋 | Muhid | HOD Aftersales | Pusat | 0 | 0 |
 | `+6282132233560` | — | **Najmi Putri Harini** 📋 | Puput | Admin Sales & Penawaran | Pusat | 0 | 0 |
 | `+6282140803327` | — | **Nopa Andriawan** 📋 | Nopa | Teknisi | Pusat | 0 | 0 |
 | `+6283851703968` | — | **PUTRI DIANA** 📋 | Putri | Accounting | Pusat | 0 | 0 |
@@ -104,78 +108,81 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 
 | Display Name | Msg Count | Groups |
 |---|---:|---|
-| Warehouse1 | 1112 | 16 |
-| admwahana2020 | 594 | 16 |
-| Warehouse WRG | 564 | 16 |
-| Denys Chandra | 527 | 2 |
-| Shipping WRG | 520 | 12 |
-| Ekba_Prastia | 434 | 4 |
-| Karib | 391 | 3 |
-| Elok | 344 | 4 |
-| agus | 310 | 3 |
-| anggaadhitya2016 | 304 | 5 |
-| Arif_Official | 274 | 7 |
-| Rizal | 272 | 3 |
-| Fafa | 269 | 3 |
-| Nungky | 252 | 4 |
-| Luripohan | 246 | 8 |
-| M. Wildha Saputra | 238 | 6 |
-| Hanif | 232 | 2 |
-| Aulia Ghozalina | 220 | 9 |
-| IRUL|PT WAHANA GUMILANG | 212 | 5 |
-| Putri Diana | 212 | 2 |
-| Ibnuuuu | 191 | 4 |
-| Mufidz | 191 | 7 |
-| Yogi Nugroho | 182 | 12 |
-| FIRMANSYAH | 178 | 5 |
-| Keuangan Wahana Rizky | 175 | 9 |
+| Warehouse1 | 1132 | 16 |
+| admwahana2020 | 609 | 16 |
+| Warehouse WRG | 593 | 16 |
+| Denys Chandra | 537 | 2 |
+| Shipping WRG | 525 | 12 |
+| Ekba_Prastia | 460 | 4 |
+| Karib | 410 | 3 |
+| Elok | 354 | 4 |
+| agus | 329 | 3 |
+| anggaadhitya2016 | 310 | 5 |
+| Arif_Official | 288 | 7 |
+| Rizal | 280 | 3 |
+| Fafa | 272 | 3 |
+| Luripohan | 262 | 8 |
+| Nungky | 255 | 4 |
+| M. Wildha Saputra | 251 | 6 |
+| Hanif | 238 | 2 |
+| Aulia Ghozalina | 235 | 9 |
+| IRUL|PT WAHANA GUMILANG | 223 | 5 |
+| Putri Diana | 213 | 2 |
+| Ibnuuuu | 195 | 4 |
+| Mufidz | 193 | 7 |
+| FIRMANSYAH | 186 | 5 |
+| Yogi Nugroho | 183 | 12 |
+| Keuangan Wahana Rizky | 181 | 9 |
 | Husni | 172 | 5 |
-| Yugo | 148 | 6 |
-| iqbal Wrg | 148 | 4 |
-| fanessa | 141 | 2 |
-| DNIFXMMS | 136 | 1 |
-| Maskhan | 128 | 1 |
+| iqbal Wrg | 151 | 4 |
+| Yugo | 149 | 6 |
+| fanessa | 146 | 2 |
+| DNIFXMMS | 140 | 1 |
+| Maskhan | 135 | 1 |
+| Vickyadi | 130 | 5 |
+| Sidqi | 127 | 5 |
+| IKA | 126 | 6 |
 | Admin Penawaran | 123 | 1 |
-| Sidqi | 123 | 5 |
-| Vickyadi | 120 | 5 |
-| IKA | 115 | 6 |
-| Kadek Heriadi | 108 | 3 |
-| Admin Purchasing WRG | 107 | 10 |
-| Ari Kurnia Yuda | 107 | 4 |
-| Siti Nurcholis | 107 | 6 |
-| Rengga | 102 | 1 |
-| Marimasmadu | 97 | 3 |
-| Haris | 88 | 1 |
-| RG WG | 88 | 9 |
-| Rekarya | 87 | 1 |
-| ASN | 85 | 1 |
-| Baginda Naufal | 84 | 3 |
+| Ari Kurnia Yuda | 115 | 4 |
+| Siti Nurcholis | 114 | 6 |
+| Admin Purchasing WRG | 113 | 10 |
+| Kadek Heriadi | 113 | 3 |
+| Rengga | 104 | 1 |
+| Marimasmadu | 103 | 3 |
+| Haris | 94 | 1 |
+| RG WG | 92 | 9 |
+| ASN | 89 | 1 |
+| Rekarya | 89 | 1 |
+| Baginda Naufal | 86 | 3 |
 | Muhid | 83 | 2 |
-| Boni3 | 80 | 3 |
-| renika | 75 | 1 |
-| Fakturis WRG | 63 | 3 |
+| Boni3 | 81 | 3 |
+| renika | 78 | 1 |
+| Fakturis WRG | 64 | 4 |
+| Arman | 55 | 6 |
 | Anas_Januar | 52 | 1 |
-| Arman | 52 | 6 |
-| Dito | 44 | 1 |
-| Ayume | 42 | 1 |
-| Pita | 42 | 1 |
-| Rahma | 42 | 1 |
+| Dito | 46 | 1 |
+| Pita | 44 | 1 |
+| Sari | 44 | 2 |
+| Ayume | 43 | 1 |
+| Rahma | 43 | 1 |
 | Kapten | 41 | 30 |
-| Sari | 41 | 2 |
-| d | 39 | 2 |
-| Navisa | 37 | 1 |
+| d | 40 | 2 |
+| Navisa | 38 | 1 |
 | Chafid | 34 | 1 |
-| Gilang Pratama | 26 | 2 |
+| Gilang Pratama | 27 | 2 |
 | Firman W | 20 | 1 |
 | Iqbal | 7 | 1 |
 | Firmansyah | 5 | 1 |
 | abib_robi | 5 | 2 |
+| Call Center Wahana Group | 4 | 1 |
 | S | 4 | 1 |
-| Call Center Wahana Group | 3 | 1 |
 | HRD Wahana Gumilang Group | 3 | 2 |
 | Halim | 3 | 1 |
 | navisatris | 3 | 1 |
 | NovalAndriawan | 2 | 1 |
 | kuntdrg | 2 | 1 |
+| Akhmad Iqbal WRG | 1 | 1 |
 | Aulia | 1 | 1 |
 | Dwi Wintarto | 1 | 1 |
+| Mas Wildha Wahana | 1 | 1 |
+| Muhammad Prayugo WRG | 1 | 1 |
