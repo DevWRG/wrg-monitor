@@ -1,6 +1,6 @@
 # Members Directory
 
-_Generated: 2026-06-12 22:30 WIB · 92 distinct phones across 18 groups_
+_Generated: 2026-06-13 22:30 WIB · 90 distinct phones across 18 groups_
 
 Edit `data/members.json` field `name` untuk override auto-detected name.
 Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempotent, ulang-jalankan untuk merge.
@@ -10,8 +10,8 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | Phone | Auto Name | Current Name | Panggilan | Posisi | Cabang | Groups | Appearances |
 |---|---|---|---|---|---|---:|---:|
 | `+6285168121906` | — | **Kapten** | — | — | — | 8 | 8 |
+| `+6281248476085` | — | **IKA PURWANINGSARI** 📋 | Ika | HOD Finance & Supply Chain | Pusat | 6 | 6 |
 | `+6281230460577` | — | **Gilang S Pratama** | — | — | — | 5 | 5 |
-| `+6281248476085` | — | **IKA PURWANINGSARI** 📋 | Ika | HOD Finance & Supply Chain | Pusat | 5 | 5 |
 | `+6281330088773` | — | **Yogi Nugroho** 📋 | Yogi | HOD Sales West Area | Pusat | 5 | 5 |
 | `+6285231034648` | — | **Adm Keuangan** | — | — | — | 5 | 5 |
 | `+6285808489080` | admwahana2020 | **adm Sales** | — | — | — | 5 | 5 |
@@ -41,7 +41,7 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+628983451067` | — | **Baginda Naufal** 📋 | Baginda | Kirim Tagih & Admin Cabang | NTB | 3 | 3 |
 | `+109363238846504` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+11540744925281` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
-| `+12516038045733` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
+| `+62881036179456` | — | **Abib robi Nurhamsa** 📋 | Abib | Admin Sales & Penawaran | Pusat | 2 | 2 |
 | `+6281228983310` | — | **Muhammad Prayugo** 📋 | Yugo | AM | Palembang | 2 | 2 |
 | `+6281232554911` | — | **Ekba Prastia** 📋 | Ekba | Kirim Tagih & Admin Cabang | SBY 2 | 2 | 2 |
 | `+6282326239278` | — | **MIFTAHUL WILDHA SAPUTRA** 📋 | Wildha | AM | Madiun | 2 | 2 |
@@ -59,7 +59,6 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+96765764223134` | — | _(unlabeled)_ | — | — | — | 2 | 2 |
 | `+111755216851047` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+12631582728230` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
-| `+1584859762795` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+253553562153141` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+6281216995625` | — | **achmad surya nugraha** 📋 | Surya | kirim tagih | Jember | 1 | 1 |
 | `+6281234504296` | — | **DIMAS BAGUS PRAKOSO** 📋 | Dimas | Kirim tagih | Jember | 1 | 1 |
@@ -82,7 +81,6 @@ Format JSON: `{"phone":"+62...", "name":"Pak Anu", ...}` — script ini idempote
 | `+6289605483157` | — | **Dito Anggara** 📋 | Dito | GA | Pusat | 1 | 1 |
 | `+73469727395989` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
 | `+87961316122799` | — | _(unlabeled)_ | — | — | — | 1 | 1 |
-| `+62881036179456` | — | **Abib robi Nurhamsa** 📋 | Abib | Admin Sales & Penawaran | Pusat | 0 | 0 |
 | `+6285856613533` | — | **Achmad fahruddin arrazzy** 📋 | Boni | Logistik | Pusat | 0 | 0 |
 | `+6285262444989` | — | **Claudya fikayanti** 📋 | Claudya | purchasing | Pusat | 0 | 0 |
 | `+6285257118107` | — | **Diana** 📋 | Diana | Admin Shipping | Pusat | 0 | 0 |
@@ -114,43 +112,43 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Denys Chandra | 537 | 2 |
 | Shipping WRG | 525 | 12 |
 | Ekba_Prastia | 460 | 4 |
-| Karib | 410 | 3 |
-| Elok | 354 | 4 |
+| Karib | 413 | 3 |
+| Elok | 356 | 4 |
 | agus | 329 | 3 |
 | anggaadhitya2016 | 310 | 5 |
-| Arif_Official | 288 | 7 |
+| Arif_Official | 295 | 7 |
 | Rizal | 280 | 3 |
 | Fafa | 272 | 3 |
 | Luripohan | 262 | 8 |
 | Nungky | 255 | 4 |
 | M. Wildha Saputra | 251 | 6 |
 | Hanif | 238 | 2 |
-| Aulia Ghozalina | 235 | 9 |
-| IRUL|PT WAHANA GUMILANG | 223 | 5 |
+| Aulia Ghozalina | 236 | 9 |
+| IRUL|PT WAHANA GUMILANG | 229 | 5 |
 | Putri Diana | 213 | 2 |
 | Ibnuuuu | 195 | 4 |
 | Mufidz | 193 | 7 |
 | FIRMANSYAH | 186 | 5 |
-| Yogi Nugroho | 183 | 12 |
+| Yogi Nugroho | 184 | 12 |
 | Keuangan Wahana Rizky | 181 | 9 |
-| Husni | 172 | 5 |
-| iqbal Wrg | 151 | 4 |
+| Husni | 179 | 5 |
+| iqbal Wrg | 157 | 4 |
 | Yugo | 149 | 6 |
 | fanessa | 146 | 2 |
-| DNIFXMMS | 140 | 1 |
+| DNIFXMMS | 145 | 1 |
 | Maskhan | 135 | 1 |
+| Sidqi | 134 | 5 |
 | Vickyadi | 130 | 5 |
-| Sidqi | 127 | 5 |
 | IKA | 126 | 6 |
 | Admin Penawaran | 123 | 1 |
-| Ari Kurnia Yuda | 115 | 4 |
+| Ari Kurnia Yuda | 118 | 4 |
+| Admin Purchasing WRG | 116 | 10 |
 | Siti Nurcholis | 114 | 6 |
-| Admin Purchasing WRG | 113 | 10 |
 | Kadek Heriadi | 113 | 3 |
 | Rengga | 104 | 1 |
 | Marimasmadu | 103 | 3 |
+| RG WG | 95 | 9 |
 | Haris | 94 | 1 |
-| RG WG | 92 | 9 |
 | ASN | 89 | 1 |
 | Rekarya | 89 | 1 |
 | Baginda Naufal | 86 | 3 |
@@ -161,10 +159,10 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Arman | 55 | 6 |
 | Anas_Januar | 52 | 1 |
 | Dito | 46 | 1 |
+| Rahma | 45 | 1 |
 | Pita | 44 | 1 |
 | Sari | 44 | 2 |
 | Ayume | 43 | 1 |
-| Rahma | 43 | 1 |
 | Kapten | 41 | 30 |
 | d | 40 | 2 |
 | Navisa | 38 | 1 |
@@ -172,8 +170,8 @@ These are pushName values seen in chat — useful kalau auto_name di atas kosong
 | Gilang Pratama | 27 | 2 |
 | Firman W | 20 | 1 |
 | Iqbal | 7 | 1 |
-| Firmansyah | 5 | 1 |
-| abib_robi | 5 | 2 |
+| Firmansyah | 6 | 1 |
+| abib_robi | 6 | 2 |
 | Call Center Wahana Group | 4 | 1 |
 | S | 4 | 1 |
 | HRD Wahana Gumilang Group | 3 | 2 |
